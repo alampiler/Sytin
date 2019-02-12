@@ -19,6 +19,7 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "font-awesome": "^5.6.1"
+    "jquery": "^3.3.1",
+    "ion.rangeSlider": "ion-range-slider#^2.3.0"
   }
 }

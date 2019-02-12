@@ -25,7 +25,7 @@ var gulp            = require('gulp'),
 
 
     gulp.task('scss', () => {
-       return gulp.src(['app/scss/reset.scss', 'app/scss/main.scss', 'app/scss/fonts.scss', 'app/scss/all-ie.scss'])
+       return gulp.src(['app/scss/reset.scss', 'app/scss/main.scss'])
            .pipe(scss({
                includePaths: require('node-normalize-scss').includePaths
            }).on('error', scss.logError))
@@ -67,7 +67,7 @@ var gulp            = require('gulp'),
     });
 
     gulp.task('minJS', () => {
-        return gulp.src(['app/libs/jquery/dist/jquery.min.js', 'app/libs/font-awesome/js/all.min.js'])
+        return gulp.src(['app/libs/jquery/dist/jquery.min.js', 'app/libs/ion.rangeSlider/js/ion.rangeSlider.min.js'])
             .pipe(filesize())
             .pipe(concat('libs.min.js'))
             .pipe(cleanJS())
