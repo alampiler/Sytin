@@ -35,7 +35,7 @@ var gulp            = require('gulp'),
     });
 
     gulp.task('fonts', () => {
-       return gulp.src('app/libs/font-awesome/webfonts/*')
+       return gulp.src('node_modules/video.js/dist/font/*')
            .pipe(gulp.dest('app/fonts'))
     });
 
@@ -67,7 +67,7 @@ var gulp            = require('gulp'),
     });
 
     gulp.task('minJS', () => {
-        return gulp.src(['app/libs/jquery/dist/jquery.min.js', 'app/libs/ion.rangeSlider/js/ion.rangeSlider.min.js'])
+        return gulp.src(['app/libs/jquery/dist/jquery.min.js', 'app/libs/ion.rangeSlider/js/ion.rangeSlider.min.js', "node_modules/video.js/dist/video.min.js"])
             .pipe(filesize())
             .pipe(concat('libs.min.js'))
             .pipe(cleanJS())
