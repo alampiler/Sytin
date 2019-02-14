@@ -2,11 +2,21 @@ $(document).ready(function () {
 
 $('.video-js').addClass('hover');
 
-$('.hover').hover(function () {
+if($(window).width() > 1024){
+  $('.hover').hover(function () {
+    $('.hover').removeClass('active');
+    $(this).addClass('active');
+  });
+}
+else if ($(window).width() < 1024 && $(window).width() > 900) {
+  $('.hover').click(function () {
+    $('.hover').removeClass('active');
+    $(this).addClass('active');
+  });
+}
+else{
   $('.hover').removeClass('active');
-  $(this).addClass('active');
-});
-
+}
 
 
   $("#filer_price").ionRangeSlider({
