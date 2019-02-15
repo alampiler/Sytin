@@ -70,11 +70,11 @@ body {
     opacity: 0.47;
     height: 210px;
     width: 1px;
-    margin-bottom: 40px; }
+    margin: 20px 0; }
     .number_list .p_pos_line:first-child,
     .line_list .p_pos_line:first-child {
-      height: 170px;
-      margin-top: 22px; }
+      height: 160px;
+      margin-top: 39px; }
     .number_list .p_pos_line:last-child,
     .line_list .p_pos_line:last-child {
       height: 396px;
@@ -88,26 +88,26 @@ body {
   .number_list .number_elem {
     font: normal normal 12px/normal 'Neuman', sans-serif;
     color: #BD744E;
-    margin: 10px 4px 12px 0; }
+    margin: 12px 4px 12px 0;
+    position: relative;
+    top: 8px; }
     .number_list .number_elem:nth-child(2) {
-      margin: 5px 4px 18px 0; }
-    .number_list .number_elem:nth-child(6) {
-      margin: 15px 4px 30px 0; }
+      margin: 12px 4px 12px 0; }
   .number_list .active_num {
     color: #FFE1D2;
     font-size: 16px; }
 
 .line_list .line_elem {
   background: #BD744E;
-  margin: 10px 4px 30px 0;
+  margin: 30px 4px 10px 0;
   width: 20px;
-  height: 1px; }
-  .line_list .line_elem:nth-child(2) {
-    margin-top: 16px; }
+  height: 1px;
+  position: relative; }
 
 .line_list .active_line {
   background: #FFE1D2;
-  width: 40px; }
+  width: 40px;
+  margin: 30px 4px 10px 0; }
 
 .line_list .scroll_down {
   -webkit-transform: rotate(90deg);
@@ -142,10 +142,14 @@ body {
     height: 1px; }
 
 .header {
-  background: black url("../img/header.png") no-repeat center;
-  padding: 0 51px; }
+  background: black url("../img/header_big.png") no-repeat center;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  padding: 0 51px;
+  position: relative;
+  z-index: 222; }
   .header .header_menu {
-    padding-top: 26px;
+    padding-top: 36px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -158,6 +162,10 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .header .header_menu .logo {
+      width: 13%; }
+      .header .header_menu .logo img {
+        max-width: 100%; }
     .header .header_menu .line {
       background: #141416;
       height: 1px;
@@ -199,13 +207,16 @@ body {
         .header .header_info .header_content .header_title span {
           color: #BD744E; }
       .header .header_info .header_content .header_text {
-        margin: 174px 0 44px 0;
+        margin: 124px 0 44px 0;
         width: 44%; }
       .header .header_info .header_content .order {
         background-color: rgba(255, 255, 255, 0);
         border: none;
         z-index: 10;
-        position: relative; }
+        position: relative;
+        width: 167px; }
+        .header .header_info .header_content .order img {
+          max-width: 100%; }
         .header .header_info .header_content .order:hover img {
           -webkit-transition: 0.2s linear;
           -o-transition: 0.2s linear;
@@ -218,7 +229,7 @@ body {
     width: 100%;
     height: 1px;
     position: relative;
-    bottom: 40px; }
+    bottom: 20px; }
 
 .main_content .about {
   display: -webkit-box;
@@ -226,9 +237,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 190px 51px 14% 51px;
-  background: url("../img/about.png") no-repeat center 21%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
-  background: url("../img/about.png") no-repeat center 21%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
-  background: url("../img/about.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent); }
+  background: url("../img/about_big.png") no-repeat center 21%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+  background: url("../img/about_big.png") no-repeat center 21%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+  background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto; }
   .main_content .about .about_left_gradient,
   .main_content .about .about_right_gradient {
     top: 720px;
@@ -238,14 +251,14 @@ body {
     position: absolute; }
   .main_content .about .about_left_gradient {
     left: 0;
-    background-image: -webkit-radial-gradient(0% 50%, 100% 50%, rgba(189, 116, 78, 0.1), transparent);
-    background-image: -o-radial-gradient(0% 50%, 100% 50%, rgba(189, 116, 78, 0.1), transparent);
-    background-image: radial-gradient(100% 50% at 0% 50%, rgba(189, 116, 78, 0.1), transparent); }
+    background-image: -webkit-radial-gradient(0% 35%, 100% 60%, rgba(189, 116, 78, 0.1), transparent);
+    background-image: -o-radial-gradient(0% 35%, 100% 60%, rgba(189, 116, 78, 0.1), transparent);
+    background-image: radial-gradient(100% 60% at 0% 35%, rgba(189, 116, 78, 0.1), transparent); }
   .main_content .about .about_right_gradient {
     right: 0;
-    background-image: -webkit-radial-gradient(100% 50%, 100% 50%, rgba(189, 116, 78, 0.1), transparent);
-    background-image: -o-radial-gradient(100% 50%, 100% 50%, rgba(189, 116, 78, 0.1), transparent);
-    background-image: radial-gradient(100% 50% at 100% 50%, rgba(189, 116, 78, 0.1), transparent); }
+    background-image: -webkit-radial-gradient(100% 35%, 100% 60%, rgba(189, 116, 78, 0.1), transparent);
+    background-image: -o-radial-gradient(100% 35%, 100% 60%, rgba(189, 116, 78, 0.1), transparent);
+    background-image: radial-gradient(100% 60% at 100% 35%, rgba(189, 116, 78, 0.1), transparent); }
   .main_content .about .number_list,
   .main_content .about .line_list {
     margin: 4% 0; }
@@ -354,7 +367,7 @@ body {
           display: inline-block;
           margin-right: 20px;
           margin-top: 2px;
-          background: url(../img/sprite.png) no-repeat -4px -172px; }
+          background: url(../img/sprite.png) no-repeat -12px -172px; }
         .main_content .about .about_content .about_specifications .spec_block .spec_text {
           text-transform: uppercase;
           font-size: 14px;
@@ -560,6 +573,8 @@ body {
           -webkit-justify-content: space-between;
               -ms-flex-pack: justify;
                   justify-content: space-between; }
+          .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_form input {
+            width: 26%; }
           .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_form .send_block {
             width: 100%;
             text-align: right; }
@@ -576,7 +591,7 @@ body {
               .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_form .send_block .form_send:after {
                 content: "";
                 display: inline-block;
-                background: url(../img/sprite.png) -4px 0px no-repeat;
+                background: url(../img/sprite.png) -16px 0px no-repeat;
                 position: relative;
                 top: 3px;
                 left: 8px;
@@ -784,7 +799,7 @@ body {
         .main_content .apartments .apartments_content .filters .filters_btn:after {
           content: "";
           display: inline-block;
-          background: url(../img/sprite.png) -4px 0px no-repeat;
+          background: url(../img/sprite.png) -16px 0px no-repeat;
           position: relative;
           top: 3px;
           left: 8px;
@@ -826,7 +841,7 @@ body {
       .main_content .apartments .apartments_content .see_more:after {
         content: "";
         display: inline-block;
-        background: url(../img/sprite.png) -4px 0px no-repeat;
+        background: url(../img/sprite.png) -16px 0px no-repeat;
         position: relative;
         top: 3px;
         left: 8px;
@@ -858,21 +873,21 @@ body {
       -webkit-flex-flow: row wrap;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       width: 80%;
       margin: 0 auto; }
       .main_content .apartments .apartments_content .apartments_blocks .room_block {
-        width: 44.5%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        width: 48.5%;
         background-color: #212121;
         -webkit-border-radius: 5px;
                 border-radius: 5px;
         padding: 2% 2% 6% 2%;
         margin-bottom: 30px; }
-        .main_content .apartments .apartments_content .apartments_blocks .room_block:not(:nth-child(2n)) {
-          margin-right: 3%; }
         .main_content .apartments .apartments_content .apartments_blocks .room_block .room_title {
           font-size: 1.66vw;
           line-height: 24px; }
@@ -910,25 +925,27 @@ body {
             top: 7px;
             background: url(../img/sprite.png) no-repeat; }
           .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before {
-            background-position: -4px -20px;
+            background-position: -14px -20px;
             width: 25px;
             height: 25px; }
           .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:before {
-            background-position: -10px -60px;
-            width: 14px;
+            background-position: -12px -60px;
+            width: 25px;
             height: 34px;
             top: 9px; }
           .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:before {
-            background-position: -8px -110px;
+            background-position: -18px -110px;
             width: 28px;
             height: 23px; }
           .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:before {
-            background-position: -4px -142px;
+            background-position: -14px -142px;
             width: 25px;
             height: 21px; }
 
 .main_content .choose_apartment {
-  background: #141416 url("../img/apartaments.png") no-repeat center;
+  background: #141416 url("../img/apartaments_big.png") no-repeat center;
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -991,7 +1008,7 @@ body {
         .main_content .contacts .contacts_content .contact_info .contacts_form .form_send:after {
           content: "";
           display: inline-block;
-          background: url(../img/sprite.png) -4px 0px no-repeat;
+          background: url(../img/sprite.png) -16px 0px no-repeat;
           position: relative;
           top: 3px;
           left: 8px;
@@ -1034,17 +1051,86 @@ body {
       -webkit-box-shadow: 0 0 27px rgba(0, 0, 0, 0.45);
               box-shadow: 0 0 27px rgba(0, 0, 0, 0.45); }
 
+@media screen and (min-width: 1680px) and (max-width: 2048px) {
+  .line_list .scroll_down {
+    top: 6vw; }
+    .line_list .scroll_down a {
+      font-size: 0.8vw; } }
+
+/*1440 - 1680*/
+@media screen and (min-width: 1441px) and (max-width: 1680px) {
+  body input {
+    font-size: 18px; }
+  body h1 {
+    font: normal normal 64px/63px "Neuman", sans-serif; }
+  body h2 {
+    font: normal normal 55px/normal "Neuman", sans-serif; }
+  body h3 {
+    font: normal normal 46px/normal "Neuman", sans-serif; }
+  body p {
+    font: normal normal 18px/24px "Proxima Nova", sans-serif; }
+  .line_list .scroll_down {
+    top: 6vw; }
+    .line_list .scroll_down a {
+      font-size: 0.8vw; }
+  .header {
+    background: black url("../img/header_big.png") no-repeat center;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto; }
+    .header .header_menu .navbar .nav_list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .header .header_menu .navbar .nav_list .nav_elem a {
+        font-size: 12px; }
+    .header .header_info .header_content .order {
+      width: 16%; }
+  .main_content .about {
+    background: url("../img/about_big.png") no-repeat center 23%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+    background: url("../img/about_big.png") no-repeat center 23%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+    background: url("../img/about_big.png") no-repeat center 23%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto; }
+  .main_content .spec_features {
+    height: 1550px;
+    background-image: -webkit-radial-gradient(28% 78%, 30% 22%, rgba(189, 116, 78, 0.2), transparent);
+    background-image: -o-radial-gradient(28% 78%, 30% 22%, rgba(189, 116, 78, 0.2), transparent);
+    background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent); }
+    .main_content .spec_features .spec_feat_container .spec_feat_info {
+      background-image: -webkit-radial-gradient(50% 42%, 360px 360px, rgba(189, 116, 78, 0.05), transparent);
+      background-image: -o-radial-gradient(50% 42%, 360px 360px, rgba(189, 116, 78, 0.05), transparent);
+      background-image: radial-gradient(360px 360px at 50% 42%, rgba(189, 116, 78, 0.05), transparent); }
+    .main_content .spec_features .spec_feat_container .order_viewing .video_viewing .video-js .vjs-big-play-button {
+      top: 45%; }
+      .main_content .spec_features .spec_feat_container .order_viewing .video_viewing .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+        left: 35.4%; }
+    .main_content .spec_features .spec_feat_container .order_viewing .order_view_content {
+      margin-top: 0; }
+  .main_content .apartments .apartments_content .apartments_blocks .room_block .room_title {
+    font-size: 24px; }
+  .main_content .choose_apartment {
+    height: 80vw; }
+  .main_content .contacts .contacts_content .line {
+    width: 40%; }
+  .main_content .contacts .contacts_content .bg_contacts_img {
+    width: 66%;
+    background: url(../img/contacts_big.png) no-repeat center; } }
+
+/*1280*/
 @media screen and (max-width: 1280px) {
   body input {
     padding: 0.582em 0.55em; }
   .header .header_menu .line {
-    width: 28%; }
+    width: 38%; }
   .header .header_info .header_content .header_title {
     width: 82%; }
   .main_content .about {
-    background: url("../img/about.png") no-repeat center 21%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
-    background: url("../img/about.png") no-repeat center 21%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
-    background: url("../img/about.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent); }
+    background: url("../img/about_big.png") no-repeat center 21%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+    background: url("../img/about_big.png") no-repeat center 21%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+    background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto; }
     .main_content .about .about_content .about_specifications {
       width: 90%; }
       .main_content .about .about_content .about_specifications .spec_block {
@@ -1059,13 +1145,18 @@ body {
     padding: 9% 51px; }
     .main_content .location .location_content .location_list .location_elem {
       line-height: 18px; }
-  .main_content .spec_features .number_list,
-  .main_content .spec_features .line_list {
-    margin: 340px 0; }
-  .main_content .spec_features .spec_feat_container .order_viewing {
-    padding: 80px 0 0 0; }
-    .main_content .spec_features .spec_feat_container .order_viewing .order_view_content {
-      width: 66%; }
+  .main_content .spec_features {
+    background-image: -webkit-radial-gradient(28% 79%, 30% 22%, rgba(189, 116, 78, 0.2), transparent);
+    background-image: -o-radial-gradient(28% 79%, 30% 22%, rgba(189, 116, 78, 0.2), transparent);
+    background-image: radial-gradient(30% 22% at 28% 79%, rgba(189, 116, 78, 0.2), transparent);
+    height: 1400px; }
+    .main_content .spec_features .number_list,
+    .main_content .spec_features .line_list {
+      margin: 340px 0; }
+    .main_content .spec_features .spec_feat_container .order_viewing {
+      padding: 0 0 0 0; }
+      .main_content .spec_features .spec_feat_container .order_viewing .order_view_content {
+        width: 66%; }
   .main_content .gallery {
     padding: 10% 51px 0 51px;
     background-image: -webkit-radial-gradient(50% 52%, 50% 50%, rgba(189, 116, 78, 0.1), transparent);
@@ -1075,7 +1166,7 @@ body {
     .main_content .gallery .line_list {
       margin: 25% 0 15% 0; }
   .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
-    font-size: 1.2vw; }
+    font-size: 1.1vw; }
     .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before,
     .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:before,
     .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:before,
@@ -1086,22 +1177,31 @@ body {
   .main_content .contacts .contacts_content .contact_info {
     width: 80%; }
     .main_content .contacts .contacts_content .contact_info .contacts_form .form_send {
-      margin-top: 120px; }
+      margin-top: 80px; }
   .main_content .contacts .contacts_content .line {
     width: 40%; }
   .main_content .contacts .contacts_content .bg_contacts_img {
     width: 730px; } }
 
+/*1134*/
 @media screen and (max-width: 1134px) {
+  body h1 {
+    font: normal normal 50px/63px "Neuman", sans-serif; }
+  .header .header_menu .logo {
+    width: 15%; }
   .header .header_menu .line {
     width: 28%; }
   .header .header_info .header_content .header_title {
     width: 82%; }
+  .header .header_info .header_content .header_text {
+    width: 60%; }
   .main_content .about {
     padding: 160px 51px 10% 51px;
-    background: url("../img/about_tablet.png") no-repeat center 16%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
-    background: url("../img/about_tablet.png") no-repeat center 16%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
-    background: url("../img/about_tablet.png") no-repeat center 16%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent); }
+    background: url("../img/about_big.png") no-repeat center 21%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+    background: url("../img/about_big.png") no-repeat center 21%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
+    background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto; }
     .main_content .about .about_content .price_block .price_number {
       font: normal normal 40px/normal "Neuman", sans-serif; }
   .main_content .location {
@@ -1117,12 +1217,30 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
-    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:last-child,
-    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:last-child,
-    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:last-child,
-    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:last-child {
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.3vw; }
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count,
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor,
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size,
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price {
+      width: 50%;
+      text-align: left;
       margin-top: 10px; }
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:not(:last-child),
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:not(:last-child),
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:not(:last-child),
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:not(:last-child) {
+        margin-right: 0; }
   .main_content .choose_apartment {
     height: 900px; }
     .main_content .choose_apartment .number_list,
@@ -1131,6 +1249,7 @@ body {
   .main_content .contacts .contacts_content .bg_contacts_img {
     width: 64%; } }
 
+/*1024*/
 @media screen and (max-width: 1024px) {
   body h1 {
     font: normal normal 38px/53px "Neuman", sans-serif; }
@@ -1138,26 +1257,29 @@ body {
     font: normal normal 30px/normal "Neuman", sans-serif; }
   body h3 {
     font: normal normal 21px/normal "Neuman", sans-serif; }
-  .header {
-    background: black url("../img/header_tablet.png") no-repeat center; }
-    .header .number_list .scroll_down,
-    .header .line_list .scroll_down {
-      top: 7vw; }
-    .header .number_list .p_pos_line,
-    .header .line_list .p_pos_line {
-      height: 110px; }
-      .header .number_list .p_pos_line:first-child,
-      .header .line_list .p_pos_line:first-child {
-        height: 70px; }
-      .header .number_list .p_pos_line:last-child,
-      .header .line_list .p_pos_line:last-child {
-        height: 296px; }
-    .header .header_menu .line {
-      width: 20%; }
-    .header .header_menu .navbar .nav_list .nav_elem a {
-      font-size: 8px; }
+  .header .number_list .scroll_down,
+  .header .line_list .scroll_down {
+    top: 7vw; }
+  .header .number_list .p_pos_line,
+  .header .line_list .p_pos_line {
+    height: 110px; }
+    .header .number_list .p_pos_line:first-child,
+    .header .line_list .p_pos_line:first-child {
+      height: 70px; }
+    .header .number_list .p_pos_line:last-child,
+    .header .line_list .p_pos_line:last-child {
+      height: 296px; }
+  .header .header_menu .line {
+    width: 32%; }
+  .header .header_menu .navbar .nav_list .nav_elem a {
+    font-size: 8px; }
+  .header .header_info .header_content {
+    margin: 130px 0 0 5.9em; }
     .header .header_info .header_content .header_title {
       width: 82%; }
+    .header .header_info .header_content .header_text {
+      width: 90%;
+      margin: 25% 0 10% 0; }
   .main_content .about {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1175,9 +1297,10 @@ body {
     -webkit-background-size: 100% auto;
             background-size: 100% auto; }
   .main_content .spec_features {
-    background-image: -webkit-radial-gradient(28% 80%, 30% 28vw, rgba(189, 116, 78, 0.2), transparent);
-    background-image: -o-radial-gradient(28% 80%, 30% 28vw, rgba(189, 116, 78, 0.2), transparent);
-    background-image: radial-gradient(30% 28vw at 28% 80%, rgba(189, 116, 78, 0.2), transparent); }
+    background-image: -webkit-radial-gradient(30% 80%, 25% 24vw, rgba(189, 116, 78, 0.2), transparent);
+    background-image: -o-radial-gradient(30% 80%, 25% 24vw, rgba(189, 116, 78, 0.2), transparent);
+    background-image: radial-gradient(25% 24vw at 30% 80%, rgba(189, 116, 78, 0.2), transparent);
+    height: 1280px; }
     .main_content .spec_features .spec_feat_container .spec_feat_info .spec_feat_block .spec_feat_num {
       font: normal normal 40px/normal "Neuman", sans-serif;
       height: 60px; }
@@ -1188,6 +1311,7 @@ body {
     .main_content .spec_features .spec_feat_container .order_viewing .video_viewing .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
       left: 29.6%; }
     .main_content .spec_features .spec_feat_container .order_viewing .order_view_content {
+      bottom: 30px;
       margin-top: 0; }
   .main_content .apartments .apartments_content .filters label {
     font-size: 14px; }
@@ -1199,9 +1323,17 @@ body {
       margin: 150px 0; }
   .main_content .contacts .contacts_content {
     font-size: 13px; }
-  .main_content .contacts .bg_contacts_img {
-    width: 60%; } }
+    .main_content .contacts .contacts_content .contact_info .contacts_form input {
+      padding: 0.782em 0.75em; }
+    .main_content .contacts .contacts_content .contact_info .contacts_form .form_send {
+      margin-top: 80px; }
+    .main_content .contacts .contacts_content .line {
+      top: 70%; }
+    .main_content .contacts .contacts_content .bg_contacts_img {
+      height: 600px;
+      width: 60%; } }
 
+/*900*/
 @media screen and (max-width: 900px) {
   body h1 {
     font: normal normal 4.3vw/53px "Neuman", sans-serif; }
@@ -1216,20 +1348,78 @@ body {
     .header .line_list .scroll_down a {
       margin: 0 0 0 20px; }
   .header .header_menu .line {
-    margin: 0 20px; }
+    margin: 0 10px;
+    width: 55%; }
+  .header .header_menu .logo {
+    width: 28%; }
   .header .header_menu .mob_btn {
     display: block;
-    width: 4%;
-    height: 17px;
-    background: url(../img/menu.png) no-repeat; }
+    width: 48px;
+    height: 40px;
+    background: url(../img/sprite.png) no-repeat 0 -220px; }
   .header .header_menu .navbar {
     display: none; }
+  .header .header_menu .mobile_navbar {
+    position: absolute;
+    width: 100%;
+    background: url(../img/header_big.png) no-repeat center;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: 100%;
+    padding: 0 51px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .header .header_menu .mobile_navbar .head_mobile {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-top: 36px; }
+      .header .header_menu .mobile_navbar .head_mobile .line {
+        background: #141416;
+        height: 1px;
+        width: 60%;
+        opacity: 0.47; }
+      .header .header_menu .mobile_navbar .head_mobile .logo {
+        width: 28%; }
+    .header .header_menu .mobile_navbar .nav_mob_list {
+      border: 1px solid rgba(0, 0, 0, 0.47);
+      border-top: 0;
+      height: 100%;
+      margin-top: 48px; }
+      .header .header_menu .mobile_navbar .nav_mob_list .nav_mob_elem {
+        text-align: center; }
+        .header .header_menu .mobile_navbar .nav_mob_list .nav_mob_elem a {
+          font-size: 5vw;
+          color: #DFDFDF; }
+    .header .header_menu .mobile_navbar.active {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
   .header .header_info .header_content {
-    margin: 100px 0 0 5.9em; }
+    margin: 130px 0 0 5.9em; }
     .header .header_info .header_content .header_title {
       width: 100%; }
     .header .header_info .header_content .header_text {
-      margin: 104px 0 44px 0;
+      margin: 124px 0 44px 0;
       width: 100%; }
   .header .bottom_line {
     bottom: 20px; }
@@ -1283,7 +1473,7 @@ body {
     background-image: -webkit-radial-gradient(50% 65%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
     background-image: -o-radial-gradient(50% 65%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
     background-image: radial-gradient(40% 38vw at 50% 65%, rgba(189, 116, 78, 0.2), transparent);
-    min-height: 1500px; }
+    min-height: 1600px; }
     .main_content .spec_features .number_list,
     .main_content .spec_features .line_list {
       margin: 170px 0; }
@@ -1326,58 +1516,117 @@ body {
           width: 59vw;
           margin: 0 auto 100px auto;
           float: none;
-          bottom: 0; }
+          bottom: 0;
+          text-align: center; }
+          .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_text {
+            width: 100%; }
           .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_form input {
             width: 100%;
             margin-top: 20px;
             font-size: 14px; }
           .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_form .send_block .form_send {
             margin-top: 30px; }
-  .main_content .apartments .apartments_content .filters {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .main_content .apartments .apartments_content .filters .filter_price,
-    .main_content .apartments .apartments_content .filters .filter_square {
+  .main_content .apartments {
+    padding: 0 51px 100px 51px; }
+    .main_content .apartments .apartments_content .filters {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .main_content .apartments .apartments_content .filters .filter_price,
+      .main_content .apartments .apartments_content .filters .filter_square {
+        width: 70%; }
+      .main_content .apartments .apartments_content .filters .filter_square {
+        margin-top: 50px; }
+      .main_content .apartments .apartments_content .filters .filters_btn {
+        margin-top: 50px; }
+    .main_content .apartments .apartments_content .line {
       width: 70%; }
-    .main_content .apartments .apartments_content .filters .filter_square {
-      margin-top: 50px; }
-    .main_content .apartments .apartments_content .filters .filters_btn {
-      margin-top: 50px; }
-  .main_content .apartments .apartments_content .line {
-    width: 70%; }
-  .main_content .apartments .apartments_content .see_more {
-    margin-top: 40px; }
-  .main_content .apartments .apartments_content .apartments_blocks {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column wrap;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
-    width: 100%; }
-    .main_content .apartments .apartments_content .apartments_blocks .room_block {
-      width: 90%; }
-      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_title {
-        font-size: 20px; }
-      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
-        font-size: 1.6vw; }
-        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before,
-        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:before,
-        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:before,
-        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:before {
-          -webkit-transform: scale(0.9);
-              -ms-transform: scale(0.9);
-                  transform: scale(0.9); }
+    .main_content .apartments .apartments_content .see_more {
+      margin-top: 40px; }
+    .main_content .apartments .apartments_content .apartments_blocks {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column wrap;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -webkit-align-content: center;
+          -ms-flex-line-pack: center;
+              align-content: center;
+      width: 100%; }
+      .main_content .apartments .apartments_content .apartments_blocks .room_block {
+        width: 100%; }
+        .main_content .apartments .apartments_content .apartments_blocks .room_block:not(:nth-child(2n)) {
+          margin-right: 0; }
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_title {
+          font-size: 25px; }
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
+          width: 100%;
+          font-size: 1.9vw;
+          line-height: 24px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-flow: row wrap;
+              -ms-flex-flow: row wrap;
+                  flex-flow: row wrap;
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+          text-align: center; }
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count,
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor,
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size,
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price {
+            width: 23%; }
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:not(:last-child),
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:not(:last-child),
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:not(:last-child),
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:not(:last-child) {
+              margin-right: 2%; }
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before,
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:before,
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:before,
+            .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:before {
+              content: "";
+              display: inline-block;
+              margin-right: 2px;
+              position: relative;
+              top: 7px;
+              -webkit-transform: scale(1);
+                  -ms-transform: scale(1);
+                      transform: scale(1);
+              background: url(../img/sprite.png) no-repeat; }
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before {
+            background-position: -14px -20px;
+            width: 25px;
+            height: 25px; }
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:before {
+            background-position: -12px -60px;
+            width: 25px;
+            height: 34px;
+            top: 9px; }
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:before {
+            background-position: -18px -110px;
+            width: 28px;
+            height: 23px; }
+          .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:before {
+            background-position: -14px -142px;
+            width: 25px;
+            height: 21px; }
   .main_content .choose_apartment {
     padding: 50px 51px 0 51px;
     height: 700px; }
@@ -1390,11 +1639,13 @@ body {
     background-image: radial-gradient(400px 300px at 30% 60%, rgba(189, 116, 78, 0.15), transparent); }
     .main_content .contacts .number_list,
     .main_content .contacts .line_list {
-      margin: 130px 0; }
+      margin: 250px 0 0 0; }
     .main_content .contacts .contacts_content {
       margin: 10% 0 0 6.4%; }
       .main_content .contacts .contacts_content .contact_info {
-        height: 430px; }
+        height: 530px;
+        margin-left: 0;
+        width: 100%; }
         .main_content .contacts .contacts_content .contact_info .contacts_list {
           margin: 30px 0 50px 0; }
         .main_content .contacts .contacts_content .contact_info .contacts_form .form_send {
@@ -1403,19 +1654,31 @@ body {
         top: 74%; }
       .main_content .contacts .contacts_content .bg_contacts_img {
         width: 58%;
-        height: 430px; } }
+        height: 530px; } }
 
+/*730*/
 @media screen and (max-width: 730px) {
   .number_list .number_elem {
-    font: normal normal 10px/normal 'Neuman', sans-serif; }
+    font: normal normal 10px/normal 'Neuman', sans-serif;
+    margin: 10px 4px 10px 0; }
+    .number_list .number_elem:nth-child(2) {
+      margin-top: 1px;
+      margin-bottom: 4px; }
+    .number_list .number_elem:nth-child(6) {
+      margin: 14px 4px 15.5px 0; }
   .number_list .active_num {
     font-size: 12px; }
-  .line_list .line_elem {
-    width: 10px; }
-  .line_list .active_line {
-    width: 20px; }
-  .line_list .scroll_down {
-    display: none !important; }
+  .line_list {
+    width: 21px; }
+    .line_list .line_elem {
+      width: 10px;
+      margin: 17.5px 4px 14.5px 0; }
+      .line_list .line_elem:nth-child(2) {
+        margin-top: 10px; }
+    .line_list .active_line {
+      width: 20px; }
+    .line_list .scroll_down {
+      display: none !important; }
   body h1 {
     font: normal normal 4.3vw/33px "Neuman", sans-serif; }
   .header {
@@ -1425,7 +1688,7 @@ body {
     padding: 0 21px; }
     .header .number_list .p_pos_line,
     .header .line_list .p_pos_line {
-      height: 42px;
+      height: 74px;
       margin-bottom: 20px; }
       .header .number_list .p_pos_line:first-child,
       .header .line_list .p_pos_line:first-child {
@@ -1433,12 +1696,11 @@ body {
         margin-top: 12px; }
       .header .number_list .p_pos_line:last-child,
       .header .line_list .p_pos_line:last-child {
-        height: 42px;
+        height: 80px;
         margin-top: 0; }
-    .header .header_menu .logo img {
-      max-width: 100%; }
-    .header .header_menu .mob_btn {
-      width: 8%; }
+    .header .header_menu .logo {
+      height: 30px;
+      width: 200px; }
     .header .header_info .header_content {
       margin: 50px 2em 0 2em; }
       .header .header_info .header_content .header_text {
@@ -1494,14 +1756,21 @@ body {
   .main_content .gallery {
     padding: 10% 5px 0 5px; }
   .main_content .apartments {
-    padding: 0 5px 50px 5px; }
+    padding: 0 5px 100px 5px; }
     .main_content .apartments .number_list,
     .main_content .apartments .line_list {
       margin: 300px 0; }
-    .main_content .apartments .apartments_content .apartments_blocks .room_block {
-      width: 94%; }
-      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
-        font-size: 2.5vw; }
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
+      font-size: 2.5vw; }
+  .main_content .choose_apartment {
+    background: #141416 url("../img/apartaments_mobile.png") no-repeat 30% 50%;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
+    height: 70vw;
+    padding: 0 5px 50px 5px; }
+    .main_content .choose_apartment .line_list,
+    .main_content .choose_apartment .number_list {
+      margin: 100px 0; }
   .main_content .contacts {
     padding: 0 5px 0 5px; }
     .main_content .contacts .contacts_content {
@@ -1510,6 +1779,8 @@ body {
       .main_content .contacts .contacts_content .contact_info {
         width: 100%;
         margin-left: 0; }
+        .main_content .contacts .contacts_content .contact_info .contacts_title {
+          margin-top: 30px; }
         .main_content .contacts .contacts_content .contact_info .contacts_form input {
           width: 90%;
           margin-top: 20px;
@@ -1520,30 +1791,15 @@ body {
         width: 100%;
         height: 630px; } }
 
+/*530*/
 @media screen and (max-width: 530px) {
   body h1 {
     font: normal normal 4.3vw/33px "Neuman", sans-serif; }
   .header {
     background: transparent url("../img/header_tablet.png") no-repeat;
-    -webkit-background-size: 100% 100%;
-            background-size: 100%;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
     padding: 0 5px; }
-    .header .number_list .p_pos_line,
-    .header .line_list .p_pos_line {
-      height: 42px;
-      margin-bottom: 20px; }
-      .header .number_list .p_pos_line:first-child,
-      .header .line_list .p_pos_line:first-child {
-        height: 50px;
-        margin-top: 12px; }
-      .header .number_list .p_pos_line:last-child,
-      .header .line_list .p_pos_line:last-child {
-        height: 42px;
-        margin-top: 0; }
-    .header .header_menu .logo img {
-      max-width: 100%; }
-    .header .header_menu .mob_btn {
-      width: 8%; }
     .header .header_info .header_content {
       margin: 50px 2em 0 2em; }
       .header .header_info .header_content .header_text {
@@ -1564,21 +1820,22 @@ body {
       width: 81%; }
   .main_content .location {
     background: transparent url(../img/map_mobile.png) no-repeat center;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
     padding: 0 5px; }
     .main_content .location .location_content .location_title {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 20px; }
+      margin-top: 80px;
+      font-size: 4vw; }
     .main_content .location .location_content .location_sec_title {
-      text-align: center; }
+      font-size: 3.5vw; }
     .main_content .location .location_content .location_list .location_elem {
       font-size: 12px; }
   .main_content .spec_features {
     padding: 0 5px;
-    background-image: -webkit-radial-gradient(50% 61%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
-    background-image: -o-radial-gradient(50% 61%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
-    background-image: radial-gradient(40% 38vw at 50% 61%, rgba(189, 116, 78, 0.2), transparent);
-    min-height: 1600px; }
+    background-image: -webkit-radial-gradient(50% 59%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
+    background-image: -o-radial-gradient(50% 59%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
+    background-image: radial-gradient(40% 38vw at 50% 59%, rgba(189, 116, 78, 0.2), transparent);
+    min-height: 1650px; }
     .main_content .spec_features .spec_feat_container .spec_feat_info {
       background-image: -webkit-radial-gradient(50% 46%, 200px 200px, rgba(189, 116, 78, 0.05), transparent);
       background-image: -o-radial-gradient(50% 46%, 200px 200px, rgba(189, 116, 78, 0.05), transparent);
@@ -1596,6 +1853,7 @@ body {
           font-size: 12px; }
     .main_content .spec_features .spec_feat_container .order_viewing .video_viewing .video-js .vjs-big-play-button {
       top: 40%;
+      width: 50%;
       left: 25%;
       font-size: 2vw; }
       .main_content .spec_features .spec_feat_container .order_viewing .video_viewing .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
@@ -1610,11 +1868,46 @@ body {
     padding: 10% 5px 0 5px; }
   .main_content .apartments {
     padding: 0 5px 50px 5px; }
-    .main_content .apartments .number_list,
-    .main_content .apartments .line_list {
-      margin: 300px 0; }
-    .main_content .apartments .apartments_content .apartments_blocks .room_block {
-      width: 94%; }
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_title {
+      font-size: 20px; }
+    .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 80%;
+      margin: 0 auto; }
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count,
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor,
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size,
+      .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price {
+        width: 40%;
+        text-align: left;
+        margin-top: 10px; }
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:not(:last-child),
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:not(:last-child),
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:not(:last-child),
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:not(:last-child) {
+          margin-right: 0; }
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before,
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_floor:before,
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_size:before,
+        .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_price:before {
+          -webkit-transform: scale(0.8);
+              -ms-transform: scale(0.8);
+                  transform: scale(0.8); }
+  .main_content .choose_apartment .line_list,
+  .main_content .choose_apartment .number_list {
+    margin: 50px 0; }
   .main_content .contacts {
     padding: 0 5px 0 5px; }
     .main_content .contacts .contacts_content {
@@ -1628,30 +1921,62 @@ body {
           font-size: 16px; }
         .main_content .contacts .contacts_content .contact_info .contacts_form input:not(:last-of-type) {
           margin-right: 0; }
-      .main_content .contacts .contacts_content .line {
-        background: -webkit-gradient(linear, right top, left top, color-stop(15.73%, #141416), color-stop(104.43%, rgba(255, 255, 255, 0))), #BD744E;
-        background: -webkit-linear-gradient(right, #141416 15.73%, rgba(255, 255, 255, 0) 104.43%), #BD744E;
-        background: -o-linear-gradient(right, #141416 15.73%, rgba(255, 255, 255, 0) 104.43%), #BD744E;
-        background: linear-gradient(270deg, #141416 15.73%, rgba(255, 255, 255, 0) 104.43%), #BD744E;
-        height: 2px;
-        margin-left: 6.4%;
-        width: 40%;
-        position: relative;
-        top: 74%; }
       .main_content .contacts .contacts_content .bg_contacts_img {
-        position: absolute;
         width: 100%;
-        right: 0;
-        height: 630px;
-        background: url(../img/contacts.png) no-repeat;
-        -webkit-border-radius: 0;
-                border-radius: 0;
-        -webkit-box-shadow: 0 0 27px rgba(0, 0, 0, 0.45);
-                box-shadow: 0 0 27px rgba(0, 0, 0, 0.45); } }
+        height: 630px; } }
 
+/*438*/
 @media screen and (max-width: 438px) {
   body h1 {
     font: normal normal 4.3vw/33px "Neuman", sans-serif; }
+  body h2 {
+    font: normal normal 22px/normal "Neuman", sans-serif;
+    color: #FFE1D2;
+    margin: 0; }
+  body h3 {
+    font: normal normal 20px/normal "Neuman", sans-serif;
+    color: #BD744E;
+    margin: 0; }
+  .number_list .number_elem {
+    font: normal normal 6px/normal 'Neuman', sans-serif;
+    margin-bottom: 4px; }
+    .number_list .number_elem:nth-child(2) {
+      margin-bottom: 4px; }
+    .number_list .number_elem:nth-child(6) {
+      margin: 10px 4px 5px 0; }
+  .number_list .active_num {
+    font-size: 8px; }
+  .line_list {
+    width: 15px; }
+    .line_list .line_elem {
+      width: 5px;
+      margin: 11.5px 4px 11.5px 0; }
+      .line_list .line_elem:nth-child(2) {
+        margin-top: 10px; }
+    .line_list .active_line {
+      width: 15px; }
+  .header .number_list .p_pos_line,
+  .header .line_list .p_pos_line {
+    height: 29px;
+    margin-bottom: 9px; }
+    .header .number_list .p_pos_line:first-child,
+    .header .line_list .p_pos_line:first-child {
+      height: 40px;
+      margin-top: 12px; }
+    .header .number_list .p_pos_line:last-child,
+    .header .line_list .p_pos_line:last-child {
+      height: 45px;
+      margin-top: 14px; }
+  .header .header_menu {
+    padding-top: 10px; }
+    .header .header_menu .line {
+      margin: 0 10px;
+      width: 61%; }
+    .header .header_menu .mob_btn {
+      display: block;
+      width: 48px;
+      height: 40px;
+      background: url(../img/sprite.png) no-repeat 0 -220px; }
   .header .header_info .header_content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1665,21 +1990,27 @@ body {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-top: 0; }
     .header .header_info .header_content .header_title {
       text-align: center; }
     .header .header_info .header_content .header_text {
       display: none; }
     .header .header_info .header_content .order {
       margin-top: 30px; }
+  .header .bottom_line {
+    bottom: 10px; }
   .main_content .about {
     -webkit-background-size: 100% auto;
-            background-size: 100% auto; }
+            background-size: 100% auto;
+    padding: 40px 5px 40px 5px; }
     .main_content .about .about_content .about_info .about_block .about_info_text {
       text-align: center; }
     .main_content .about .about_content .price_block .price_title {
+      padding: 6% 2% 0 2%;
       font-size: 12px; }
     .main_content .about .about_content .price_block .price_number {
+      padding: 2% 2% 4% 2%;
       font: normal normal 26px/normal "Neuman", sans-serif; }
     .main_content .about .about_content .about_specifications .spec_block {
       width: 45%; }
@@ -1694,20 +2025,31 @@ body {
     .main_content .location .line_list {
       position: relative;
       top: 10px;
-      margin: 90px 0; }
+      margin: 120px 0; }
     .main_content .location .location_content .location_title {
-      margin-top: 0; }
+      text-align: center;
+      margin-top: 0;
+      font-size: 22px; }
     .main_content .location .location_content .location_sec_title {
       text-align: center;
-      font-size: 18px; }
+      font-size: 18px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #BD744E; }
     .main_content .location .location_content .location_list {
-      margin-top: 60px; }
+      margin-top: 65px; }
       .main_content .location .location_content .location_list .location_elem {
         line-height: 12px; }
         .main_content .location .location_content .location_list .location_elem .location_travel_time strong {
           font-size: 8px; }
   .main_content .spec_features {
-    min-height: 1700px; }
+    background-image: -webkit-radial-gradient(50% 54%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
+    background-image: -o-radial-gradient(50% 54%, 40% 38vw, rgba(189, 116, 78, 0.2), transparent);
+    background-image: radial-gradient(40% 38vw at 50% 54%, rgba(189, 116, 78, 0.2), transparent);
+    min-height: 1550px; }
+    .main_content .spec_features .spec_feat_container .spec_feat_title {
+      font-size: 22px;
+      height: 80px; }
     .main_content .spec_features .spec_feat_container .spec_feat_info {
       background-image: -webkit-radial-gradient(50% 46%, 140px 140px, rgba(189, 116, 78, 0.05), transparent);
       background-image: -o-radial-gradient(50% 46%, 140px 140px, rgba(189, 116, 78, 0.05), transparent);
@@ -1734,6 +2076,8 @@ body {
       text-align: center; }
       .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_text {
         width: 100%; }
+      .main_content .spec_features .spec_feat_container .order_viewing .order_view_content .order_view_form .send_block {
+        text-align: center; }
   .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
     font-size: 3vw; }
     .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications .room_count:before,
@@ -1744,22 +2088,29 @@ body {
           -ms-transform: scale(0.7);
               transform: scale(0.7); }
   .main_content .choose_apartment {
+    background-position: 30% 100%;
     -webkit-background-size: 100% auto;
             background-size: 100% auto;
-    padding: 50px 5px 0 5px;
-    height: 480px; }
+    padding: 0 5px;
+    height: 70vw; }
     .main_content .choose_apartment .number_list,
     .main_content .choose_apartment .line_list {
       margin: 50px 0; }
-    .main_content .choose_apartment .ch_apartment_title {
-      font-size: 25px; }
-    .main_content .choose_apartment .ch_apartment_sec_title {
-      font-size: 18px; }
   .main_content .contacts .contacts_content .contact_info .contacts_title {
     margin-top: 30px; }
   .main_content .contacts .contacts_content .contact_info .contacts_list {
     font-size: 12px; } }
 
+/*386*/
+@media screen and (max-width: 400px) {
+  .main_content .spec_features {
+    height: 1700px; }
+  .main_content .choose_apartment .ch_apartment_title {
+    font-size: 18px; }
+  .main_content .choose_apartment .ch_apartment_sec_title {
+    font-size: 15px; } }
+
+/*300*/
 @media screen and (max-width: 330px) {
   .main_content .spec_features .spec_feat_container .order_viewing .video_viewing .video-js .vjs-big-play-button {
     top: 34%; }

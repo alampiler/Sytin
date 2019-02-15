@@ -75,11 +75,11 @@ body{
     opacity: 0.47;
     height: 210px;
     width: 1px;
-    margin-bottom: 40px;
+    margin: 20px 0;
 
     &:first-child {
-      height: 170px;
-      margin-top: 22px;
+      height: 160px;
+      margin-top: 39px;
     }
 
     &:last-child{
@@ -95,11 +95,13 @@ body{
   .number_elem {
     font: normal normal 12px/normal 'Neuman', sans-serif;
     color: $mainBrown;
-    margin: 10px 4px 12px 0;
+    margin: 12px 4px 12px 0;
+    position: relative;
+    top: 8px;
 
-    &:nth-child(2){margin: 5px 4px 18px 0}
+    &:nth-child(2){margin: 12px 4px 12px 0;}
 
-    &:nth-child(6){margin: 15px 4px 30px 0}
+
   }
 
   .active_num{
@@ -109,18 +111,26 @@ body{
 }
 
 .line_list {
+
   .line_elem {
     background: $mainBrown;
-    margin: 10px 4px 30px 0;
+    margin: 30px 4px 10px 0;
     width: 20px;
     height: 1px;
+    position: relative;
 
-    &:nth-child(2){margin-top: 16px}
+    &:not(&.active){
+
+
+    }
   }
 
   .active_line{
     background: $lightWhite;
     width: 40px;
+    margin: 30px 4px 10px 0;
+    
+
   }
 
   .scroll_down{
@@ -170,7 +180,7 @@ body{
   &:after{
     content: "";
     display: inline-block;
-    background: url(../img/sprite.png) -4px -0px no-repeat ;
+    background: url(../img/sprite.png) -16px -0px no-repeat ;
     position: relative;
     top: 3px;
     left: 8px;
@@ -202,14 +212,24 @@ body{
 }
 
 .header {
-  background: black url("../img/header.png") no-repeat center;
+  background: black url("../img/header_big.png") no-repeat center;//
+  background-size: 100% 100%;//
   padding: 0 51px;
+  position: relative;
+  z-index: 222;
 
   .header_menu {
-    padding-top: 26px;
+    padding-top: 36px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .logo{
+      width: 13%;
+      img{
+        max-width: 100%;
+      }
+    }
 
     .line {
       background: $lineColor;
@@ -264,7 +284,7 @@ body{
       }
 
       .header_text{
-        margin: 174px 0 44px 0;
+        margin: 124px 0 44px 0;
         width: 44%;
       }
 
@@ -273,6 +293,11 @@ body{
         border: none;
         z-index: 10;
         position: relative;
+        width: 167px;
+
+        img{
+          max-width: 100%;
+        }
         
         &:hover{
           img{
@@ -290,7 +315,7 @@ body{
     width: 100%;
     height: 1px;
     position: relative;
-    bottom: 40px;
+    bottom: 20px;
   }
 }
 
@@ -298,8 +323,8 @@ body{
   .about{
     display: flex;
     padding: 190px 51px 14% 51px;
-    background: url("../img/about.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
-
+    background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+    background-size: 100% auto;
     .about_left_gradient,
     .about_right_gradient{
       top: 720px;
@@ -311,12 +336,12 @@ body{
 
     .about_left_gradient{
       left: 0;
-      background-image: radial-gradient(100% 50% at 0% 50%, rgba(189, 116, 78, 0.1), transparent);
+      background-image: radial-gradient(100% 60% at 0% 35%, rgba(189, 116, 78, 0.1), transparent);
     }
 
     .about_right_gradient{
       right: 0;
-      background-image: radial-gradient(100% 50% at 100% 50%, rgba(189, 116, 78, 0.1), transparent);
+      background-image: radial-gradient(100% 60% at 100% 35%, rgba(189, 116, 78, 0.1), transparent);
     }
 
     .number_list,
@@ -407,7 +432,7 @@ body{
             display: inline-block;
             margin-right: 20px;
             margin-top: 2px;
-            background: url(../img/sprite.png) no-repeat -4px  -172px;
+            background: url(../img/sprite.png) no-repeat -12px  -172px;
           }
 
           .spec_text{
@@ -598,6 +623,10 @@ body{
             flex-flow: row wrap;
             justify-content: space-between;
 
+            input{
+              width: 26%;
+            }
+
             .send_block{
               width: 100%;
               text-align: right;
@@ -782,18 +811,17 @@ body{
       .apartments_blocks{
         display: flex;
         flex-flow: row wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         width: 80%;
         margin: 0 auto;
 
         .room_block{
-          width: 44.5%;
+          box-sizing: border-box;
+          width: 48.5%;
           background-color: $roomsBlocks;
           border-radius: 5px;
           padding: 2% 2% 6% 2%;
           margin-bottom: 30px;
-
-          &:not(:nth-child(2n)){margin-right: 3%}
 
           .room_title{
             font-size: 1.66vw;
@@ -828,16 +856,16 @@ body{
               }
             }
 
-            .room_count:before{@include apartmentIco(25px, 25px, -4px, -20px)}
+            .room_count:before{@include apartmentIco(25px, 25px, -14px, -20px)}
 
             .room_floor:before{
-              @include apartmentIco(14px, 34px, -10px, -60px);
+              @include apartmentIco(25px, 34px, -12px, -60px);
               top: 9px;
             }
 
-            .room_size:before{@include apartmentIco(28px, 23px, -8px, -110px)}
+            .room_size:before{@include apartmentIco(28px, 23px, -18px, -110px)}
 
-            .room_price:before{@include apartmentIco(25px, 21px, -4px, -142px)}
+            .room_price:before{@include apartmentIco(25px, 21px, -14px, -142px)}
 
           }
         }
@@ -846,7 +874,8 @@ body{
   }
 
   .choose_apartment{
-    background: #141416 url("../img/apartaments.png") no-repeat center;
+    background: #141416 url("../img/apartaments_big.png") no-repeat center;
+    background-size: 100% auto;
     display: flex;
     justify-content: space-between;
     padding:  0 51px 0 51px;
@@ -924,6 +953,124 @@ body{
 
 }
 
+@media screen and (min-width: $laptopEL) and (max-width: $Two_K){
+  .line_list {
+    .scroll_down{
+      top: 6vw;
+
+      a{font-size: 0.8vw}
+    }
+  }
+}
+
+/*1440 - 1680*/
+@media screen and (min-width: $laptopL) and (max-width: $laptopEL){
+  body{
+    input{font-size: 18px}
+
+    h1{font: normal normal 64px/63px "Neuman", sans-serif}
+
+    h2{font: normal normal 55px/normal "Neuman", sans-serif}
+
+    h3{font: normal normal 46px/normal "Neuman", sans-serif}
+
+    p{font: normal normal 18px/24px "Proxima Nova", sans-serif}
+  }
+
+
+  .line_list {
+    .scroll_down{
+      top: 6vw;
+
+      a{font-size: 0.8vw}
+    }
+  }
+
+  .header {
+    background: black url("../img/header_big.png") no-repeat center;//
+    background-size: 100% auto;//
+
+    .header_menu {
+
+      .navbar {
+        .nav_list {
+          display: flex;
+
+          .nav_elem {
+            a {font-size: 12px}
+          }
+        }
+      }
+    }
+
+    .header_info {
+      .header_content{
+        .order{width: 16%}
+      }
+    }
+  }
+
+  .main_content{
+    .about{
+      background: url("../img/about_big.png") no-repeat center 23%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+      background-size: 100% auto;
+    }
+
+
+    .spec_features{
+      height: 1550px;
+      background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent);
+
+      .spec_feat_container{
+        .spec_feat_info{
+          background-image: radial-gradient(360px 360px at 50% 42%, rgba(189, 116, 78, 0.05), transparent);
+        }
+
+        .order_viewing{
+          .video_viewing{
+            .video-js{
+              .vjs-big-play-button{
+                top: 45%;
+
+                .vjs-icon-placeholder{
+                  &:before{left: 35.4%}
+                }
+              }
+            }
+          }
+
+          .order_view_content{margin-top: 0}
+        }
+      }
+    }
+
+    .apartments {
+      .apartments_content {
+        .apartments_blocks{
+          .room_block{
+            .room_title{font-size: 24px}
+          }
+        }
+      }
+    }
+
+    .choose_apartment{height: 80vw;}
+
+    .contacts{
+      .contacts_content{
+
+        .line{width: 40%;}
+
+        .bg_contacts_img{
+          width: 66%;
+          background: url(../img/contacts_big.png) no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+/*1280*/
 @media screen and (max-width: $laptopM){
 
 body{
@@ -932,7 +1079,11 @@ body{
 
   .header {
     .header_menu {
-      .line {width: 28%}
+      .logo{
+
+      }
+
+      .line {width: 38%}
     }
 
     .header_info {
@@ -944,7 +1095,8 @@ body{
 
   .main_content{
     .about{
-      background: url("../img/about.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+      background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+      background-size: 100% auto;
 
       .about_content{
         .about_specifications{
@@ -975,12 +1127,15 @@ body{
     }
 
     .spec_features{
+      background-image: radial-gradient(30% 22% at 28% 79%, rgba(189, 116, 78, 0.2), transparent);
+      height: 1400px;
+
       .number_list,
       .line_list {margin: 340px 0}
 
       .spec_feat_container{
         .order_viewing{
-          padding: 80px 0 0 0;
+          padding: 0 0 0 0;
 
           .order_view_content{width: 66%}
         }
@@ -1000,7 +1155,7 @@ body{
         .apartments_blocks{
           .room_block{
             .room_specifications{
-              font-size: 1.2vw;
+              font-size: 1.1vw;
 
               .room_count,
               .room_floor,
@@ -1021,7 +1176,7 @@ body{
           width: 80%;
 
           .contacts_form {
-            .form_send{margin-top: 120px}
+            .form_send{margin-top: 80px}
           }
         }
 
@@ -1034,16 +1189,28 @@ body{
 
 }
 
+/*1134*/
 @media screen and (max-width: $bagFixLaptop){
+body{
+  h1{font: normal normal 50px/63px "Neuman", sans-serif}
+}
+
 
   .header {
     .header_menu {
+
+      .logo{
+        width: 15%;
+      }
+
       .line {width: 28%}
     }
 
     .header_info {
       .header_content{
         .header_title{width: 82%}
+
+        .header_text{width: 60%}
         }
       }
     }
@@ -1052,7 +1219,8 @@ body{
   .main_content{
     .about{
       padding: 160px 51px 10% 51px;
-      background: url("../img/about_tablet.png") no-repeat center 16%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+      background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+      background-size: 100% auto;
 
       .about_content{
         .price_block{
@@ -1083,12 +1251,22 @@ body{
           .room_block{
             .room_specifications{
               flex-flow: row wrap;
+              justify-content: space-between;
+              align-items: center;
+              width: 80%;
+              margin: 0 auto;
+              font-size: 1.3vw;
 
               .room_count,
               .room_floor,
               .room_size,
               .room_price{
-                &:last-child{margin-top: 10px}
+                width: 50%;
+                text-align: left;
+                margin-top: 10px;
+
+                &:not(:last-child){
+                  margin-right: 0;}
               }
             }
           }
@@ -1111,6 +1289,7 @@ body{
   }
 }
 
+/*1024*/
 @media screen and (max-width: $laptopS){
   body{
     h1{font: normal normal 38px/53px "Neuman", sans-serif}
@@ -1133,10 +1312,9 @@ body{
         &:last-child{height: 296px}
       }
     }
-    background: black url("../img/header_tablet.png") no-repeat center;
 
     .header_menu {
-      .line {width: 20%}
+      .line {width: 32%}
 
       .navbar {
         .nav_list {
@@ -1149,7 +1327,13 @@ body{
 
     .header_info {
       .header_content{
+        margin: 130px 0 0 5.9em;
         .header_title{width: 82%}
+
+        .header_text{
+          width: 90%;
+          margin: 25% 0 10% 0;
+        }
       }
     }
   }
@@ -1171,7 +1355,8 @@ body{
     }
 
     .spec_features{
-      background-image: radial-gradient(30% 28vw at 28% 80%, rgba(189, 116, 78, 0.2), transparent);
+      background-image: radial-gradient(25% 24vw at 30% 80%, rgba(189, 116, 78, 0.2), transparent);
+      height: 1280px;
 
       .spec_feat_container{
         .spec_feat_info{
@@ -1200,7 +1385,10 @@ body{
             }
           }
 
-          .order_view_content{margin-top: 0}
+          .order_view_content {
+            bottom: 30px;
+            margin-top: 0;
+          }
         }
       }
     }
@@ -1222,14 +1410,36 @@ body{
     }
 
     .contacts{
-      .contacts_content{font-size: 13px}
+      .contacts_content{
+        font-size: 13px;
+        .contact_info{
+          .contacts_form {
 
-        .bg_contacts_img{width: 60%}
+            input{
+              padding: 0.782em 0.75em;
+            }
+
+            .form_send{margin-top: 80px}
+          }
+        }
+        .line{
+          top: 70%;
+        }
+
+        .bg_contacts_img{
+          height: 600px;
+          width: 60%;
+        }
+      }
+
+
+
       }
     }
 
   }
 
+/*900*/
 @media screen and (max-width: $tabletL) {
   body {
     h1 {font: normal normal 4.3vw/53px "Neuman", sans-serif}
@@ -1250,28 +1460,82 @@ body{
     }
 
     .header_menu {
-      .line {margin: 0 20px}
+      .line {
+            margin: 0 10px;
+            width: 55%;
+          }
+
+      .logo{width: 28%}
 
       .mob_btn {
         display: block;
-        width: 4%;
-        height: 17px;
-        background: url(../img/menu.png) no-repeat;
+        width: 48px;
+        height: 40px;
+        background: url(../img/sprite.png) no-repeat -0 -220px;
       }
 
-      .navbar {
-        display: none
+      .navbar {display: none}
+      
+      .mobile_navbar{
+        position: absolute;
+        width: 100%;
+        background: url(../img/header_big.png) no-repeat center;
+        background-size: 100% 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        height: 100%;
+        padding: 0 51px;
+        flex-flow: column nowrap;
+        box-sizing: border-box;
+
+        .head_mobile{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 36px;
+
+          .line{
+            background: #141416;
+            height: 1px;
+            width: 60%;
+            opacity: 0.47;
+          }
+
+          .logo{
+            width: 28%;
+          }
+        }
+
+        .nav_mob_list{
+          border: 1px solid rgba(0,0,0,0.47);
+          border-top: 0;
+          height: 100%;
+          margin-top: 48px;
+          .nav_mob_elem{
+            text-align: center;
+            a{
+              font-size: 5vw;
+              color: $lightGrey;
+            }
+          }
+        }
+        
+        &.active{
+          display: flex;
+        }
       }
     }
 
     .header_info {
       .header_content {
-        margin: 100px 0 0 5.9em;
+        margin: 130px 0 0 5.9em;
 
         .header_title {width: 100%}
 
         .header_text {
-          margin: 104px 0 44px 0;
+          margin: 124px 0 44px 0;
           width: 100%;
         }
       }
@@ -1330,7 +1594,7 @@ body{
 
     .spec_features {
       background-image: radial-gradient(40% 38vw at 50% 65%, rgba(189, 116, 78, 0.2), transparent); //
-      min-height: 1500px;
+      min-height: 1600px;
 
       .number_list,
       .line_list {margin: 170px 0}
@@ -1350,6 +1614,8 @@ body{
           margin: 0 auto 50px auto;
           position: relative;
           width: 80%;
+
+
 
 
           .video_viewing {
@@ -1391,7 +1657,11 @@ body{
             margin: 0 auto 100px auto;
             float: none;
             bottom: 0;
+            text-align: center;
 
+            .order_view_text{
+              width: 100%;
+            }
 
             .order_view_form {
               input {
@@ -1410,6 +1680,7 @@ body{
     }
 
     .apartments {
+      padding: 0 51px 100px 51px;
       .apartments_content {
         .filters {
           width: 100%;
@@ -1434,20 +1705,56 @@ body{
           width: 100%;
 
           .room_block {
-            width: 90%;
+            width: 100%;
 
-            .room_title {font-size: 20px}
+            &:not(:nth-child(2n)){margin-right: 0}
 
-            .room_specifications {
-              font-size: 1.6vw;
+
+            .room_title {font-size: 25px}
+
+
+            .room_specifications{
+              width: 100%;
+              font-size: 1.9vw;
+              line-height: 24px;
+              display: flex;
+              flex-flow: row wrap;
+              align-items: flex-end;
+              justify-content: space-around;
+              text-align: center;
 
               .room_count,
               .room_floor,
               .room_size,
-              .room_price {
-                &:before {transform: scale(0.9)}
+              .room_price{
+                width: 23%;
+                &:not(:last-child){margin-right: 2%}
+
+                &:before{
+                  content: "";
+                  display: inline-block;
+                  margin-right: 2px;
+                  position: relative;
+                  top: 7px;
+                  transform: scale(1);
+                  background: url(../img/sprite.png) no-repeat ;
+                }
               }
+
+              .room_count:before{@include apartmentIco(25px, 25px, -14px, -20px)}
+
+              .room_floor:before{
+                @include apartmentIco(25px, 34px, -12px, -60px);
+                top: 9px;
+              }
+
+              .room_size:before{@include apartmentIco(28px, 23px, -18px, -110px)}
+
+              .room_price:before{@include apartmentIco(25px, 21px, -14px, -142px)}
+
             }
+
+
           }
         }
       }
@@ -1465,13 +1772,15 @@ body{
       background-image: radial-gradient(400px 300px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
 
       .number_list,
-      .line_list {margin: 130px 0}
+      .line_list {margin: 250px 0 0 0}
 
       .contacts_content {
         margin: 10% 0 0 6.4%;
 
         .contact_info {
-          height: 430px;
+          height: 530px;
+          margin-left: 0;
+          width: 100%;
 
           .contacts_list {margin: 30px 0 50px 0}
 
@@ -1484,7 +1793,7 @@ body{
 
         .bg_contacts_img {
           width: 58%;
-          height: 430px;
+          height: 530px;
 
         }
       }
@@ -1492,32 +1801,51 @@ body{
   }
 }
 
+/*730*/
 @media screen and (max-width: $tabletM){
 
   .number_list {
-    .number_elem {font: normal normal 10px/normal 'Neuman', sans-serif}
+    .number_elem {
+      font: normal normal 10px/normal 'Neuman', sans-serif;
+      margin: 10px 4px 10px 0;
+
+      &:nth-child(2){
+        margin-top: 1px;
+        margin-bottom: 4px;
+      }
+
+      &:nth-child(6){margin:14px 4px 15.5px 0}
+    }
 
     .active_num{font-size: 12px}
   }
 
   .line_list {
-    .line_elem {width: 10px}
+    width: 21px;
+    .line_elem {
+      width: 10px;
+      margin: 17.5px 4px 14.5px 0;
+
+      &:nth-child(2){margin-top: 10px}
+    }
 
     .active_line{width: 20px}
 
     .scroll_down{display: none !important}
   }
 
-    body {
+
+  body {
       h1 {
         font: normal normal 4.3vw/33px "Neuman", sans-serif;
       }
     }
+
   .header {
     .number_list,
     .line_list {
       .p_pos_line{
-        height: 42px;
+        height: 74px;
         margin-bottom: 20px;
 
         &:first-child {
@@ -1526,7 +1854,7 @@ body{
         }
 
         &:last-child{
-          height: 42px;
+          height: 80px;
           margin-top: 0;
         }
       }
@@ -1538,10 +1866,9 @@ body{
 
     .header_menu {
       .logo{
-        img{max-width: 100%}
-          }
-
-      .mob_btn {width: 8%}
+        height: 30px;
+        width: 200px;
+      }
     }
 
     .header_info {
@@ -1550,6 +1877,10 @@ body{
 
         .header_text {margin: 14px 0 14px 0}
       }
+    }
+
+    .bottom_line{
+
     }
   }
 
@@ -1641,7 +1972,7 @@ body{
     .gallery {padding: 10% 5px 0 5px}
 
     .apartments {
-      padding: 0 5px 50px 5px;
+      padding: 0 5px 100px 5px;
 
       .number_list,
       .line_list {margin: 300px 0}
@@ -1649,13 +1980,23 @@ body{
       .apartments_content {
         .apartments_blocks {
           .room_block {
-            width: 94%;
-
             .room_specifications {
               font-size: 2.5vw;
             }
           }
         }
+      }
+    }
+
+    .choose_apartment{
+      background: #141416 url("../img/apartaments_mobile.png") no-repeat 30% 50%;
+      background-size: 100% auto;
+      height: 70vw;
+      padding: 0 5px 50px 5px;
+
+      .line_list,
+      .number_list{
+        margin: 100px 0;
       }
     }
 
@@ -1669,6 +2010,10 @@ body{
         .contact_info {
           width: 100%;
           margin-left: 0;
+
+          .contacts_title{
+            margin-top: 30px;
+          }
 
           .contacts_form {
             input{
@@ -1690,6 +2035,7 @@ body{
   }
 }
 
+/*530*/
 @media screen and (max-width: $tabletS){
 
   body {
@@ -1697,36 +2043,9 @@ body{
   }
 
   .header {
-
-    .number_list,
-    .line_list {
-      .p_pos_line{
-        height: 42px;
-        margin-bottom: 20px;
-
-        &:first-child {
-          height: 50px;
-          margin-top: 12px;
-        }
-
-        &:last-child{
-          height: 42px;
-          margin-top: 0;
-        }
-      }
-    }
-
-    background: transparent url("../img/header_tablet.png") no-repeat ;
-    background-size: 100%;
+    background: transparent url("../img/header_tablet.png") no-repeat;
+    background-size: 100% auto;
     padding: 0 5px;
-
-    .header_menu {
-      .logo{
-        img{max-width: 100%}
-      }
-
-      .mob_btn {width: 8%}
-    }
 
     .header_info {
       .header_content {
@@ -1762,16 +2081,16 @@ body{
 
     .location {
       background: transparent url(../img/map_mobile.png) no-repeat center;
+      background-size: 100% auto;
       padding: 0 5px;
 
       .location_content {
         .location_title {
-          text-align: center;
-          margin-top: 50px;
-          font-size: 20px;
+          margin-top: 80px;
+          font-size: 4vw;
         }
 
-        .location_sec_title{text-align: center}
+        .location_sec_title{font-size: 3.5vw}
 
         .location_list {
           .location_elem {font-size: 12px}
@@ -1781,8 +2100,8 @@ body{
 
     .spec_features {
       padding: 0 5px;
-      background-image: radial-gradient(40% 38vw at 50% 61%, rgba(189, 116, 78, 0.2), transparent);
-      min-height: 1600px;
+      background-image: radial-gradient(40% 38vw at 50% 59%, rgba(189, 116, 78, 0.2), transparent);
+      min-height: 1650px;
 
       .spec_feat_container {
         .spec_feat_info {
@@ -1812,6 +2131,7 @@ body{
             .video-js {
               .vjs-big-play-button {
                 top: 40%;
+                width: 50%;
                 left: 25%;
                 font-size: 2vw;
 
@@ -1840,13 +2160,44 @@ body{
     .apartments {
       padding: 0 5px 50px 5px;
 
-      .number_list,
-      .line_list {margin: 300px 0}
-
       .apartments_content {
         .apartments_blocks {
-          .room_block {width: 94%}
+          .room_block {
+            .room_title{font-size: 20px}
+
+           .room_specifications{
+             flex-flow: row wrap;
+             justify-content: space-between;
+             align-items: center;
+             width: 80%;
+             margin: 0 auto;
+
+
+             .room_count,
+             .room_floor,
+             .room_size,
+             .room_price {
+               width: 40%;
+               text-align: left;
+               margin-top: 10px;
+
+               &:not(:last-child){
+                 margin-right: 0;}
+
+
+               &:before {transform: scale(0.8)}
+             }
+           }
+          }
         }
+      }
+    }
+
+    .choose_apartment{
+
+      .line_list,
+      .number_list{
+        margin: 50px 0;
       }
     }
 
@@ -1871,54 +2222,122 @@ body{
           }
         }
 
-        .line {
-          background: $gradientLine;
-          height: 2px;
-          margin-left: 6.4%;
-          width: 40%;
-          position: relative;
-          top: 74%;
-        }
-
         .bg_contacts_img {
-          position: absolute;
-          width: 100%;//
-          right: 0;
-          height: 630px;//
-          background: url(../img/contacts.png) no-repeat;
-          border-radius: 0;
-          box-shadow: 0 0 27px rgba(0, 0, 0, 0.45);
+          width: 100%;
+          height: 630px;
         }
       }
     }
   }
 }
 
+/*438*/
 @media screen and (max-width: $mobileM) {
 
   body {
-    h1 {font: normal normal 4.3vw/33px "Neuman", sans-serif}
+    h1 {font: normal normal 4.3vw/33px "Neuman", sans-serif};
+
+    h2{
+      font: normal normal 22px/normal "Neuman", sans-serif;
+      color: $lightWhite;
+      margin: 0;
+    }
+
+    h3{
+      font: normal normal 20px/normal "Neuman", sans-serif;
+      color: $mainBrown;
+      margin: 0;
+    }
+  }
+
+  .number_list {
+    .number_elem {
+      font: normal normal 6px/normal 'Neuman', sans-serif;
+      margin-bottom: 4px;
+
+      &:nth-child(2){margin-bottom: 4px}
+
+      &:nth-child(6){margin:10px 4px 5px 0}
+    }
+
+    .active_num{font-size: 8px}
+  }
+
+  .line_list {
+    width: 15px;
+    .line_elem {
+      width: 5px;
+      margin: 11.5px 4px 11.5px 0;
+
+      &:nth-child(2){margin-top: 10px}
+    }
+
+    .active_line{width: 15px}
   }
 
   .header {
+
+    .number_list,
+    .line_list {
+      .p_pos_line{
+        height: 29px;
+        margin-bottom: 9px;
+
+        &:first-child {
+          height: 40px;
+          margin-top: 12px;
+        }
+
+        &:last-child{
+          height: 45px;
+          margin-top: 14px;
+        }
+      }
+    }
+
+    .header_menu{
+      padding-top:10px ;
+
+      .line {
+        margin: 0 10px;
+        width: 61%;
+      }
+
+      .mob_btn {
+        display: block;
+        width: 48px;
+        height: 40px;
+        background: url(../img/sprite.png) no-repeat -0 -220px;
+      }
+    }
+
+
     .header_info {
       .header_content {
         display: flex;
         flex-flow: column;
         align-items: center;
+        margin-top: 0;
 
         .header_title {text-align: center}
 
         .header_text {display: none}
 
-        .order {margin-top: 30px;}
+        .order {
+          margin-top: 30px;
+        }
       }
+    }
+
+    .bottom_line{
+      bottom: 10px;
     }
   }
 
   .main_content {
     .about {
       background-size: 100% auto;
+      padding: 40px 5px 40px 5px;
 
       .about_content {
         .about_info {
@@ -1926,19 +2345,24 @@ body{
             .about_info_text {text-align: center}
           }
         }
-   .price_block {
-          .price_title {font-size: 12px}
 
-          .price_number {font: normal normal 26px/normal "Neuman", sans-serif}
+        .price_block {
+          .price_title {
+            padding: 6% 2% 0 2%;
+            font-size: 12px;
+          }
+
+          .price_number {
+            padding: 2% 2% 4% 2%;
+            font: normal normal 26px/normal "Neuman", sans-serif;
+          }
         }
 
         .about_specifications {
-
-
           .spec_block {
             width: 45%;
 
-            .spec_text {width: 86%}
+          .spec_text {width: 86%}
           }
         }
       }
@@ -1953,19 +2377,26 @@ body{
       .line_list {
         position: relative;
         top: 10px;
-        margin: 90px 0;
+        margin: 120px 0;
       }
 
       .location_content {
-        .location_title {margin-top: 0}
+        .location_title {
+          text-align: center;
+          margin-top: 0;
+          font-size: 22px;
+        }
 
         .location_sec_title{
           text-align: center;
           font-size: 18px;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid $mainBrown;
         }
 
         .location_list {
-          margin-top: 60px;
+          margin-top: 65px;
 
           .location_elem {
             line-height: 12px;
@@ -1979,9 +2410,16 @@ body{
     }
 
     .spec_features {
-      min-height: 1700px;
+      background-image: radial-gradient(40% 38vw at 50% 54%, rgba(189, 116, 78, 0.2), transparent);
+      min-height: 1550px;
 
       .spec_feat_container {
+
+        .spec_feat_title{
+          font-size: 22px;
+          height: 80px;
+        }
+
         .spec_feat_info {
           background-image: radial-gradient(140px 140px at 50% 46%, rgba(189, 116, 78, 0.05), transparent);
 
@@ -2021,8 +2459,20 @@ body{
             text-align: center;
 
             .order_view_text {width: 100%}
+
+            .order_view_form{
+              .send_block{
+                text-align: center;
+              }
+            }
           }
         }
+      }
+    }
+
+    .gallery{
+      .gallery_sec_title{
+
       }
     }
 
@@ -2046,16 +2496,15 @@ body{
     }
 
     .choose_apartment {
+      background-position: 30% 100%;
       background-size: 100% auto;
-      padding: 50px 5px 0 5px;
-      height: 480px;
+      padding: 0 5px;
+      height: 70vw;
 
       .number_list,
       .line_list {margin: 50px 0}
 
-      .ch_apartment_title{font-size: 25px}
 
-      .ch_apartment_sec_title{font-size: 18px}
     }
 
     .contacts {
@@ -2070,7 +2519,32 @@ body{
   }
 }
 
+/*386*/
+@media screen and (max-width: $bagFixMobile){
+  .main_content{
+    .spec_features{
+      height: 1700px;
+    }
+
+    .choose_apartment {
+      .ch_apartment_title{
+        font-size: 18px;
+      }
+
+      .ch_apartment_sec_title{
+        font-size: 15px;
+      }
+
+
+    }
+
+  }
+}
+
+/*300*/
 @media screen and (max-width: $mobileS){
+
+
 
   .main_content{
     .spec_features {

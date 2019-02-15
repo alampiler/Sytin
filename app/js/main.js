@@ -18,6 +18,14 @@ else{
   $('.hover').removeClass('active');
 }
 
+$('#mob_btn').click(function () {
+  $('.mobile_navbar').addClass('active');
+});
+
+  $('#exit').click(function () {
+    $('.mobile_navbar').removeClass('active');
+  });
+
 
   $("#filer_price").ionRangeSlider({
     type: "double",
