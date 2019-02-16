@@ -1391,7 +1391,7 @@ body {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center;
-      padding-top: 36px; }
+      padding-top: 43px; }
       .header .header_menu .mobile_navbar .head_mobile .line {
         background: #141416;
         height: 1px;
@@ -1399,6 +1399,20 @@ body {
         opacity: 0.47; }
       .header .header_menu .mobile_navbar .head_mobile .logo {
         width: 28%; }
+      .header .header_menu .mobile_navbar .head_mobile .exit_mob_menu {
+        font: bold normal 60px/0 "Neuman", sans-serif;
+        text-align: center;
+        position: relative;
+        left: 2px;
+        bottom: 4px;
+        line-height: 30px;
+        background: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(20%, #BD744E), color-stop(80%, #fff));
+        background: -webkit-linear-gradient(0, #BD744E 20%, #fff 80%);
+        background: -o-linear-gradient(0, #BD744E 20%, #fff 80%);
+        background: linear-gradient(0, #BD744E 20%, #fff 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #0000;
+        display: inline-block; }
     .header .header_menu .mobile_navbar .nav_mob_list {
       border: 1px solid rgba(0, 0, 0, 0.47);
       border-top: 0;
@@ -1406,8 +1420,11 @@ body {
       margin-top: 48px; }
       .header .header_menu .mobile_navbar .nav_mob_list .nav_mob_elem {
         text-align: center; }
+        .header .header_menu .mobile_navbar .nav_mob_list .nav_mob_elem:not(:first-child) {
+          margin-top: 20px; }
         .header .header_menu .mobile_navbar .nav_mob_list .nav_mob_elem a {
           font-size: 5vw;
+          opacity: 0.9;
           color: #DFDFDF; }
     .header .header_menu .mobile_navbar.active {
       display: -webkit-box;
@@ -1701,6 +1718,11 @@ body {
     .header .header_menu .logo {
       height: 30px;
       width: 200px; }
+    .header .header_menu .mobile_navbar {
+      padding: 0 21px; }
+      .header .header_menu .mobile_navbar .head_mobile .logo {
+        height: 30px;
+        width: 200px; }
     .header .header_info .header_content {
       margin: 50px 2em 0 2em; }
       .header .header_info .header_content .header_text {
@@ -1800,6 +1822,8 @@ body {
     -webkit-background-size: 100% auto;
             background-size: 100% auto;
     padding: 0 5px; }
+    .header .header_menu .mobile_navbar {
+      padding: 0 5px; }
     .header .header_info .header_content {
       margin: 50px 2em 0 2em; }
       .header .header_info .header_content .header_text {
@@ -1977,6 +2001,14 @@ body {
       width: 48px;
       height: 40px;
       background: url(../img/sprite.png) no-repeat 0 -220px; }
+    .header .header_menu .mobile_navbar {
+      padding: 0 5px; }
+      .header .header_menu .mobile_navbar .head_mobile {
+        padding-top: 30px; }
+      .header .header_menu .mobile_navbar .nav_mob_list {
+        margin-top: 30px; }
+        .header .header_menu .mobile_navbar .nav_mob_list .nav_mob_elem:not(:first-child) {
+          margin-top: 16px; }
   .header .header_info .header_content {
     display: -webkit-box;
     display: -webkit-flex;
