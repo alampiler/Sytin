@@ -67,24 +67,25 @@ body{
   flex-flow: column nowrap;
   align-items: flex-end;
   margin: 0;
+  width: 3%;
   position: relative;
   z-index: 10;
 
   .p_pos_line{
     background: $lineColor;
     opacity: 0.47;
-    height: 210px;
+    height: 180px;
     width: 1px;
-    margin: 20px 0;
+    margin: 60px 0 20px 0;
 
     &:first-child {
-      height: 160px;
-      margin-top: 39px;
+      height: 170px;
+      margin: 40px 0 30px 0;
     }
 
     &:last-child{
-      height: 396px;
-      margin-top: 22px;
+      height: 375px;
+      margin: 82px 0 50px 0;
     }
   }
 }
@@ -95,11 +96,11 @@ body{
   .number_elem {
     font: normal normal 12px/normal 'Neuman', sans-serif;
     color: $mainBrown;
-    margin: 5px 4px 15px 0;
+    margin: 12px 4px 15px 0;
     position: relative;
-    top: 8px;
+    top: 20px;
 
-    &:nth-child(2){margin: 12px 4px 15px 0;}
+    &:nth-child(2){margin: 12px 4px 10px 0;}
 
 
   }
@@ -111,18 +112,13 @@ body{
 }
 
 .line_list {
-
   .line_elem {
     background: $mainBrown;
     margin: 30px 4px 10px 0;
     width: 20px;
     height: 1px;
     position: relative;
-
-    &:not(&.active){
-
-
-    }
+    top: 18px;
   }
 
   .active_line{
@@ -135,25 +131,24 @@ body{
     transform: rotate(90deg);
     position: relative;
     left: 80px;
-    top: 5vw;
+    top: 7vw;
     width: 160px;
     display: flex;
     align-items: center;
 
     a{
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.2em;
       color: $mainBrown;
       transition: 0.2s linear;
-      margin: 0 10px;
+      margin: 0 5px 0 10px;
 
       &:hover{text-shadow: 0 0 10px $mainBrown}
     }
 
     .scroll_line{
       background-color: $mainBrown;
-      width: 30px;
-      margin-left: 10px;
+      width: 20px;
       height: 1px;
     }
   }
@@ -167,7 +162,7 @@ body{
 
 @mixin button_styles{
   border: none;
-  background: inherit;
+  background: transparent;
   color: $lightGrey;
   font-size: 14px;
   line-height: 24px;
@@ -216,8 +211,6 @@ body{
   position: relative;
   z-index: 222;
 
-
-
   .header_menu {
     padding-top: 36px;
     display: flex;
@@ -226,15 +219,14 @@ body{
 
     .logo{
       width: 13.5%;
-      img{
-        max-width: 100%;
-      }
+
+      img{max-width: 100%}
     }
 
     .line {
       background: $lineColor;
       height: 1px;
-      width: 41%;
+      width: 42%;
       opacity: 0.47;
     }
 
@@ -260,7 +252,7 @@ body{
           }
 
           &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: 26px;
           }
         }
       }
@@ -274,17 +266,17 @@ body{
     justify-content: space-between;
 
     .header_content{
-      margin: 260px 0 0 5.9em;
+      margin: 276px 0 0 84px;
 
       .header_title{
         margin: 0;
-        width: 62%;
+        width: 60%;
 
         span{color: $mainBrown}
       }
 
       .header_text{
-        margin: 124px 0 44px 0;
+        margin: 180px 0 50px 0;
         width: 44%;
       }
 
@@ -315,7 +307,7 @@ body{
     width: 100%;
     height: 1px;
     position: relative;
-    bottom: 20px;
+    bottom: 50px;
   }
 }
 
@@ -347,12 +339,13 @@ body{
 
   .about{
     display: flex;
-    padding: 190px 51px 14% 51px;
-    background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+    padding: 190px 51px 150px 51px;
+    background: url("../img/about_big.png") no-repeat center 20%, radial-gradient(26% 18% at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
     background-size: 100% auto;
+
     .about_left_gradient,
     .about_right_gradient{
-      top: 720px;
+      top: 820px;
       right: 0;
       width: 40%;
       height: 800px;
@@ -369,12 +362,9 @@ body{
       background-image: radial-gradient(100% 60% at 100% 35%, rgba(189, 116, 78, 0.1), transparent);
     }
 
-    .number_list,
-    .line_list {
-      margin: 4% 0;
-    }
 
     .about_content{
+      width: 96%;
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
@@ -386,10 +376,10 @@ body{
       .about_info{
         display: flex;
         justify-content: space-around;
-        margin-top: 480px;
+        margin-top: 485px;
 
         .about_block{
-          width: 30%;
+          width: 32%;
           margin-bottom: 90px;
 
           .about_block_num{
@@ -414,7 +404,7 @@ body{
         flex-flow: column nowrap;
         padding: 1%;
         margin: 0 auto;
-        width: 50%;
+        width: 60%;
         text-align: center;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
@@ -427,13 +417,13 @@ body{
           letter-spacing: 0.2em;
           text-transform: uppercase;
           border-bottom: 0;
-          padding: 6% 0 0 0;
+          padding: 3% 0 0 0;
         }
 
         .price_number{
           font: normal normal 45px/normal "Neuman", sans-serif;
           border-top: 0;
-          padding: 2% 0 4% 0;
+          padding: 2% 0 2% 0;
           color: $lightWhite;
         }
       }
@@ -448,7 +438,7 @@ body{
         .spec_block{
           width: 22%;
           display: flex;
-          margin-bottom: 2%;
+          margin-bottom: 60px;
 
           &:before{
             content: '';
@@ -484,6 +474,7 @@ body{
 
     .location_content{
       flex-grow: 1;
+      width: 96%;
       margin-left: 6.4%;
 
       .location_title{margin-top: 32px}
@@ -506,30 +497,32 @@ body{
   .spec_features{
     display: flex;
     justify-content: space-between;
-    padding: 0 51px;
-    height: 1500px;
-    background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent);
-
+    padding: 140px 51px 0 51px;
+    height: 1600px;
+    background-image: radial-gradient(30% 20% at 28% 76%, rgba(189, 116, 78, 0.2), transparent),
+    radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
 
     .number_list,
-    .line_list {margin: 340px 0}
+    .line_list {margin: 320px 0}
 
     .spec_feat_container{
       text-align: center;
       padding: 0 30px;
+      width: 96%;
 
       .spec_feat_title{
-        padding-top: 160px;
+        padding-top: 120px;
         background: transparent url("../img/advantages.png") no-repeat center;
-        background-size: 80% auto;
+        background-size: 95% auto;
+
       }
 
       .spec_feat_info{
         display: flex;
         justify-content: space-around;
         flex-flow: row wrap;
-        background-image: radial-gradient(300px 300px at 50% 46%, rgba(189, 116, 78, 0.05), transparent);
-        padding: 70px 0;
+        padding: 120px 0 60px 0;
+
 
         .spec_feat_block{
           margin-bottom: 100px;
@@ -555,6 +548,7 @@ body{
           .spec_feat_text{
             letter-spacing: 0.2em;
             width: 90%;
+            line-height: 26px;
             text-transform: uppercase;
           }
         }
@@ -577,10 +571,10 @@ body{
 
             .vjs-tech{
               height: 30vw;
-              border-radius: 5px;
+              border-radius: 10px;
             }
 
-            .vjs-poster{border-radius: 5px}
+            .vjs-poster{border-radius: 10px}
 
             .vjs-big-play-button{
               width: 30%;
@@ -632,13 +626,16 @@ body{
 
           &.active{animation: animForForm 0.5s ease-out 0s 1 alternate forwards}
 
-          .order_view_text{width: 70%}
+          .order_view_text{
+            margin: 30px 0;
+            width: 80%;
+          }
 
           .line{
             background: $gradientLine;
             height: 1px;
             position: relative;
-            top: 10px;
+            top: 5px;
             width: 100%;
           }
 
@@ -648,7 +645,7 @@ body{
             justify-content: space-between;
 
             input{
-              width: 26%;
+              width: 27%;
             }
 
             .send_block{
@@ -699,17 +696,19 @@ body{
   }
 
   .gallery{
-    padding: 10% 51px 4% 51px;
+    padding: 4% 51px 14% 51px;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    background-image: radial-gradient(50% 50% at 50% 50%, rgba(189, 116, 78, 0.1), transparent);
+    background-image: radial-gradient(50% 50% at 50% 50%, rgba(189, 116, 78, 0.15), transparent);
 
     .number_list,
-    .line_list {margin: 25% 0 15% 0}
+    .line_list {margin: 20% 0 15% 0}
 
     .gallery_content{
-      .gallery_sec_title{margin-bottom: 30px}
+      width: 96%;
+
+      .gallery_sec_title{margin-bottom: 50px}
 
       .gallery_images{
         display: flex;
@@ -756,15 +755,16 @@ body{
     padding:0 51px 200px 51px;
 
     .number_list,
-    .line_list {margin: 240px 0}
+    .line_list {margin: 290px 0}
 
     .apartments_content {
       text-align: center;
+      width: 96%;
 
       .filters{
         text-align: left;
         width: 72%;
-        margin: 50px auto;
+        margin: 100px auto 50px auto;
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
@@ -872,7 +872,7 @@ body{
               &:before{
                 content: "";
                 display: inline-block;
-                margin-right: 2px;
+                margin-right: 8px;
                 position: relative;
                 top: 7px;
                 background: url(../img/sprite.png) no-repeat ;
@@ -898,12 +898,12 @@ body{
 
   .choose_apartment{
     background: #141416 url("../img/apartaments_big.png") no-repeat center;
-    background-size: 100% auto;
+    background-size: 80% auto;
     display: flex;
     justify-content: space-between;
     padding:  0 51px 0 51px;
     text-align: center;
-    height: 1000px;
+    height: 70vw;
 
     .number_list,
     .line_list {margin: 350px 0;}
@@ -913,7 +913,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 0 51px 0 51px;
-    background-image: radial-gradient(600px 300px at 30% 50%, rgba(189, 116, 78, 0.15), transparent);
+    background-image: radial-gradient(600px 350px at 30% 55%, rgba(189, 116, 78, 0.15), transparent);
 
     .number_list,
     .line_list {
@@ -923,15 +923,15 @@ body{
     }
 
     .contacts_content{
-      width: 100%;
+      width: 96%;
 
       .contact_info{
         float: left;
         display: inline-block;
         position: relative;
         z-index: 5;
-        margin-left: 6.4%;
-        height: 600px;
+        margin: 40px 0 0 70px ;
+        height: 590px;
         width: 100%;
 
         .contacts_list{
@@ -940,7 +940,7 @@ body{
 
           .contacts_elem{
             letter-spacing: 0.2em;
-            margin-top: 30px;
+            margin-top: 20px;
           }
         }
 
@@ -957,7 +957,7 @@ body{
       .line{
         background: $gradientLine;
         height: 2px;
-        margin-left: 6.4%;
+        margin-left: 70px;
         width: 30%;
         position: relative;
         top: 80%;
@@ -965,11 +965,11 @@ body{
 
       .bg_contacts_img{
         position: absolute;
-        width: 930px;
+        width: 64%;
         right: 0;
         height: 630px;
         background: url(../img/contacts.png) no-repeat;
-        border-radius: 5px;
+        border-radius: 5px 0 5px 0;
         box-shadow: 0 0 27px rgba(0, 0, 0, 0.45);
       }
     }
@@ -980,15 +980,15 @@ body{
 /*2048 2548*/
 @media screen and (min-width: $laptopXXL) and (max-width: $Four_K){
   body{
-    input{font-size: 24px}//
+    input{font-size: 24px}
 
-    h1{font: normal normal 104px/113px "Neuman", sans-serif}//
+    h1{font: normal normal 104px/113px "Neuman", sans-serif}
 
-    h2{font: normal normal 80px/normal "Neuman", sans-serif}//
+    h2{font: normal normal 80px/normal "Neuman", sans-serif}
 
-    h3{font: normal normal 70px/normal "Neuman", sans-serif}//
+    h3{font: normal normal 70px/normal "Neuman", sans-serif}
 
-    p{font: normal normal 30px/54px "Proxima Nova", sans-serif}//
+    p{font: normal normal 30px/54px "Proxima Nova", sans-serif}
   }
 
   .number_list,
@@ -1001,20 +1001,19 @@ body{
     z-index: 10;
 
     .p_pos_line{
-      background: $lineColor;
-      opacity: 0.47;
-      height: 380px;//
-      width: 2px;//
-      margin: 20px 0;
+
+      height: 380px;
+      width: 2px;
+      margin: 60px 0 20px 0;
 
       &:first-child {
-        height: 360px;//
-        margin-top: 39px;
+        height: 290px;
+        margin: 40px 0 30px 0;
       }
 
       &:last-child{
-        height: 596px;//
-        margin-top: 22px;
+        height: 566px;
+        margin: 102px 0 50px 0;
       }
     }
   }
@@ -1023,71 +1022,29 @@ body{
     align-items: flex-start;
 
     .number_elem {
-      font: normal normal 18px/normal 'Neuman', sans-serif;//
-      color: $mainBrown;
-      margin: 5px 4px 15px 0;
-      position: relative;
-      top: 8px;
-
-      &:nth-child(2){margin: 12px 4px 15px 0;}
-
-
+      margin: 12px 4px 15px 0;
+      font: normal normal 18px/normal 'Neuman', sans-serif;
     }
 
-    .active_num{
-      color: $lightWhite;
-      font-size: 22px;//
-    }
+    .active_num{font-size: 22px}
   }
 
   .line_list {
-
     .line_elem {
-      background: $mainBrown;
-      margin: 30px 4px 10px 0;
-      width: 30px;//
-      height: 2px;//
-      position: relative;
-
-      &:not(&.active){
-
-
-      }
+      width: 30px;
+      height: 2px;
+      margin: 40px 4px 10px 0;
     }
 
-    .active_line{
-      background: $lightWhite;
-      width: 50px;//
-      margin: 25px 4px 10px 0;
-
-
-    }
+    .active_line{width: 50px;}
 
     .scroll_down{
-      transform: rotate(90deg);
-      position: relative;
-      top: 4.4vw;//
-      width: 230px;//
-      left: 115px;//
-      display: flex;
-      align-items: center;
+      top: 4vw;
+      width: 230px;
+      left: 115px;
 
-      a{
-        font-size: 18px;//
-        letter-spacing: 0.2em;
-        color: $mainBrown;
-        transition: 0.2s linear;
-        margin: 0 10px;
+      a{font-size: 18px}
 
-        &:hover{text-shadow: 0 0 10px $mainBrown}
-      }
-
-      .scroll_line{
-        background-color: $mainBrown;
-        width: 30px;
-        margin-left: 10px;
-        height: 1px;
-      }
     }
   }
 
@@ -1097,37 +1054,25 @@ body{
     font-size: 1.2vw !important;
 
     &:after{
-      content: "";
-      display: inline-block;
-      background: url(../img/sprite.png) -16px -0px no-repeat ;
-      top: 1px !important;//
-      left: 18px !important;//
-      transform: scale(1.4);//
-      width: 25px;
-      height: 13px;
+      top: 1px !important;
+      left: 18px !important;
+      transform: scale(1.4);
+
     }
   }
 
 
   .header {
-    background: black url("../img/header_big.png") no-repeat center;
-    background-size: 100% 100%;
     padding: 0 71px;
 
     .header_menu {
-
-      .line{
-        width: 40%;
-        height: 2px;//
-      }
+      .line{height: 2px}
 
       .navbar {
-
         .nav_list {
-          display: flex;
 
           .nav_elem {
-            a {font-size: 20px}//
+            a {font-size: 20px}
           }
         }
       }
@@ -1135,7 +1080,12 @@ body{
 
     .header_info {
       .header_content{
-        margin-top: 200px;//
+        margin: 390px 0 0 174px;
+
+        .header_text{
+          margin: 170px 0 40px 0;
+        }
+
         .order{width: 16%}
       }
     }
@@ -1150,102 +1100,38 @@ body{
     .about{
       background: url("../img/about_big.png") no-repeat center 12%, radial-gradient(600px 600px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
       background-size: 100% auto;
+      padding: 180px 71px 150px 71px;
 
       .about_content{
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        z-index: 5;
-
-        .about_title,
-        .about_sec_title{text-align: center}
-
         .about_info{
-          display: flex;
-          justify-content: space-around;
-          margin-top: 780px;
+          margin-top: 850px;
 
           .about_block{
             width: 30%;
-            margin-bottom: 90px;
 
-            .about_block_num{
-              font: normal normal 60px/normal "Neuman", sans-serif;
-              background: $gradientText;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              display: inline-block;
-            }
+            .about_block_num{font: normal normal 70px/normal "Neuman", sans-serif}
 
-            .about_info_title{
-              text-transform: uppercase;
-              margin-top: 0;
-              font-size: 1.3vw;
-              letter-spacing: 0.2em;
-            }
+            .about_info_title{font-size: 1.3vw}
           }
         }
 
         .price_block{
-          background: $priceBackground;
-          display: inline-flex;
-          flex-flow: column nowrap;
-          padding: 1%;
-          margin: 0 auto;
-          width: 50%;
-          text-align: center;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-          border-radius: 5px;
+          .price_title{font-size: 30px}
 
-          .price_title,
-          .price_number{border: 1px solid #434343}
-
-          .price_title{
-            font-weight: bold;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            border-bottom: 0;
-            padding: 6% 0 0 0;
-            font-size: 30px;//
-          }
-
-          .price_number{
-            font: normal normal 65px/normal "Neuman", sans-serif;//
-            border-top: 0;
-            padding: 2% 0 4% 0;
-            color: $lightWhite;
-          }
+          .price_number{font: normal normal 65px/normal "Neuman", sans-serif}
         }
 
         .about_specifications{
-          display: flex;
-          width: 80%;
-          justify-content: space-around;
-          flex-flow: row wrap;
-          margin-top: 150px;
-
           .spec_block{
-            width: 22%;
-            display: flex;
-            margin-bottom: 6%;
-
             &:before{
-              content: '';
-              width: 32px;
-              height: 38px;
-              display: inline-block;
               margin-right: 18%;
-              margin-top: 12px;
-              background: url(../img/sprite.png) no-repeat -12px  -172px;
-              transform: scale(1.8);//
+              transform: scale(1.8);
             }
 
             .spec_text{
-              text-transform: uppercase;
-              font-size: 26px;//
-              width: 70%;
+              font-size: 26px;
               font-weight: bold;
-              line-height: 40px;//
+              line-height: 40px;
             }
           }
         }
@@ -1253,55 +1139,36 @@ body{
     }
 
     .location{
-      background: transparent url(../img/map.png) no-repeat center;
-      background-size: 100% auto;
-      padding: 9% 51px;
-      display: flex;
-      justify-content: space-between;
-
-      .number_list,
-      .line_list {margin: 140px 0}
-
+      padding: 9% 71px;
       .location_content{
-        flex-grow: 1;
-        margin-left: 6.4%;
-
-        .location_title{margin-top: 32px}
-
         .location_list{
-          margin-top: 50px;
-
           .location_elem{
-            margin-bottom: 2%;
-            line-height: 41px;//
+            line-height: 41px;
 
-            .location_travel_time{
-              font-size: 30px;//
-              strong{text-transform: uppercase}
-            }
+            .location_travel_time{font-size: 30px;}
           }
         }
       }
     }
 
     .spec_features{
-      height: 2000px;//
-      background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent);
+      height: 2200px;
+      background-image: radial-gradient(30% 28% at 26% 72%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(680px 680px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
+      padding: 140px 71px 0 71px;
 
       .spec_feat_container{
         .spec_feat_info{
-          background-image: radial-gradient(360px 360px at 50% 42%, rgba(189, 116, 78, 0.05), transparent);
-
           .spec_feat_block{
             .spec_feat_num{
               font: normal normal 55px/normal "Neuman", sans-serif;
               width: 77px;
               height: 77px;
             }
+
             .spec_feat_text{
-              line-height: 40px;//
-              font-size: 25px;//
-              width: 80%;
+              line-height: 40px;
+              font-size: 25px;
             }
           }
         }
@@ -1310,14 +1177,11 @@ body{
           .video_viewing{
             .video-js{
               .vjs-big-play-button{
-                top: 47%;//
-                transform: scale(1.5);//
+                top: 47%;
+                transform: scale(1.5);
 
                 .vjs-icon-placeholder{
-                  &:before{
-                    left: 42%;//
-
-                  }
+                  &:before{left: 42%}
                 }
               }
             }
@@ -1328,70 +1192,28 @@ body{
       }
     }
 
-    .apartments {
-      display: flex;
-      justify-content: space-between;
-      padding:200px 51px 200px 51px;//
+    .gallery{
+      padding: 4% 71px 14% 71px;
+    }
 
-      .number_list,
-      .line_list {margin: 240px 0}
+    .apartments {
+      padding: 100px 71px 200px 71px;
 
       .apartments_content {
-        text-align: center;
-
         .filters{
-          text-align: left;
-          width: 72%;
-          margin: 50px auto;
-          display: flex;
-          justify-content: space-around;
-          align-items: flex-end;
-
           .filter_price,
           .filter_square{
-            width: 30%;
-
-            label{
-              font-size: 22px;//
-            }
+            label{font-size: 22px}
 
             .irs{
-              .irs-line{
-                height: 2px;
-                width: 99%;
-                background-color: #434343;
-              }
-
-              .irs-min,
-              .irs-max{display: none}
-
               .irs-from,
-              .irs-to{
-                top: 50px;
-                background: none;
-                font-size: 18px;
-                line-height: 24px;
-              }
-
-              .irs-from:before,
-              .irs-to:before{display: none}
-
-              .irs-bar{
-                height: 2px;
-                background-color: $lightWhite;
-              }
-
+              .irs-to{font-size: 18px}
 
               .irs-handle{
-                top: 16px;
-
                 & > i:first-child {
-                  background-color: $mainBrown;
-                  width: 30px;//
-                  height: 30px;//
-                  top: -5px;//
-                  border-radius: 50%;
-                  left: 0;
+                  width: 30px;
+                  height: 30px;
+                  top: -5px;
                 }
               }
             }
@@ -1402,130 +1224,59 @@ body{
           }
         }
 
-        .line{
-          background: $gradientLine;
-          height: 2px;
-          width: 65%;
-          margin: 120px auto 100px auto;//
-        }
-
-        .see_more{
-          @include button_styles;
-          margin-top: 60px;
-        }
+        .line{margin: 120px auto 100px auto}
 
         .apartments_blocks{
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: space-between;
-          width: 80%;
-          margin: 0 auto;
+          width: 90%;
 
           .room_block{
-            box-sizing: border-box;
-            width: 48.5%;
-            background-color: $roomsBlocks;
-            border-radius: 5px;
-            padding: 2% 2% 6% 2%;
-            margin-bottom: 30px;
-
-            .room_title{
-              font-size: 1.66vw;
-              line-height: 24px;
-            }
-
-            img{
-              border-radius: 5px;
-              max-width: 100%;
-            }
+            .room_title{margin-bottom: 100px}
 
             .room_specifications{
-              font-size: 1.25vw;//
-              line-height: 34px;
-              display: flex;
-              align-items: flex-end;
-              justify-content: space-around;
+              font-size: 1.25vw;
 
               .room_count,
               .room_floor,
               .room_size,
               .room_price{
-                &:not(:last-child){margin-right: 2%}
-
                 &:before{
-                  content: "";
-                  display: inline-block;
-                  margin-right: 12px;//
+                  margin-right: 12px;
                   position: relative;
-                  top: 5px;//
-                  background: url(../img/sprite.png) no-repeat ;
+                  top: 1px;
+                  transform: scale(1.6);
                 }
               }
-
-              .room_count:before{@include apartmentIco(25px, 25px, -14px, -20px)}
-
-              .room_floor:before{
-                @include apartmentIco(25px, 34px, -12px, -60px);
-                top: 9px;
-              }
-
-              .room_size:before{@include apartmentIco(28px, 23px, -18px, -110px)}
-
-              .room_price:before{@include apartmentIco(25px, 21px, -14px, -142px)}
-
             }
           }
         }
       }
     }
 
-    .choose_apartment{height: 80vw;}
-
     .contacts{
       display: flex;
       justify-content: space-between;
-      padding: 0 51px 0 51px;
-      background-image: radial-gradient(800px 500px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);//
+      padding: 0 71px;
+      background-image: radial-gradient(800px 500px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
 
-      .number_list,
-      .line_list {
-        position: relative;
-        z-index: 5;
-        margin: 12em 0;
-      }
 
       .contacts_content{
-        width: 100%;
-
         .contact_info{
-          float: left;
-          display: inline-block;
-          position: relative;
-          z-index: 5;
-          margin-left: 6.4%;
-          height: 1030px;//
-          width: 90%;//
+          height: 990px;
+          width: 90%;
 
           .contacts_list{
-            text-transform: uppercase;
-            margin: 30px 0 120px 0;
-
             .contacts_elem{
-              letter-spacing: 0.2em;
-              font-size: 20px;//
-              margin-top: 40px;//
+              font-size: 20px;
+              margin-top: 40px;
             }
           }
 
           .contacts_form {
-            input{
-              width: 20%;//
-              &:not(:last-of-type){margin-right: 2.4%}
-            }
+            input{width: 20%}
 
             .form_send{
               @include button_styles;
-              margin-top: 180px;//
+              margin-top: 180px;
             }
           }
         }
@@ -1533,10 +1284,9 @@ body{
         .line{
           background: $gradientLine;
           height: 2px;
-          margin-left: 6.4%;
+          margin-left: 70px;
           width: 40%;
-          position: relative;
-          top: 70%;//
+          top: 70%;
         }
 
         .bg_contacts_img{
@@ -1551,14 +1301,11 @@ body{
         }
       }
     }
-
-
-
   }
 }
 
 /*1681 2048*/
-@media screen and (min-width: $laptopXL) and (max-width: $laptopXXL){
+@media screen and (min-width: $laptopXL) and (max-width: 1920px){
   body{
     input{font-size: 24px}
 
@@ -1616,13 +1363,15 @@ body{
   .main_content{
     .about{
       background: url("../img/about_big.png") no-repeat center 12%, radial-gradient(600px 600px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
-      padding: 0 71px;
+      background-size: 100% auto;
+      padding: 145px 71px 150px 71px;
 
       .about_content{
         .about_info{
-          margin-top: 1080px;
+          margin-top: 670px;
 
           .about_block{
+            width: 28%;
             .about_block_num{font: normal normal 60px/normal "Neuman", sans-serif}
 
             .about_info_title{font-size: 1.3vw}
@@ -1637,8 +1386,10 @@ body{
 
         .about_specifications{
           margin-top: 150px;
+          width: 80%;
 
           .spec_block{
+            width: 22%;
             margin-bottom: 6%;
 
             &:before{
@@ -1657,7 +1408,8 @@ body{
     }
 
     .location{
-      padding: 0 71px;
+
+      padding: 9% 71px;
       .location_content{
         .location_list{
           .location_elem{
@@ -1670,14 +1422,20 @@ body{
     }
 
     .spec_features{
-      height: 1650px;
+      height: 2150px;
       padding: 0 71px;
-      background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent);
+      background-image: radial-gradient(30% 24% at 28% 72%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(680px 680px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
 
       .spec_feat_container{
-        .spec_feat_info{
-          background-image: radial-gradient(360px 360px at 50% 42%, rgba(189, 116, 78, 0.05), transparent);
 
+        .spec_feat_title{
+          padding-top: 320px;
+          background: transparent url(../img/advantages.png) no-repeat 50% 90%;
+          -webkit-background-size: 95% auto;
+        }
+
+        .spec_feat_info{
           .spec_feat_block{
             .spec_feat_num{
               font: normal normal 55px/normal "Neuman", sans-serif;
@@ -1703,6 +1461,10 @@ body{
                 }
               }
             }
+          }
+
+          .order_view_content{
+            margin-top: 50px;
           }
         }
       }
@@ -1755,14 +1517,12 @@ body{
 
     .contacts{
       padding: 0 71px;
-      background-image: radial-gradient(800px 500px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);//
+      background-image: radial-gradient(800px 400px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
 
 
       .contacts_content{
-
-
         .contact_info{
-          height: 830px;
+          height: 690px;
           width: 90%;
 
           .contacts_form {
@@ -1770,16 +1530,21 @@ body{
           }
         }
 
-        .line{top: 70%}
+        .line{
+          top: 84%;
+        }
 
-        .bg_contacts_img{height: 830px}
+        .bg_contacts_img{
+          background-size: 100% auto;
+          height: 730px;
+        }
       }
     }
   }
 }
 
 /*1440 - 1680*/
-@media screen and (min-width: $laptopL) and (max-width: $laptopXL){
+@media screen and (min-width: $laptopL) and (max-width: 1680px){
   body{
     input{font-size: 18px}
 
@@ -1792,9 +1557,16 @@ body{
     p{font: normal normal 18px/24px "Proxima Nova", sans-serif}
   }
 
-  .line_list {
-    .scroll_down{top: 4.5vw}
+  .number_list {
+    .number_elem {top: 0}
   }
+
+  .line_list {
+    .line_elem {top: 0}
+
+    .scroll_down{top: 5.5vw}
+  }
+
 
   .header {
     background: black url("../img/header_big.png") no-repeat center;//
@@ -1815,6 +1587,12 @@ body{
 
     .header_info {
       .header_content{
+        margin: 256px 0 0 104px;
+
+        .header_text{
+          margin: 220px 0 66px 0;
+        }
+
         .order{width: 16%}
       }
     }
@@ -1824,17 +1602,29 @@ body{
     .about{
       background: url("../img/about_big.png") no-repeat center 23%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
       background-size: 100% auto;
+      padding: 215px 51px 150px 51px;
+
+      .number_list,
+      .line_list {margin: 50px 0}
+
+      .about_content{
+        .about_info{margin-top: 554px}
+
+        .price_block{
+
+          .price_number{
+            font: normal normal 50px/normal "Neuman", sans-serif;
+          }
+        }
+      }
     }
 
     .spec_features{
-      height: 1550px;
-      background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent);
+      height: 1650px;
+      background-image: radial-gradient(30% 22% at 28% 78%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(360px 360px at 50% 42%, rgba(189, 116, 78, 0.05), transparent);;
 
       .spec_feat_container{
-        .spec_feat_info{
-          background-image: radial-gradient(360px 360px at 50% 42%, rgba(189, 116, 78, 0.05), transparent);
-        }
-
         .order_viewing{
           .video_viewing{
             .video-js{
@@ -1848,7 +1638,7 @@ body{
             }
           }
 
-          .order_view_content{margin-top: 0}
+          .order_view_content{margin-top: 30px}
         }
       }
     }
@@ -1863,18 +1653,24 @@ body{
       }
     }
 
-    .choose_apartment{height: 80vw;}
+    .choose_apartment{
+      height: 65vw;
+
+
+      .number_list,
+      .line_list {margin: 300px 0}
+    }
 
     .contacts{
       .contacts_content{
 
         .line{
-          top: 82%;
-          width: 40%;
+          top: 86%;
+          width: 28%;
         }
 
         .bg_contacts_img{
-          width: 66%;
+          width: 63%;
           background: url(../img/contacts_big.png) no-repeat center;
         }
       }
@@ -1882,8 +1678,105 @@ body{
   }
 }
 
-/*1280*/
+/*1366*/
 @media screen and (max-width: $laptopM){
+  body{
+    background: #141416;
+    font-family: "Proxima Nova", sans-serif;
+    color: $lightGrey;
+
+    a{
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+
+    button{
+      cursor: pointer;
+      padding: 0;
+    }
+
+    button,
+    input{
+      &:focus{
+        outline: none;
+        border: 1px solid $mainBrown;
+      }
+    }
+
+    input{
+      border-radius: 5px;
+      border: 1px solid $lightGrey;
+      padding: 0.782em 0.75em;
+      color: $lightGrey;
+      background: rgba(255,255,255,0);
+    }
+
+    h1{
+      font: normal normal 54px/63px "Neuman", sans-serif;
+      color: $lightWhite;
+    }
+
+    h2{
+      font: normal normal 45px/normal "Neuman", sans-serif;
+      color: $lightWhite;
+      margin: 0;
+    }
+
+    h3{
+      font: normal normal 36px/normal "Neuman", sans-serif;
+      color: $mainBrown;
+      margin: 0;
+    }
+
+    p{
+      font: normal normal 14px/24px "Proxima Nova", sans-serif;
+      color: $lightGrey;
+    }
+  }
+
+  .main_content{
+    .about{
+      padding: 190px 51px 150px 51px;
+
+      .about_content{
+        .about_info{margin-top: 462px}
+      }
+   }
+
+    .spec_features{
+      height: 1560px;
+
+      .spec_feat_container{
+        .order_viewing{
+          .order_view_content{
+            margin-top: 0;
+          }
+        }
+      }
+
+    }
+
+    .apartments{
+      .apartments_content{
+        .apartments_blocks{
+          .room_block{
+            .room_specifications{
+              font-size: 1.1vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*1280*/
+@media screen and (max-width: $laptopS){
 
 body{
   input{padding: 0.582em 0.55em;}
@@ -1891,35 +1784,36 @@ body{
 
   .header {
     .header_menu {
-      .logo{
-
-      }
-
       .line {width: 38%}
     }
 
     .header_info {
       .header_content{
-        .header_title{width: 82%}
+
       }
     }
   }
 
   .main_content{
     .about{
-      background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
-      background-size: 100% auto;
+        padding: 200px 51px 150px 51px;
 
       .about_content{
+        .about_info{margin-top: 428px}
+
         .about_specifications{
-          width: 90%;
+          width: 86%;
 
           .spec_block{
             width: 22%;
 
+            &:before{
+              margin-right: 20px;
+            }
+
             .spec_text{
               font-size: 12px;
-              width: 65%;
+              width: 62%;
             }
           }
         }
@@ -1939,13 +1833,21 @@ body{
     }
 
     .spec_features{
-      background-image: radial-gradient(30% 22% at 28% 79%, rgba(189, 116, 78, 0.2), transparent);
-      height: 1400px;
+      background-image: radial-gradient(30% 20% at 28% 80%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
+      height: 1450px;
+      padding: 100px 51px 0 51px;
 
       .number_list,
-      .line_list {margin: 340px 0}
+      .line_list {margin: 290px 0}
 
       .spec_feat_container{
+
+        .spec_feat_title{
+          background-size: 100% auto;
+          padding-top: 80px;
+        }
+
         .order_viewing{
           padding: 0 0 0 0;
 
@@ -1955,15 +1857,18 @@ body{
     }
 
     .gallery{
-      padding: 10% 51px 0 51px;
-      background-image: radial-gradient(50% 50% at 50% 52%, rgba(189, 116, 78, 0.1), transparent);
+      padding: 4% 51px 10% 51px;
 
       .number_list,
       .line_list {margin: 25% 0 15% 0}
     }
 
     .apartments {
+      padding: 0 51px 180px 51px;
       .apartments_content {
+
+        .line{margin: 70px auto 100px auto}
+
         .apartments_blocks{
           .room_block{
             .room_specifications{
@@ -1992,27 +1897,32 @@ body{
           }
         }
 
-        .line{width: 40%}
-
-        .bg_contacts_img{width: 730px}
+        .bg_contacts_img{width: 62%;}
       }
     }
   }
 
 }
 
-/*1134*/
+/*1152*/
 @media screen and (max-width: $bagFixLaptop){
 body{
   h1{font: normal normal 50px/63px "Neuman", sans-serif}
+
+  h2{font: normal normal 40px/normal "Neuman", sans-serif}
+
+  h3{font: normal normal 34px/normal "Neuman", sans-serif}
 }
 
+  .line_list {
+    .scroll_down{top: 9vw}
+  }
 
   .header {
     .header_menu {
 
       .logo{
-        width: 15%;
+        width: 17%;
       }
 
       .line {width: 28%}
@@ -2020,7 +1930,7 @@ body{
 
     .header_info {
       .header_content{
-        .header_title{width: 82%}
+        margin: 276px 0 0 64px;
 
         .header_text{width: 60%}
         }
@@ -2030,11 +1940,11 @@ body{
 
   .main_content{
     .about{
-      padding: 160px 51px 10% 51px;
-      background: url("../img/about_big.png") no-repeat center 21%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
-      background-size: 100% auto;
+      padding: 222px 51px 150px 51px;
 
       .about_content{
+        .about_info{margin-top: 380px}
+
         .price_block{
           .price_number{font: normal normal 40px/normal "Neuman", sans-serif}
         }
@@ -2044,9 +1954,19 @@ body{
     .location{background: transparent url(../img/map.png) no-repeat center}
 
     .spec_features{
+      background-image: radial-gradient(30% 20% at 29% 80%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
+      height: 1400px;
+
       .spec_feat_container{
         .order_viewing{
           .order_view_content{
+            bottom: 20px;
+
+            .order_view_text{
+              width: 100%;
+            }
+
             .order_view_form{
               input{width: 27%}
             }
@@ -2059,6 +1979,8 @@ body{
 
     .apartments {
       .apartments_content {
+        .line{margin: 80px auto 80px auto}
+
         .apartments_blocks{
           .room_block{
             .room_specifications{
@@ -2087,7 +2009,7 @@ body{
     }
 
     .choose_apartment{
-      height: 900px;
+      height: 800px;
 
       .number_list,
       .line_list {margin: 230px 0}
@@ -2095,38 +2017,39 @@ body{
 
     .contacts{
       .contacts_content{
-        .bg_contacts_img{width: 64%}
+        .bg_contacts_img{width: 60%}
       }
     }
   }
 }
 
 /*1024*/
-@media screen and (max-width: $laptopS){
+@media screen and (max-width: $laptopES){
   body{
     h1{font: normal normal 38px/53px "Neuman", sans-serif}
 
     h2{font: normal normal 30px/normal "Neuman", sans-serif}
 
-    h3{font: normal normal 21px/normal "Neuman", sans-serif}
+    h3{font: normal normal 24px/normal "Neuman", sans-serif}
   }
 
   .header {
     .number_list,
     .line_list {
-      .scroll_down{top: 7vw}
-
       .p_pos_line{
         height:110px;
 
-        &:first-child {height: 70px}
+        &:first-child {
+          height: 110px;
+          margin: 5px 0 5px 0;
+        }
 
         &:last-child{height: 296px}
       }
     }
 
     .header_menu {
-      .line {width: 32%}
+      .line {width: 30%}
 
       .navbar {
         .nav_list {
@@ -2139,12 +2062,11 @@ body{
 
     .header_info {
       .header_content{
-        margin: 130px 0 0 5.9em;
-        .header_title{width: 82%}
+        margin: 206px 0 0 44px;
+
 
         .header_text{
-          width: 90%;
-          margin: 25% 0 10% 0;
+          margin: 146px 0 30px 0;
         }
       }
     }
@@ -2153,9 +2075,15 @@ body{
   .main_content{
     .about{
       display: flex;
-      padding: 140px 51px 10% 51px;
+      padding: 140px 51px 4% 51px;
       background: url("../img/about_tablet.png") no-repeat center 12%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
 
+      .number_list,
+      .line_list {margin: 0}
+
+      .about_content{
+        .about_info{margin-top: 360px}
+      }
 
       .about_left_gradient,
       .about_right_gradient{top: 90%}
@@ -2167,11 +2095,21 @@ body{
     }
 
     .spec_features{
-      background-image: radial-gradient(25% 24vw at 30% 80%, rgba(189, 116, 78, 0.2), transparent);
-      height: 1280px;
+      background-image: radial-gradient(30% 20% at 29% 80%, rgba(189, 116, 78, 0.1), transparent), radial-gradient(420px 420px at 50% 35%, rgba(189, 116, 78, 0.1), transparent);
+      height: 1200px;
+      padding: 10px 51px 0 51px;
+
+      .number_list,
+      .line_list {margin: 240px 0}
 
       .spec_feat_container{
+        .spec_feat_title{
+          background-size: 90% auto;
+          padding-top: 80px;
+        }
+
         .spec_feat_info{
+          padding: 80px 0 60px 0;
           .spec_feat_block{
             .spec_feat_num{
               font: normal normal 40px/normal "Neuman", sans-serif;
@@ -2198,15 +2136,35 @@ body{
           }
 
           .order_view_content {
-            bottom: 30px;
+            bottom: 20px;
             margin-top: 0;
+
+            .order_view_form{
+              .send_block{
+                .form_send{
+                  margin-top: 30px;
+                }
+              }
+            }
           }
         }
       }
     }
 
+    .gallery{
+      background-image: radial-gradient(50% 50% at 50% 55%, rgba(189, 116, 78, 0.1), transparent);
+      padding: 4% 51px 4% 51px;
+
+      .number_list,
+      .line_list {margin: 20% 0 15% 0;}
+    }
+
     .apartments {
+      padding: 0 51px 120px 51px;
+
       .apartments_content {
+        .line{margin: 60px auto}
+
         .filters{
           label{font-size: 14px}
         }
@@ -2214,8 +2172,8 @@ body{
     }
 
     .choose_apartment{
-      background: #141416 url("../img/apartaments_tablet.png") no-repeat center;
-      height: 650px;
+      background-size: 90% auto;
+      height: 750px;
 
       .number_list,
       .line_list {margin: 150px 0}
@@ -2239,7 +2197,7 @@ body{
         }
 
         .bg_contacts_img{
-          height: 600px;
+
           width: 60%;
         }
       }
@@ -2252,7 +2210,7 @@ body{
   }
 
 /*900*/
-@media screen and (max-width: $tabletL) {
+@media screen and (max-width: $tabletEL) {
   body {
     h1 {font: normal normal 4.3vw/53px "Neuman", sans-serif}
 
@@ -2260,15 +2218,14 @@ body{
   }
 
   .header {
-    .number_list,
-    .line_list {
-      .scroll_down {
-        left: 85px;
-        top: 8vw;
-        width: 170px;
 
-        a {margin: 0 0 0 20px}
+    .number_list,
+    .line_list{
+      .p_pos_line{
+
+        height: 150px;
       }
+
     }
 
     .header_menu {
@@ -2329,7 +2286,7 @@ body{
             line-height: 30px;
             background: $gradientText;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: #0000;
+            -webkit-text-fill-color: transparent;
             display: inline-block;
           }
         }
@@ -2362,24 +2319,22 @@ body{
 
     .header_info {
       .header_content {
-        margin: 130px 0 0 40px;
+        margin: 220px 0 0 30px;
 
 
 
         .header_text {
-          margin: 124px 0 44px 0;
+          margin: 134px 0 54px 0;
           width: 100%;
         }
       }
     }
-
-    .bottom_line {bottom: 20px}
   }
 
   .main_content {
     .about {
-      padding: 140px 51px 2% 51px;
-      background: url("../img/about_mobile.png") no-repeat center 11%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
+      padding: 80px 51px 2% 51px;
+      background: url("../img/about_mobile.png") no-repeat center 7%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
       .about_content {
 
         .about_info {
@@ -2424,9 +2379,18 @@ body{
       }
     }
 
+    .location{
+      .location_content{
+        .location_title{
+          margin-top: 52px;
+        }
+      }
+    }
+
     .spec_features {
-      background-image: radial-gradient(40% 38vw at 50% 65%, rgba(189, 116, 78, 0.2), transparent); //
-      min-height: 1600px;
+      background-image: radial-gradient(40% 20% at 50% 56%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
+      min-height: 1750px;
 
       .number_list,
       .line_list {margin: 170px 0}
@@ -2435,7 +2399,7 @@ body{
         padding: 0;
 
         .spec_feat_title {
-          padding-top: 40px;
+          padding-top: 60px;
           background: transparent url("../img/advantages.png") no-repeat 50% 0;
           background-size: 100% auto;
         }
@@ -2510,10 +2474,17 @@ body{
       }
     }
 
+    .gallery{
+      background-image: radial-gradient(50% 45% at 50% 55%, rgba(189, 116, 78, 0.1), transparent);
+      padding: 4% 51px 5% 51px;
+    }
+
     .apartments {
       padding: 0 51px 100px 51px;
+
       .apartments_content {
         .filters {
+          margin: 50px auto 50px auto;
           width: 100%;
           flex-flow: column;
           align-items: center;
@@ -2559,6 +2530,8 @@ body{
               .room_size,
               .room_price{
                 width: 23%;
+                text-align: center;
+                
                 &:not(:last-child){margin-right: 2%}
 
                 &:before{
@@ -2600,31 +2573,34 @@ body{
     }
 
     .contacts {
-      background-image: radial-gradient(400px 300px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
+      background-image: radial-gradient(400px 250px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
 
       .number_list,
-      .line_list {margin: 250px 0 0 0}
+      .line_list {margin: 150px 0 0 0}
 
       .contacts_content {
-        margin: 10% 0 0 6.4%;
+
 
         .contact_info {
-          height: 530px;
-          margin-left: 0;
+          height: 392px;
           width: 100%;
 
           .contacts_list {margin: 30px 0 50px 0}
 
           .contacts_form {
-            .form_send {margin-top: 50px}
+            .form_send {margin-top: 60px}
           }
         }
 
-        .line {top: 74%;}
+        .line {
+          top: 84%;
+          width: 32%;
+          margin-left: 70px;
+        }
 
         .bg_contacts_img {
           width: 58%;
-          height: 530px;
+          height: 430px;
 
         }
       }
@@ -2632,7 +2608,66 @@ body{
   }
 }
 
-/*730*/
+/*805*/
+@media screen and (max-width: $tabletL){
+  body{
+    h2{font: normal normal 26px/normal "Neuman", sans-serif}
+
+    h3{font: normal normal 22px/normal "Neuman", sans-serif}
+  }
+
+
+  .main_content{
+    .about{
+      padding: 100px 51px 2% 51px;
+    }
+
+    .choose_apartment{
+      background-size: 80% auto;
+      height: 70vw;
+
+
+      .number_list,
+      .line_list {margin: 60px 0}
+    }
+
+    .contacts {
+      background-image: radial-gradient(400px 250px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
+
+      .number_list,
+      .line_list {margin: 150px 0 0 0}
+
+      .contacts_content {
+
+
+        .contact_info {
+          height: 392px;
+          width: 100%;
+
+          .contacts_list {margin: 30px 0 50px 0}
+
+          .contacts_form {
+            .form_send {margin-top: 60px}
+          }
+        }
+
+        .line {
+          top: 84%;
+          width: 25%;
+          margin-left: 70px;
+        }
+
+        .bg_contacts_img {
+          width: 62%;
+          height: 430px;
+
+        }
+      }
+    }
+  }
+}
+
+/*720*/
 @media screen and (max-width: $tabletM){
 
   .number_list {
@@ -2641,8 +2676,7 @@ body{
       margin: 10px 4px 10px 0;
 
       &:nth-child(2){
-        margin-top: 1px;
-        margin-bottom: 4px;
+        margin: 10px 4px 10px 0;
       }
 
       &:nth-child(6){  margin: 10px 4px 10px 0}
@@ -2665,7 +2699,6 @@ body{
     .scroll_down{display: none !important}
   }
 
-
   body {
       h1 {
         font: normal normal 4.3vw/33px "Neuman", sans-serif;
@@ -2676,16 +2709,16 @@ body{
     .number_list,
     .line_list {
       .p_pos_line{
-        height: 20vw;//
+        height: 10vw;
         margin-bottom: 20px;
 
         &:first-child {
-          height: 20vw;//
+          height: 18vw;
           margin-top: 12px;
         }
 
         &:last-child{
-          height: 21vw;//
+          height: 14.3vw;
           margin-top: 20px;
         }
       }
@@ -2714,17 +2747,21 @@ body{
 
     .header_info {
       .header_content {
-        margin: 23vw 2em 0 2em;
+        margin: 70px 0 0 10px;
         width: 80%;
 
-        .header_text {margin: 5vw 0 5vw 0}
+        .header_text {margin: 60px 0 54px 0;}
       }
+    }
+
+    .bottom_line{
+      bottom: 20px;
     }
   }
 
   .main_content {
     .about {
-      padding: 40px 5px 2% 5px;
+      padding: 60px 5px 2% 5px;
       background: url("../img/about_mobile.png") no-repeat center 5%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
 
       .about_left_gradient,
@@ -2751,7 +2788,7 @@ body{
 
       .location_content {
         .location_title {
-          margin-top: 100px;
+          margin-top: 80px;
           font-size: 20px;
         }
 
@@ -2765,20 +2802,20 @@ body{
 
     .spec_features {
       padding: 0 5px;
-      background-image: radial-gradient(40% 38vw at 50% 61%, rgba(189, 116, 78, 0.2), transparent);
-      min-height: 1600px;
+      background-image: radial-gradient(40% 15% at 50% 60%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(300px 300px at 50% 25%, rgba(189, 116, 78, 0.05), transparent);
+      min-height: 1750px;
 
 
       .spec_feat_container {
         .spec_feat_title{
-          background: #0000 url(../img/advantages.png) no-repeat 50% 40%;
+          background: transparent url(../img/advantages.png) no-repeat 50% 40%;
           background-size: 100% auto;
           padding-top: 100px;
         }
 
         .spec_feat_info {
-          background-image: radial-gradient(200px 200px at 50% 46%, rgba(189, 116, 78, 0.05), transparent);
-          padding: 20px 0;
+          padding: 50px 0;
 
           .spec_feat_block {
             width: 46%;
@@ -2814,8 +2851,8 @@ body{
     .gallery {padding: 10% 5px 0 5px}
 
     .apartments {
-      padding: 0 5px;
-      margin-top: 70px;
+      padding: 0 5px 140px 5px;
+      margin-top: 120px;
 
       .number_list,
       .line_list {margin: 300px 0}
@@ -2832,14 +2869,14 @@ body{
     }
 
     .choose_apartment{
-      background: #141416 url("../img/apartaments_mobile.png") no-repeat 30% 50%;
-      background-size: 100% auto;
-      height: 70vw;
-      padding: 0 5px 50px 5px;
+
+      background-size: 90% auto;
+      height: 76vw;
+      padding: 0 5px;
 
       .line_list,
       .number_list{
-        margin: 100px 0;
+        margin: 80px 0;
       }
     }
 
@@ -2847,7 +2884,7 @@ body{
       padding: 0 5px 0 5px;
 
       .contacts_content {
-        margin: 10% 0 0 0;
+        margin: 0;
         text-align: center;
 
         .contact_info {
@@ -2878,11 +2915,15 @@ body{
   }
 }
 
-/*530*/
+/*640*/
 @media screen and (max-width: $tabletS){
 
   body {
     h1 {font: normal normal 4.3vw/33px "Neuman", sans-serif}
+
+    h2{font: normal normal 22px/normal "Neuman", sans-serif}
+
+    h3{font: normal normal 18px/normal "Neuman", sans-serif}
   }
 
   .header {
@@ -2891,17 +2932,17 @@ body{
     .number_list,
     .line_list {
       .p_pos_line{
-        height: 20vw;//
-        margin-bottom: 20px;
+        height: 120px;
+
 
         &:first-child {
-          height: 10vw;//
+          height: 10vw;
           margin-top: 12px;
         }
 
         &:last-child{
-          height: 21vw;//
-          margin-top: 0;
+          height: 150px;
+
         }
       }
     }
@@ -2962,21 +3003,16 @@ body{
 
       .location_content {
         .location_title {
-          text-align: center;
-          margin-top: 0;
-          font-size: 22px;
+          margin-top: 80px;
+          font-size: 4.8vw;
         }
 
         .location_sec_title{
-          text-align: center;
-          font-size: 18px;
-          margin-bottom: 10px;
-          padding-bottom: 5px;
-          border-bottom: 1px solid $mainBrown;
+          font-size: 3.2vw;
         }
 
         .location_list {
-          margin-top: 65px;
+          margin-top: 15px;
 
           .location_elem {
             line-height: 12px;
@@ -2991,17 +3027,19 @@ body{
 
     .spec_features {
       padding: 0 5px;
-      background-image: radial-gradient(40% 38vw at 50% 59%, rgba(189, 116, 78, 0.2), transparent);
+      background-image: radial-gradient(40% 15% at 50% 61%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(300px 300px at 50% 25%, rgba(189, 116, 78, 0.05), transparent);
       min-height: 1650px;
 
       .spec_feat_container {
-        .spec_feat_info {
-          background-image: radial-gradient(200px 200px at 50% 46%, rgba(189, 116, 78, 0.05), transparent);
-          padding: 20px 0;
+        .spec_feat_title{
+          background: transparent url(../img/advantages.png) no-repeat 50% 70%;
+          background-size: 100% auto;
+        }
 
+        .spec_feat_info {
           .spec_feat_block {
             width: 46%;
-
 
             .spec_feat_num {
               font: normal normal 30px/normal "Neuman", sans-serif;
@@ -3021,13 +3059,13 @@ body{
           .video_viewing {
             .video-js {
               .vjs-big-play-button {
-                top: 40%;
+                top: 42%;
                 width: 50%;
                 left: 25%;
                 font-size: 2vw;
 
                 .vjs-icon-placeholder {
-                  &:before {left: 33.5%}
+                  &:before {left: 36.5%}
                 }
               }
 
@@ -3047,9 +3085,13 @@ body{
     }
 
     .gallery {
-      padding: 40px 5px 0 5px;
+      padding: 80px 5px 0 5px;
+      background-image: none;
 
       .gallery_content{
+        .gallery_sec_title{
+          margin: 0;
+        }
 
         .gallery_images{
           flex-flow: column;
@@ -3073,16 +3115,15 @@ body{
     }
 
     .apartments {
-      padding: 0 5px 50px 5px;
 
       .apartments_content {
         .apartments_blocks {
           .room_block {
-            .room_title{font-size: 20px}
+            .room_title{font-size: 24px}
 
            .room_specifications{
              flex-flow: row wrap;
-             justify-content: space-between;
+             justify-content: center;
              align-items: center;
              width: 80%;
              margin: 0 auto;
@@ -3095,6 +3136,7 @@ body{
                width: 40%;
                text-align: left;
                margin-top: 10px;
+
 
                &:not(:last-child){
                  margin-right: 0;}
@@ -3109,6 +3151,7 @@ body{
     }
 
     .choose_apartment{
+      height: 75vw;
 
       .line_list,
       .number_list{
@@ -3146,7 +3189,65 @@ body{
   }
 }
 
-/*438*/
+/*530*/
+@media screen and (max-width: $mobileL){
+  body {
+    h1 {font: normal normal 4.3vw/33px "Neuman", sans-serif}
+
+    h2{font: normal normal 18px/normal "Neuman", sans-serif}
+
+    h3{font: normal normal 14px/normal "Neuman", sans-serif}
+  }
+
+  .main_content{
+    .about{padding: 96px 5px 2% 5px}
+
+    .spec_features{
+      height: 1600px;
+      background-image: radial-gradient(40% 12% at 50% 58%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(300px 300px at 50% 25%, rgba(189, 116, 78, 0.05), transparent);
+
+      .spec_feat_container {
+        .spec_feat_title {
+          background: transparent url(../img/advantages.png) no-repeat 50% 80%;
+          background-size: 100% auto;
+        }
+
+        .spec_feat_info{
+          .spec_feat_block{
+            .spec_feat_text{
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .gallery{
+      margin-top: 0;
+    }
+
+    .apartments{
+      .apartments_content{
+        .apartments_blocks{
+          .room_block{
+
+            .room_title{
+              font-size: 22px;
+            }
+
+            .room_specifications{
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/*440*/
 @media screen and (max-width: $mobileM) {
 
   body {
@@ -3195,8 +3296,8 @@ body{
     .number_list,
     .line_list {
       .p_pos_line{
-        height: 29px;
-        margin-bottom: 9px;
+        height: 69px;
+        margin: 54px 0 9px 0;
 
         &:first-child {
           height: 40px;
@@ -3204,8 +3305,8 @@ body{
         }
 
         &:last-child{
-          height: 45px;
-          margin-top: 14px;
+          height: 74px;
+          margin-top: 54px;
         }
       }
     }
@@ -3240,13 +3341,12 @@ body{
       }
     }
 
-
     .header_info {
       .header_content {
         display: flex;
         flex-flow: column;
         align-items: center;
-        margin-top: 0;
+        margin-top: 60px;
 
         .header_title {text-align: center}
 
@@ -3266,7 +3366,7 @@ body{
   .main_content {
     .about {
       background-size: 100% auto;
-      padding: 40px 5px 40px 5px;
+      padding: 90px 5px 0 5px;
 
       .about_content {
         .about_info {
@@ -3290,6 +3390,7 @@ body{
         .about_specifications {
           .spec_block {
             width: 45%;
+            margin-top: 30px;
 
           .spec_text {width: 86%}
           }
@@ -3311,21 +3412,19 @@ body{
 
       .location_content {
         .location_title {
-          text-align: center;
-          margin-top: 0;
+
           font-size: 22px;
         }
 
         .location_sec_title{
-          text-align: center;
+
           font-size: 18px;
-          margin-bottom: 10px;
-          padding-bottom: 5px;
-          border-bottom: 1px solid $mainBrown;
+
+
         }
 
         .location_list {
-          margin-top: 65px;
+          margin-top: 15px;
 
           .location_elem {
             line-height: 12px;
@@ -3339,19 +3438,21 @@ body{
     }
 
     .spec_features {
-      background-image: radial-gradient(40% 38vw at 50% 54%, rgba(189, 116, 78, 0.2), transparent);
+      background-image: radial-gradient(40% 11% at 50% 60%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(200px 200px at 50% 25%, rgba(189, 116, 78, 0.05), transparent);
       min-height: 1550px;
 
       .spec_feat_container {
 
         .spec_feat_title{
+          background: transparent url(../img/advantages.png) no-repeat 50% 10%;
+          background-size: 100% auto;
           font-size: 22px;
           height: 80px;
+          padding-top: 40px;
         }
 
         .spec_feat_info {
-          background-image: radial-gradient(140px 140px at 50% 46%, rgba(189, 116, 78, 0.05), transparent);
-
           .spec_feat_block {
             .spec_feat_text {
               letter-spacing: 0.1em;
@@ -3406,9 +3507,19 @@ body{
     }
 
     .apartments {
+      padding: 0 5px 70px 5px;
       .apartments_content {
+
+        .see_more{
+          margin-top: 10px;
+        }
+
         .apartments_blocks {
           .room_block {
+            .room_title{
+              font-size: 20px;
+            }
+
             .room_specifications {
               font-size: 3vw;
 
@@ -3416,7 +3527,10 @@ body{
               .room_floor,
               .room_size,
               .room_price {
-                &:before {transform: scale(0.7)}
+                &:before {
+                  margin-right: 6px;
+                  transform: scale(1);
+                }
               }
             }
           }
@@ -3428,7 +3542,7 @@ body{
       background-position: 30% 100%;
       background-size: 100% auto;
       padding: 0 5px;
-      height: 70vw;
+      height: 75vw;
 
       .number_list,
       .line_list {margin: 50px 0}
@@ -3448,12 +3562,96 @@ body{
   }
 }
 
-/*386*/
+/*400*/
 @media screen and (max-width: $bagFixMobile){
+ body{
+   h2{
+     font: normal normal 20px/normal "Neuman", sans-serif;
+     color: $lightWhite;
+     margin: 0;
+   }
+
+   h3{
+     font: normal normal 15px/normal "Neuman", sans-serif;
+     color: $mainBrown;
+     margin: 0;
+   }
+ }
+
   .main_content{
+
+    .location{
+      .location_content{
+        .location_title{
+          text-align: center;
+          margin-top: 20px;
+        }
+        .location_sec_title{
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .location_list{
+          margin-top: 40px;
+        }
+      }
+    }
+
     .spec_features{
       height: 1700px;
+      background-image: none,
+      radial-gradient(200px 200px at 50% 25%, rgba(189, 116, 78, 0.05), transparent);
+
+      .spec_feat_container{
+        .order_viewing{
+          .video_viewing{
+            width: 100%;
+
+
+            .video-js{
+              width: 100%;
+              height: 60vw;
+
+              .vjs-tech{
+                height: 60vw;
+                border-radius: 10px;
+              }
+
+
+              .vjs-big-play-button{
+
+                top: 40%;
+                left: 25%;
+
+
+                .vjs-icon-placeholder{
+                  &:before{
+
+                    left: 33.2%;
+
+                  }
+                }
+              }
+            }
+
+            video{
+              border-radius: 5px;
+              width: 100%;
+              height: 60vw;
+            }
+          }
+
+          .order_view_content {
+            width: 80%;
+            .order_view_text{
+              margin: 10px 0;
+              font-size: 12px;
+            }
+          }
+        }
+      }
     }
+
+    .gallery{padding: 20px 5px 0 5px}
 
     .choose_apartment {
       .ch_apartment_title{
@@ -3467,14 +3665,21 @@ body{
 
     }
 
+    .contacts{
+      .contacts_content{
+        .contact_info{
+          .contacts_list{
+            width: 80%;
+            margin: 30px auto 50px auto;
+          }
+        }
+      }
+    }
   }
 }
 
-/*300*/
+/*330*/
 @media screen and (max-width: $mobileS){
-
-
-
   .main_content{
     .spec_features {
       .spec_feat_container {
