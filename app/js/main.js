@@ -22,9 +22,9 @@ else{
 
 /*Плавный переход по якроям ссылок*/
   $("a[href*='#']").on("click", function(e){
-    let anchor = $(this);
+    let this_elem = $(this);
     $('html, body').stop().animate({
-      scrollTop: $(anchor.attr('href')).offset().top
+      scrollTop: $(this_elem.attr('href')).offset().top
     }, 777);
     e.preventDefault();
     return false;

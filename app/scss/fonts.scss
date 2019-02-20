@@ -1,9 +1,22 @@
 @font-face {
   font-family: Proxima Nova;
-  src: url("../fonts/Proxima_Nova_Regular.otf") format("truetype");
+  src: url("../fonts/Proxima Nova Regular.eot");
+  src: url("../fonts/Proxima Nova Regular.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Proxima_Nova_Regular.otf") format("truetype"),
+       url("../fonts/ProximaNova-Regular.ttf") format("truetype"),
+       url("../fonts/proxima_nova_regular-webfont.woff") format("woff"),
+       url("../fonts/proxima_nova_regular-webfont.woff2") format("woff2"),
+       url("../fonts/ProximaNova-Regular.svg") format("svg");
+
 }
 
 @font-face {
   font-family: Neuman;
-  src: url("../fonts/td-neumann.otf") format("truetype");
+
+  src:
+       url("../fonts/Neumann.ttf") format("embedded-opentype"),
+       url("../fonts/td-neumann-webfont.woff") format("woff"),
+       url("../fonts/td-neumann-webfont.woff2") format("woff2"),
+       url("../fonts/Neumann.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Neumann.svg") format("svg");
 }

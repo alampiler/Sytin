@@ -1,9 +1,8 @@
-$mainBrown:#BD744E;
-$gradientText: linear-gradient(0, #BD744E 20%, #fff 80%);
-$priceBackground: #212121;
-$lightWhite: #FFE1D2;
-$lightGrey: #DFDFDF;
-$lineColor: #141416;
-$roomsBlocks: #212121;
-$gradientBg: rgba(189, 116, 78, 0.05);
-$gradientLine: linear-gradient(270deg, #141416 15.73%, rgba(255, 255, 255, 0) 104.43%), #BD744E;
+$mainBrown:#BD744E;//+Коричневый+
+$gradientText: linear-gradient(#BD744E 20%, #fff 80%);//Градиент для текста +Светло-коричневый и белый+
+$priceBackground: #212121;//Цвет блока с ценой +Темно-серый+
+$lightWhite: #FFE1D2;//Цвет для текста +Очень светло-розовый+
+$lightGrey: #DFDFDF;//Цвет текста +Светло серый+
+$lineColor: #141416;//Цвет линий в хедере +Черный+
+$roomsBlocks: #212121;//Цвет блоков для квартир +Темно-серый+
+$gradientLine: linear-gradient(270deg, #141416 15.73%, rgba(255, 255, 255, 0) 104.43%), #BD744E;//Цвет линий +Черный и светло-коричневый+
