@@ -107,14 +107,14 @@ var gulp            = require('gulp'),
     gulp.task('build', ['cleanDist', 'minFiles'], () => {
        var buildHTML = gulp.src('app/**/*.html')
             .pipe(gulp.dest('dist'));
-       var buildCSS = gulp.src(['app/css/main.css', 'app/css/libs.min.css', 'app/css/reset.css'])
+       var buildCSS = gulp.src(['app/css/main.min.css', 'app/css/libs.min.css', 'app/css/reset.css'])
            .pipe(gulp.dest('dist/css'));
-       var buildJS = gulp.src(['app/js/main.js', 'app/js/libs.min.js'])
+       var buildJS = gulp.src(['app/js/main.min.js', 'app/js/libs.min.js'])
            .pipe(gulp.dest('dist/js'));
        var buildFonts = gulp.src('app/fonts/**/*.*')
            .pipe(gulp.dest('dist/fonts'));
        var buildMedia = gulp.src('app/media/*')
-           .pipe(gulp.dest('dist/media'))
+           .pipe(gulp.dest('dist/media'));
         var buildImages = gulp.src('app/img/*')
             .pipe(gulp.dest('dist/img'));
     });

@@ -728,7 +728,7 @@ $mobileS: 330px;
   }
 }
 
-/*1681 1920*/
+/*1681w - 1920w  1080h*/
 @media screen and (min-width: $laptopXL) and (max-width: 1920px) {
   $sectionPaddingLeft_Right: 71px;
 
@@ -760,7 +760,7 @@ $mobileS: 330px;
 
   .line_list {
     .scroll_down {
-      top: 6vw;
+      top: 5vw;
       width: 200px;
       left: 100px;
 
@@ -768,8 +768,21 @@ $mobileS: 330px;
     }
   }
 
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      &:first-child {height: 190px}
+
+      &:last-child{
+        height: 390px;
+        margin: 82px 0 20px 0;
+      }
+    }
+  }
+
   .header {
     padding: 0 $sectionPaddingLeft_Right;
+    height: 1080px;
 
     .header_menu {
       .line {
@@ -789,17 +802,15 @@ $mobileS: 330px;
 
     .header_info {
       .header_content {
-        margin-top: 250px;
+        margin: 276px 0 0 114px;
 
-        .header_text {
-          margin: 144px 0 54px 0
-        }
+        .header_text {margin: 136px 0 34px 0}
 
-        .order {
-          width: 16%
-        }
+        .order {width: 16%}
       }
     }
+
+    .bottom_line{bottom: 20px}
   }
 
   .main_content {
@@ -1023,12 +1034,12 @@ $mobileS: 330px;
   }
 }
 
-/*1440 - 1680*/
-@media screen and (min-width: $laptopL) and (max-width: 1680px){
+/*1440w - 1680w  1050h*/
+@media screen and (min-width: $laptopL) and (max-width: 1680px) and (max-height: 1050px){
   body{
     input{font-size: 18px}
 
-    h1{font: normal normal 64px/63px "Neuman", sans-serif}
+    h1{font: normal normal 62px/63px "Neuman", sans-serif}
 
     h2{font: normal normal 55px/normal "Neuman", sans-serif}
 
@@ -1037,23 +1048,31 @@ $mobileS: 330px;
     p{font: normal normal 18px/24px "Proxima Nova", sans-serif}
   }
 
-  .number_list {
-    .number_elem {top: 0}
-  }
-
+  .number_list,
   .line_list {
-    .line_elem {top: 0}
+    .p_pos_line{
+      height: 200px;
+      margin: 60px 0 10px 0;
 
-    .scroll_down{top: 6vw}
+      &:first-child {
+        height: 180px;
+        margin: 30px 0 10px 0;
+      }
+
+      &:last-child{
+        height: 430px;
+        margin: 82px 0 50px 0;
+      }
+    }
   }
-
 
   .header {
     background: black url("../img/header_big.jpeg") no-repeat center;
     background-size: 100% auto;
+    height: 1050px;
 
     .header_menu {
-
+      padding-top: 16px;
       .navbar {
         .nav_list {
           display: flex;
@@ -1067,11 +1086,9 @@ $mobileS: 330px;
 
     .header_info {
       .header_content{
-        margin: 256px 0 0 104px;
+        margin: 270px 0 0 110px;
 
-        .header_text{
-          margin: 230px 0 66px 0;
-        }
+        .header_text{margin: 234px 0 66px 0;}
       }
     }
   }
@@ -1089,7 +1106,6 @@ $mobileS: 330px;
         .about_info{margin-top: 554px}
 
         .price_block{
-
           .price_number{
             font: normal normal 50px/normal "Neuman", sans-serif;
           }
@@ -1170,10 +1186,61 @@ $mobileS: 330px;
   }
 }
 
-/*1366*/
-@media screen and (max-width: $laptopM){
+/*1366w  768h*/
+@media screen and (max-width: $laptopM) and (max-height: 768px){
+
+  body{
+    h1{font: normal normal 50px/63px "Neuman", sans-serif}
+  }
+
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 80px;
+      margin: 40px 0 10px 0;
+
+      &:first-child {
+        height: 110px;
+        margin: 20px 0 0 0;
+      }
+
+      &:last-child{
+        height: 240px;
+        margin: 42px 0 50px 0;
+      }
+    }
+  }
+
+  .line_list {
+    .scroll_down{
+      left: 80px;
+      top: 5.5vw;
+      width: 160px;
+
+      a{font-size: 9px}
+    }
+  }
+
+  .header {
+    height: 768px;
+
+    .header_info {
+      .header_content{
+        margin: 170px 0 0 80px;
+
+        .header_text{margin: 84px 0 20px 0}
+
+        .order{width: 137px}
+      }
+    }
+  }
+
+
   .main_content{
     .about{
+      .about_left_gradient,
+      .about_right_gradient{top: 520px}
+
       .about_content{
         .about_info{margin-top: 462px}
       }
@@ -1206,16 +1273,25 @@ $mobileS: 330px;
   }
 }
 
-/*1280*/
-@media screen and (max-width: $laptopS){
+/*1280w  1024h*/
+@media screen and (max-width: $laptopS) and (max-height: 1024px){
 
   body{
     input{padding: 0.582em 0.55em;}
   }
 
   .header {
+    height: 1024px;
     .header_menu {
       .line {width: 38%}
+    }
+
+    .header_info {
+      .header_content{
+        margin: 260px 0 0 80px;
+
+        .header_text{margin: 174px 0 50px 0}
+      }
     }
   }
 
@@ -1253,7 +1329,7 @@ $mobileS: 330px;
     }
 
     .spec_features{
-      background-image: radial-gradient(30% 20% at 28% 80%, rgba(189, 116, 78, 0.2), transparent),
+      background-image: radial-gradient(30% 20% at 28% 78%, rgba(189, 116, 78, 0.2), transparent),
       radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
       height: 1450px;
       padding: 100px $sectionPaddingLeft_Right 0 $sectionPaddingLeft_Right;
@@ -1321,6 +1397,129 @@ $mobileS: 330px;
     }
   }
 
+}
+
+/*1280w  800h*/
+@media screen and (max-width: $laptopS) and (max-height: 800px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 100px;
+      margin: 30px 0 0  0;
+
+      &:first-child {
+        height: 100px;
+        margin: 20px 0 20px 0;
+      }
+
+      &:last-child{
+        height: 235px;
+        margin: 82px 0 50px 0;
+      }
+    }
+  }
+
+  .header {
+    height: 800px;
+
+    .header_menu {
+      .line {width: 40%}
+
+      .navbar {
+        .nav_list {
+          .nav_elem {
+            a {font-size: 9px}
+
+            &:not(:last-child) {margin-right: 26px}
+          }
+        }
+      }
+    }
+
+    .header_info {
+      .header_content{
+        margin: 180px 0 0 74px;
+
+        .header_text{margin: 100px 0 50px 0}
+      }
+    }
+
+
+    .bottom_line{
+      background-color: $lineColor;
+      width: 100%;
+      height: 1px;
+      position: relative;
+      bottom: 50px;
+    }
+  }
+
+  .main_content{
+    .about{
+      .about_left_gradient,
+      .about_right_gradient{top: 520px}
+    }
+  }
+}
+
+/*1280w 720h*/
+@media screen and (max-width: $laptopS) and (max-height: 800px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 90px;
+      margin: 30px 0 0  0;
+
+      &:first-child {
+        height: 90px;
+        margin: 10px 0 10px 0;
+      }
+
+      &:last-child{
+        height: 190px;
+
+      }
+    }
+  }
+
+  .line_list {
+    .scroll_down{top: 6.4vw}
+  }
+
+  .header {
+    height: 720px;
+
+    .header_menu {
+      .line {width: 40%}
+
+      .navbar {
+        .nav_list {
+          .nav_elem {
+            a {font-size: 9px}
+
+            &:not(:last-child) {margin-right: 26px}
+          }
+        }
+      }
+    }
+
+    .header_info {
+      .header_content{
+        margin: 150px 0 0 74px;
+
+        .header_text{margin: 74px 0 20px 0}
+      }
+    }
+
+    .bottom_line{bottom: 50px}
+  }
+
+  .main_content{
+    .about{
+      .about_left_gradient,
+      .about_right_gradient{top: 460px}
+    }
+  }
 }
 
 /*1233*/

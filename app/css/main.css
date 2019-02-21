@@ -1,12 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: Proxima Nova;
-  src: url("../fonts/Proxima Nova Regular.eot");
-  src: url("../fonts/Proxima Nova Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima_Nova_Regular.otf") format("truetype"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/proxima_nova_regular-webfont.woff") format("woff"), url("../fonts/proxima_nova_regular-webfont.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.svg") format("svg"); }
+  src: url("../fonts/ProximaNovaRegular.ttf") format("truetype"), url("../fonts/proxima_nova_regular-webfont.woff") format("woff"), url("../fonts/proxima_nova_regular-webfont.woff2") format("woff2"); }
 
 @font-face {
   font-family: Neuman;
-  src: url("../fonts/Neumann.ttf") format("embedded-opentype"), url("../fonts/td-neumann-webfont.woff") format("woff"), url("../fonts/td-neumann-webfont.woff2") format("woff2"), url("../fonts/Neumann.eot?#iefix") format("embedded-opentype"), url("../fonts/Neumann.svg") format("svg"); }
+  src: url("../fonts/td-neumann.otf") format("truetype"), url("../fonts/td-neumann-webfont.woff") format("woff"), url("../fonts/td-neumann-webfont.woff2") format("woff2"); }
 
 body {
   background: #141416;
@@ -1814,7 +1813,7 @@ body {
       -webkit-box-shadow: 0 0 27px rgba(0, 0, 0, 0.45);
               box-shadow: 0 0 27px rgba(0, 0, 0, 0.45); } }
 
-/*1681 1920*/
+/*1681w - 1920w  1080h*/
 @media screen and (min-width: 1682px) and (max-width: 1920px) {
   body input {
     font-size: 24px; }
@@ -1831,23 +1830,33 @@ body {
   .filters_btn {
     font-size: 1.2vw !important; }
   .line_list .scroll_down {
-    top: 6vw;
+    top: 5vw;
     width: 200px;
     left: 100px; }
     .line_list .scroll_down a {
       font-size: 14px; }
+  .number_list .p_pos_line:first-child,
+  .line_list .p_pos_line:first-child {
+    height: 190px; }
+  .number_list .p_pos_line:last-child,
+  .line_list .p_pos_line:last-child {
+    height: 390px;
+    margin: 82px 0 20px 0; }
   .header {
-    padding: 0 71px; }
+    padding: 0 71px;
+    height: 1080px; }
     .header .header_menu .line {
       width: 36%; }
     .header .header_menu .navbar .nav_list .nav_elem a {
       font-size: 16px; }
     .header .header_info .header_content {
-      margin-top: 250px; }
+      margin: 276px 0 0 114px; }
       .header .header_info .header_content .header_text {
-        margin: 144px 0 54px 0; }
+        margin: 136px 0 34px 0; }
       .header .header_info .header_content .order {
         width: 16%; }
+    .header .bottom_line {
+      bottom: 20px; }
   .main_content .about {
     background: url("../img/about_big.jpeg") no-repeat center 12%, -webkit-radial-gradient(50% 80%, 600px 600px, rgba(189, 116, 78, 0.1), transparent);
     background: url("../img/about_big.jpeg") no-repeat center 12%, -o-radial-gradient(50% 80%, 600px 600px, rgba(189, 116, 78, 0.1), transparent);
@@ -2009,39 +2018,48 @@ body {
       -webkit-background-size: 100% 100%;
               background-size: 100% 100%; } }
 
-/*1440 - 1680*/
-@media screen and (min-width: 1441px) and (max-width: 1680px) {
+/*1440w - 1680w  1050h*/
+@media screen and (min-width: 1441px) and (max-width: 1680px) and (max-height: 1050px) {
   body input {
     font-size: 18px; }
   body h1 {
-    font: normal normal 64px/63px "Neuman", sans-serif; }
+    font: normal normal 62px/63px "Neuman", sans-serif; }
   body h2 {
     font: normal normal 55px/normal "Neuman", sans-serif; }
   body h3 {
     font: normal normal 46px/normal "Neuman", sans-serif; }
   body p {
     font: normal normal 18px/24px "Proxima Nova", sans-serif; }
-  .number_list .number_elem {
-    top: 0; }
-  .line_list .line_elem {
-    top: 0; }
-  .line_list .scroll_down {
-    top: 6vw; }
+  .number_list .p_pos_line,
+  .line_list .p_pos_line {
+    height: 200px;
+    margin: 60px 0 10px 0; }
+    .number_list .p_pos_line:first-child,
+    .line_list .p_pos_line:first-child {
+      height: 180px;
+      margin: 30px 0 10px 0; }
+    .number_list .p_pos_line:last-child,
+    .line_list .p_pos_line:last-child {
+      height: 430px;
+      margin: 82px 0 50px 0; }
   .header {
     background: black url("../img/header_big.jpeg") no-repeat center;
     -webkit-background-size: 100% auto;
-            background-size: 100% auto; }
-    .header .header_menu .navbar .nav_list {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      .header .header_menu .navbar .nav_list .nav_elem a {
-        font-size: 12px; }
+            background-size: 100% auto;
+    height: 1050px; }
+    .header .header_menu {
+      padding-top: 16px; }
+      .header .header_menu .navbar .nav_list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        .header .header_menu .navbar .nav_list .nav_elem a {
+          font-size: 12px; }
     .header .header_info .header_content {
-      margin: 256px 0 0 104px; }
+      margin: 270px 0 0 110px; }
       .header .header_info .header_content .header_text {
-        margin: 230px 0 66px 0; }
+        margin: 234px 0 66px 0; }
   .main_content .about {
     background: url("../img/about_big.jpeg") no-repeat center 23%, -webkit-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
     background: url("../img/about_big.jpeg") no-repeat center 23%, -o-radial-gradient(50% 80%, 400px 400px, rgba(189, 116, 78, 0.1), transparent);
@@ -2085,8 +2103,39 @@ body {
     width: 63%;
     background: url(../img/contacts_big.jpeg) no-repeat center; } }
 
-/*1366*/
-@media screen and (max-width: 1366px) {
+/*1366w  768h*/
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  body h1 {
+    font: normal normal 50px/63px "Neuman", sans-serif; }
+  .number_list .p_pos_line,
+  .line_list .p_pos_line {
+    height: 80px;
+    margin: 40px 0 10px 0; }
+    .number_list .p_pos_line:first-child,
+    .line_list .p_pos_line:first-child {
+      height: 110px;
+      margin: 20px 0 0 0; }
+    .number_list .p_pos_line:last-child,
+    .line_list .p_pos_line:last-child {
+      height: 240px;
+      margin: 42px 0 50px 0; }
+  .line_list .scroll_down {
+    left: 80px;
+    top: 5.5vw;
+    width: 160px; }
+    .line_list .scroll_down a {
+      font-size: 9px; }
+  .header {
+    height: 768px; }
+    .header .header_info .header_content {
+      margin: 170px 0 0 80px; }
+      .header .header_info .header_content .header_text {
+        margin: 84px 0 20px 0; }
+      .header .header_info .header_content .order {
+        width: 137px; }
+  .main_content .about .about_left_gradient,
+  .main_content .about .about_right_gradient {
+    top: 520px; }
   .main_content .about .about_content .about_info {
     margin-top: 462px; }
   .main_content .spec_features {
@@ -2096,12 +2145,18 @@ body {
   .main_content .apartments .apartments_content .apartments_blocks .room_block .room_specifications {
     font-size: 1.1vw; } }
 
-/*1280*/
-@media screen and (max-width: 1280px) {
+/*1280w  1024h*/
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
   body input {
     padding: 0.582em 0.55em; }
-  .header .header_menu .line {
-    width: 38%; }
+  .header {
+    height: 1024px; }
+    .header .header_menu .line {
+      width: 38%; }
+    .header .header_info .header_content {
+      margin: 260px 0 0 80px; }
+      .header .header_info .header_content .header_text {
+        margin: 174px 0 50px 0; }
   .main_content .about {
     padding: 200px 51px 150px 51px; }
     .main_content .about .about_content .about_info {
@@ -2116,9 +2171,9 @@ body {
   .main_content .location .location_content .location_list .location_elem {
     line-height: 18px; }
   .main_content .spec_features {
-    background-image: -webkit-radial-gradient(28% 80%, 30% 20%, rgba(189, 116, 78, 0.2), transparent), -webkit-radial-gradient(50% 35%, 480px 480px, rgba(189, 116, 78, 0.05), transparent);
-    background-image: -o-radial-gradient(28% 80%, 30% 20%, rgba(189, 116, 78, 0.2), transparent), -o-radial-gradient(50% 35%, 480px 480px, rgba(189, 116, 78, 0.05), transparent);
-    background-image: radial-gradient(30% 20% at 28% 80%, rgba(189, 116, 78, 0.2), transparent), radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
+    background-image: -webkit-radial-gradient(28% 78%, 30% 20%, rgba(189, 116, 78, 0.2), transparent), -webkit-radial-gradient(50% 35%, 480px 480px, rgba(189, 116, 78, 0.05), transparent);
+    background-image: -o-radial-gradient(28% 78%, 30% 20%, rgba(189, 116, 78, 0.2), transparent), -o-radial-gradient(50% 35%, 480px 480px, rgba(189, 116, 78, 0.05), transparent);
+    background-image: radial-gradient(30% 20% at 28% 78%, rgba(189, 116, 78, 0.2), transparent), radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
     height: 1450px;
     padding: 100px 51px 0 51px; }
     .main_content .spec_features .number_list,
@@ -2156,6 +2211,75 @@ body {
       margin-top: 80px; }
   .main_content .contacts .contacts_content .bg_contacts_img {
     width: 62%; } }
+
+/*1280w  800h*/
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+  .number_list .p_pos_line,
+  .line_list .p_pos_line {
+    height: 100px;
+    margin: 30px 0 0  0; }
+    .number_list .p_pos_line:first-child,
+    .line_list .p_pos_line:first-child {
+      height: 100px;
+      margin: 20px 0 20px 0; }
+    .number_list .p_pos_line:last-child,
+    .line_list .p_pos_line:last-child {
+      height: 235px;
+      margin: 82px 0 50px 0; }
+  .header {
+    height: 800px; }
+    .header .header_menu .line {
+      width: 40%; }
+    .header .header_menu .navbar .nav_list .nav_elem a {
+      font-size: 9px; }
+    .header .header_menu .navbar .nav_list .nav_elem:not(:last-child) {
+      margin-right: 26px; }
+    .header .header_info .header_content {
+      margin: 180px 0 0 74px; }
+      .header .header_info .header_content .header_text {
+        margin: 100px 0 50px 0; }
+    .header .bottom_line {
+      background-color: #141416;
+      width: 100%;
+      height: 1px;
+      position: relative;
+      bottom: 50px; }
+  .main_content .about .about_left_gradient,
+  .main_content .about .about_right_gradient {
+    top: 520px; } }
+
+/*1280w 720h*/
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+  .number_list .p_pos_line,
+  .line_list .p_pos_line {
+    height: 90px;
+    margin: 30px 0 0  0; }
+    .number_list .p_pos_line:first-child,
+    .line_list .p_pos_line:first-child {
+      height: 90px;
+      margin: 10px 0 10px 0; }
+    .number_list .p_pos_line:last-child,
+    .line_list .p_pos_line:last-child {
+      height: 190px; }
+  .line_list .scroll_down {
+    top: 6.4vw; }
+  .header {
+    height: 720px; }
+    .header .header_menu .line {
+      width: 40%; }
+    .header .header_menu .navbar .nav_list .nav_elem a {
+      font-size: 9px; }
+    .header .header_menu .navbar .nav_list .nav_elem:not(:last-child) {
+      margin-right: 26px; }
+    .header .header_info .header_content {
+      margin: 150px 0 0 74px; }
+      .header .header_info .header_content .header_text {
+        margin: 74px 0 20px 0; }
+    .header .bottom_line {
+      bottom: 50px; }
+  .main_content .about .about_left_gradient,
+  .main_content .about .about_right_gradient {
+    top: 460px; } }
 
 /*1233*/
 /*Спецификации в блоке с квартирой сделаны в две колонки*/
