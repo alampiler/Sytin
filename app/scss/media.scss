@@ -1273,8 +1273,230 @@ $mobileS: 330px;
   }
 }
 
+/*1280w */
+@media screen and (max-width: $laptopS){
+  body{
+    input{padding: 0.582em 0.55em;}
+  }
+
+  .header {
+    background: black url("../img/header_big.jpeg") no-repeat center;
+    background-size: 100% 100%;
+    padding: 0 $sectionPaddingLeft_Right;
+    position: relative;
+    z-index: 222;
+
+    /*Верхняя часть хедера*/
+    .header_menu {
+      padding-top: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo{
+        width: 13.5%;
+
+        img{max-width: 100%}
+      }
+
+      /*Верхняя линия хедера*/
+      .line {
+        background: $lineColor;
+        height: 1px;
+        width: 42%;
+        opacity: 0.47;
+      }
+
+      /*Прячем моб. меню*/
+      .mobile_navbar{display: none;}
+
+      /*Прячем моб. кнопку*/
+      .mob_btn{display: none;}
+
+
+      .navbar {
+        .nav_list {
+          display: flex;
+
+          .nav_elem {
+            a {
+              letter-spacing: 0.2em;
+              text-transform: uppercase;
+              font-size: 10px;
+              color: $lightGrey;
+              transition: 0.2s linear;
+
+              &:hover{text-shadow: 0 0 5px $lightGrey}
+            }
+
+            &:not(:last-child) {margin-right: 26px}
+          }
+        }
+      }
+    }
+
+    /*Контент хедера*/
+    .header_info {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+
+      /*Контент текст хедера*/
+      .header_content{
+        margin: 276px 0 0 84px;
+
+
+        .header_title{
+          margin: 0;
+          width: 60%;
+
+          /*Оранджевые слова*/
+          span{color: $mainBrown}
+        }
+
+
+        .header_text{
+          margin: 180px 0 50px 0;
+          width: 44%;
+        }
+
+        /*Кнопка "ЗАКАЗАТЬ ПРОСМОТР"*/
+        .order{
+          background-color: rgba(255,255,255, 0);
+          border: none;
+          z-index: 10;
+          position: relative;
+          width: 167px;
+
+          img{max-width: 100%}
+
+          &:hover{
+            img{
+              transition: 0.2s linear;
+              background-color: rgba(189,116,78, 0.1);
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    /*Нижняя черная линия*/
+    .bottom_line{
+      background-color: $lineColor;
+      width: 100%;
+      height: 1px;
+      position: relative;
+      bottom: 50px;
+    }
+  }
+
+  .main_content{
+    .about{
+      padding: 200px $sectionPaddingLeft_Right 150px $sectionPaddingLeft_Right;
+
+      .about_content{
+        .about_info{margin-top: 428px}
+
+        .about_specifications{
+          width: 86%;
+
+          .spec_block{
+
+            &:before{
+              margin-right: 20px;
+            }
+
+            .spec_text{
+              font-size: 12px;
+              width: 62%;
+            }
+          }
+        }
+      }
+    }
+
+    .location{
+      .location_content{
+        .location_list{
+          .location_elem{line-height: 18px}
+        }
+      }
+    }
+
+    .spec_features{
+      background-image: radial-gradient(30% 20% at 28% 78%, rgba(189, 116, 78, 0.2), transparent),
+      radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
+      height: 1450px;
+      padding: 100px $sectionPaddingLeft_Right 0 $sectionPaddingLeft_Right;
+
+      .number_list,
+      .line_list {margin: 290px 0}
+
+      .spec_feat_container{
+        .spec_feat_title{
+          background-size: 100% auto;
+          padding-top: 80px;
+        }
+
+        .order_viewing{
+          padding: 0;
+
+          .order_view_content{width: 66%}
+        }
+      }
+    }
+
+    .gallery{
+      padding: 4% $sectionPaddingLeft_Right 10% $sectionPaddingLeft_Right;
+
+      .number_list,
+      .line_list {margin: 25% 0 15% 0}
+    }
+
+    .apartments {
+      padding: 0 $sectionPaddingLeft_Right 180px $sectionPaddingLeft_Right;
+      .apartments_content {
+
+        .line{margin: 70px auto 100px auto}
+
+        .apartments_blocks{
+          .room_block{
+            .room_specifications{
+              font-size: 1.1vw;
+
+              .room_count,
+              .room_floor,
+              .room_size,
+              .room_price{
+
+                &:before{transform: scale(0.7)}
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contacts{
+      .contacts_content{
+        .contact_info{
+          width: 80%;
+
+          .contacts_form {
+            .form_send{margin-top: 80px}
+          }
+        }
+
+        .bg_contacts_img{width: 62%;}
+      }
+    }
+  }
+}
+
 /*1280w  1024h*/
-@media screen and (max-width: $laptopS) and (max-height: 1024px){
+@media screen and (width: $laptopS) and (max-height: 1024px){
 
   body{
     input{padding: 0.582em 0.55em;}
@@ -1400,7 +1622,7 @@ $mobileS: 330px;
 }
 
 /*1280w  800h*/
-@media screen and (max-width: $laptopS) and (max-height: 800px){
+@media screen and (width: $laptopS) and (max-height: 800px){
   .number_list,
   .line_list {
     .p_pos_line{
@@ -1463,7 +1685,7 @@ $mobileS: 330px;
 }
 
 /*1280w 720h*/
-@media screen and (max-width: $laptopS) and (max-height: 800px){
+@media screen and (width: $laptopS) and (max-height: 720px){
   .number_list,
   .line_list {
     .p_pos_line{
@@ -1828,7 +2050,6 @@ $mobileS: 330px;
 }
 
 /*900*/
-/*Первый переход в мобильно-ппаншетную версию. Добавлено моб. меню, спецификации в секции "О ПРОЕКТЕ" сделаны в три ряда, а три колонки с текстом сделаны в один ряд, видео и форма призентиции сделана колонкой, блоки, форма фильтров в секции "КВАРТИРЫ" сделаны колонкой, спецификации в блоке квартиры секции "КВАРТИРЫ" сделана в один ряд, кнопка скроллера "вверх" прикрепленна внизу и имеет 100% длину*/
 @media screen and (max-width: $tabletEL) {
   body {
     h1 {font: normal normal 4.3vw/53px "Neuman", sans-serif}
@@ -2256,7 +2477,6 @@ $mobileS: 330px;
 }
 
 /*805*/
-/*6 колонок с текстом в секции "ПРЕИМУЩЕСТВА" сделаны в две колонки. Уменьшены отступы левой и прваой стороны секций.*/
 @media screen and (max-width: $tabletL){
 
   $sectionPaddingLeft_Right: 31px;
@@ -2337,7 +2557,6 @@ $mobileS: 330px;
 }
 
 /*720*/
-/*Второй переход в мобильно-ппаншетную версию. Удалены: кнопка листайте вниз, левый и правый градиенты между хедером и секцией "О ПРОЕКТЕ", картинка с картой в секции "МЕСТОПОЛОЖЕНИЕ" изменена на мобильную. Секция "КОНТАКТЫ" сделана по центру, задний фон занял весь размер секции. Уменьшены: отступы левой и правой стороны секций, размер линий и цифр слева и справа.*/
 @media screen and (max-width: $tabletM){
 
   $sectionPaddingLeft_Right: 21px;
@@ -2589,7 +2808,6 @@ $mobileS: 330px;
 }
 
 /*640*/
-/*Третий переход в мобильно-ппаншетную версию. Картинки в секции "Галерея" сделаны в одну колонку, спецификации в блоке квартиры секции "КВАРТИРЫ" сделана в две колонки. Уменьшены отступы левой и прваой стороны секций. Текст в хедере сделан по центру*/
 @media screen and (max-width: $tabletS){
 
   $sectionPaddingLeft_Right: 5px;
@@ -2979,7 +3197,6 @@ $mobileS: 330px;
 }
 
 /*440*/
-/*Удален текст-абзац в хедере. Уменьшены: отступы левой и правой стороны секций, размер линий и цифр слева и справа. Спецификации в секции "О ПРОЕКТЕ" сделаны в два ряда. Кнопка в секции "ПРЕИМУЩЕСТВА" у формы отправки возле видео сделана по центру*/
 @media screen and (max-width: $mobileM) {
   $sectionPaddingLeft_Right: 5px;
 
@@ -3294,7 +3511,6 @@ $mobileS: 330px;
 }
 
 /*400*/
-/*Удален градиент видео в секции "ПРЕИМУЩЕСТВА"*/
 @media screen and (max-width: $bagFixMobile){
   $sectionPaddingLeft_Right: 5px;
 
