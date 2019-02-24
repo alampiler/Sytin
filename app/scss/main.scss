@@ -61,7 +61,6 @@ body{
   }
 }
 
-/*Левые и правые линии в хедере*/
 .number_list,
 .line_list {
   display: flex;
@@ -91,7 +90,6 @@ body{
   }
 }
 
-/*Левая разметка числами*/
 .number_list {
   align-items: flex-start;
 
@@ -110,7 +108,6 @@ body{
   }
 }
 
-/*Правая разметка линиями*/
 .line_list {
   .line_elem {
     background: $mainBrown;
@@ -131,7 +128,7 @@ body{
     transform: rotate(90deg);
     position: relative;
     left: 80px;
-    top: 7vw;
+    top: 6vw;
     width: 160px;
     display: flex;
     align-items: center;
@@ -154,14 +151,12 @@ body{
   }
 }
 
-/*Позициирование и размер иконок с спрайта для блоков с квартирами*/
 @mixin apartmentIco($width, $height, $x, $y){
   background-position: $x $y;
   width: $width;
   height: $height;
 }
 
-/*Кнопки со стрелкой + анимация*/
 @mixin button_styles{
   border: none;
   background: transparent;
@@ -171,7 +166,6 @@ body{
   font-weight: bold;
   padding: 0;
 
-  /*Добавление стрелки*/
   &:after{
     content: "";
     display: inline-block;
@@ -183,7 +177,6 @@ body{
     height: 13px;
   }
 
-  /*Анимация при наведении*/
   &:hover{
     text-shadow: 0 0 5px $lightGrey;
     transition: 0.1s linear;
@@ -194,7 +187,6 @@ body{
 
   }
 
-  /*Анимация движения стрелки*/
   @keyframes buttonAnim {
     0%{
       left: 8px;
@@ -208,10 +200,10 @@ body{
   }
 }
 
-/*Левые и правые внутренние отступы блоков-секций*/
+
 $sectionPaddingLeft_Right: 51px;
 
-/*Хедер*/
+
 .header {
   background: black url("../img/header_big.jpeg") no-repeat center;
   background-size: 100% 100%;
@@ -219,7 +211,7 @@ $sectionPaddingLeft_Right: 51px;
   position: relative;
   z-index: 222;
 
-  /*Верхняя часть хедера*/
+
   .header_menu {
     padding-top: 36px;
     display: flex;
@@ -232,7 +224,6 @@ $sectionPaddingLeft_Right: 51px;
       img{max-width: 100%}
     }
 
-    /*Верхняя линия хедера*/
     .line {
       background: $lineColor;
       height: 1px;
@@ -240,12 +231,9 @@ $sectionPaddingLeft_Right: 51px;
       opacity: 0.47;
     }
 
-    /*Прячем моб. меню*/
     .mobile_navbar{display: none;}
 
-    /*Прячем моб. кнопку*/
     .mob_btn{display: none;}
-
 
     .navbar {
       .nav_list {
@@ -268,23 +256,19 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Контент хедера*/
   .header_info {
     width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
 
-    /*Контент текст хедера*/
     .header_content{
       margin: 276px 0 0 84px;
-
 
       .header_title{
         margin: 0;
         width: 60%;
 
-        /*Оранджевые слова*/
         span{color: $mainBrown}
       }
 
@@ -294,7 +278,6 @@ $sectionPaddingLeft_Right: 51px;
         width: 44%;
       }
 
-      /*Кнопка "ЗАКАЗАТЬ ПРОСМОТР"*/
       .order{
         background-color: rgba(255,255,255, 0);
         border: none;
@@ -315,7 +298,6 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Нижняя черная линия*/
   .bottom_line{
     background-color: $lineColor;
     width: 100%;
@@ -325,16 +307,13 @@ $sectionPaddingLeft_Right: 51px;
   }
 }
 
-/*Все секции*/
 .main_content{
 
-  /*Кнопка скроллер наверх*/
   .scrollUp{
     position: fixed;
     background: $gradientText;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
     cursor: pointer;
     opacity: 0.9;
     top: 80%;
@@ -345,24 +324,18 @@ $sectionPaddingLeft_Right: 51px;
     animation: scrollJump 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both;
   }
 
-  /*Анимайия подпрыгивания скроллера*/
   @keyframes scrollJump {
-    0%{
-      top: 81%;
-    }
-    100%{
-      top: 80%;
-    }
+    0%{top: 81%}
+
+    100%{top: 80%}
   }
 
-  /*Секция "О ПРОЕКТЕ"*/
   .about{
     display: flex;
     padding: 190px $sectionPaddingLeft_Right 150px $sectionPaddingLeft_Right;
-    background: url("../img/about_big.jpeg") no-repeat center 20%, radial-gradient(26% 18% at 50% 80%, rgba(189, 116, 78, 0.1), transparent);//Фото + нижний круг-градиент
+    background: url("../img/about_big.jpeg") no-repeat center 20%, radial-gradient(26% 18% at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
     background-size: 100% auto;
 
-    /*Левый и правый круги-градиенты*/
     .about_left_gradient,
     .about_right_gradient{
       top: 820px;
@@ -382,8 +355,6 @@ $sectionPaddingLeft_Right: 51px;
       background-image: radial-gradient(100% 60% at 100% 35%, rgba(189, 116, 78, 0.1), transparent);
     }
 
-
-    /*Контент секции*/
     .about_content{
       width: 96%;
       display: flex;
@@ -394,7 +365,6 @@ $sectionPaddingLeft_Right: 51px;
       .about_title,
       .about_sec_title{text-align: center}
 
-      /*Три колонки с текстом*/
       .about_info{
         display: flex;
         width: 100%;
@@ -407,9 +377,9 @@ $sectionPaddingLeft_Right: 51px;
 
           .about_block_num{
             font: normal normal 45px/normal "Neuman", sans-serif;
-            background: $gradientText;//Цветовой градиент
-            -webkit-background-clip: text;//Цветовой градиент
-            -webkit-text-fill-color: transparent;//Цветовой градиент
+            background: $gradientText;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             display: inline-block;
           }
 
@@ -421,7 +391,6 @@ $sectionPaddingLeft_Right: 51px;
         }
       }
 
-      /*Блок с ценой*/
       .price_block{
         background: $priceBackground;
         display: inline-flex;
@@ -452,7 +421,6 @@ $sectionPaddingLeft_Right: 51px;
         }
       }
 
-      /*Блок с спецификациями*/
       .about_specifications{
         display: flex;
         width: 70%;
@@ -465,7 +433,6 @@ $sectionPaddingLeft_Right: 51px;
           display: flex;
           margin-bottom: 60px;
 
-          /*Иконка щита*/
           &:before{
             content: '';
             width: 32px;
@@ -476,7 +443,6 @@ $sectionPaddingLeft_Right: 51px;
             background: url(../img/sprite.png) no-repeat -12px  -172px;
           }
 
-          /*Текст*/
           .spec_text{
             text-transform: uppercase;
             font-size: 14px;
@@ -489,7 +455,6 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Секция "МЕСТОПОЛОЖЕНИЕ"*/
   .location{
     background: transparent url(../img/map.jpeg) no-repeat center;
     background-size: 100% auto;
@@ -497,11 +462,9 @@ $sectionPaddingLeft_Right: 51px;
     display: flex;
     justify-content: space-between;
 
-    /*Отступы списков с разметкой*/
     .number_list,
     .line_list {margin: 140px 0}
 
-    /*Контент*/
     .location_content{
       flex-grow: 1;
       width: 96%;
@@ -509,7 +472,6 @@ $sectionPaddingLeft_Right: 51px;
 
       .location_title{margin-top: 32px}
 
-      /*Список с временем прибытия*/
       .location_list{
         margin-top: 50px;
 
@@ -525,7 +487,6 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Секция "ПРЕИМУЩЕСТВА"*/
   .spec_features{
     display: flex;
     justify-content: space-between;
@@ -534,11 +495,9 @@ $sectionPaddingLeft_Right: 51px;
     background-image: radial-gradient(30% 20% at 28% 76%, rgba(189, 116, 78, 0.2), transparent),
     radial-gradient(480px 480px at 50% 35%, rgba(189, 116, 78, 0.05), transparent);
 
-    /*Отступы списков с разметкой*/
     .number_list,
     .line_list {margin: 320px 0}
 
-    /*Контент*/
     .spec_feat_container{
       text-align: center;
       padding: 0 30px;
@@ -550,7 +509,7 @@ $sectionPaddingLeft_Right: 51px;
         background-size: 95% auto;
 
       }
-      /*Блоки с особеностями*/
+
       .spec_feat_info{
         display: flex;
         justify-content: space-around;
@@ -574,9 +533,9 @@ $sectionPaddingLeft_Right: 51px;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
-            border: 1px solid transparent;//Градиент для бордера
-            border-image: $gradientText;//Градиент для бордера
-            border-image-slice: 1;//Градиент для бордера
+            border: 1px solid transparent;
+            border-image: $gradientText;
+            border-image-slice: 1;
           }
 
           .spec_feat_text{
@@ -588,11 +547,9 @@ $sectionPaddingLeft_Right: 51px;
         }
       }
 
-      /*Блок с видео и заказом просмотра*/
       .order_viewing{
         padding: 80px 0 0 0;
 
-        /*Видео*/
         .video_viewing{
           width: 30%;
           position: absolute;
@@ -612,7 +569,6 @@ $sectionPaddingLeft_Right: 51px;
 
             .vjs-poster{border-radius: 10px}
 
-            /*Кнопка "ПЛЕЙ"*/
             .vjs-big-play-button{
               width: 30%;
               min-height: 50px;
@@ -625,7 +581,6 @@ $sectionPaddingLeft_Right: 51px;
               letter-spacing: 1px;
               text-align: center;
 
-              /*Текст кнопки*/
               &:after{
                 width: 100%;
                 top: 40px;
@@ -634,7 +589,6 @@ $sectionPaddingLeft_Right: 51px;
               }
 
               .vjs-icon-placeholder{
-                /*Иконка кнопки*/
                 &:before{
                   content: '';
                   display: block;
@@ -656,7 +610,6 @@ $sectionPaddingLeft_Right: 51px;
           }
         }
 
-        /*Контент заказа*/
         .order_view_content{
           width: 60%;
           text-align: left;
@@ -664,7 +617,6 @@ $sectionPaddingLeft_Right: 51px;
           float: right;
           margin-top: 25px;
 
-          /*При наведении вкл. анимация*/
           &.active{animation: animForForm 0.5s ease-out 0s 1 alternate forwards}
 
           .order_view_text{
@@ -680,7 +632,6 @@ $sectionPaddingLeft_Right: 51px;
             width: 100%;
           }
 
-          /*Форма заказа*/
           .order_view_form{
             display: flex;
             flex-flow: row wrap;
@@ -688,12 +639,10 @@ $sectionPaddingLeft_Right: 51px;
 
             input{width: 27%;}
 
-            /*Блок для кнопки*/
             .send_block{
               width: 100%;
               text-align: right;
 
-              /*Кнопка "Отправить"*/
               .form_send{
                 margin-top: 50px;
                 margin-right: 10px;
@@ -703,7 +652,6 @@ $sectionPaddingLeft_Right: 51px;
           }
         }
 
-        /*Анимация для видео*/
         @keyframes animForVideo {
           0%{
             left: 0;
@@ -718,7 +666,6 @@ $sectionPaddingLeft_Right: 51px;
           }
         }
 
-        /*Анимация для формы*/
         @keyframes animForForm {
           0%{
             left: 0;
@@ -736,7 +683,6 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Секция "ГАЛЕРЕЯ"*/
   .gallery{
     padding: 4% $sectionPaddingLeft_Right 14% $sectionPaddingLeft_Right;
     text-align: center;
@@ -747,7 +693,6 @@ $sectionPaddingLeft_Right: 51px;
     .number_list,
     .line_list {margin: 20% 0 15% 0}
 
-    /*Контент*/
     .gallery_content{
       width: 96%;
 
@@ -764,7 +709,6 @@ $sectionPaddingLeft_Right: 51px;
           box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.45);
         }
 
-        /*Блок с двумя картинками*/
         .first_img_sect{
           width: 50%;
 
@@ -773,7 +717,6 @@ $sectionPaddingLeft_Right: 51px;
           img{max-width: 100%}
         }
 
-        /*Блок с одной картинкой*/
         .second_img_sect{
           width: 27%;
           margin: 0 3%;
@@ -781,7 +724,6 @@ $sectionPaddingLeft_Right: 51px;
           img{max-width: 100%}
         }
 
-        /*Блок с тремя картинками*/
         .third_img_sect{
           width: 17.8%;
 
@@ -793,7 +735,6 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Секция "КВАРТИРЫ"*/
   .apartments {
     display: flex;
     justify-content: space-between;
@@ -802,12 +743,10 @@ $sectionPaddingLeft_Right: 51px;
     .number_list,
     .line_list {margin: 290px 0}
 
-    /*Контент*/
     .apartments_content {
       text-align: center;
       width: 96%;
 
-      /*Форма с фильтрами*/
       .filters{
         text-align: left;
         width: 72%;
@@ -816,13 +755,11 @@ $sectionPaddingLeft_Right: 51px;
         justify-content: space-around;
         align-items: flex-end;
 
-        /*Фильтры*/
         .filter_price,
         .filter_square{
           width: 30%;
 
           .irs{
-            /*Линия пустая*/
             .irs-line{
               height: 2px;
               width: 99%;
@@ -832,7 +769,6 @@ $sectionPaddingLeft_Right: 51px;
             .irs-min,
             .irs-max{display: none}
 
-            /*Мелкие цифры*/
             .irs-from,
             .irs-to{
               top: 50px;
@@ -844,13 +780,11 @@ $sectionPaddingLeft_Right: 51px;
             .irs-from:before,
             .irs-to:before{display: none}
 
-            /*Линия заполненая*/
             .irs-bar{
               height: 2px;
               background-color: $lightWhite;
             }
 
-             /*Круги*/
             .irs-handle{
               top: 16px;
 
@@ -865,11 +799,9 @@ $sectionPaddingLeft_Right: 51px;
           }
         }
 
-        /*Кнопка "Применить"*/
         .filters_btn{@include button_styles}
       }
 
-      /*Линия между фильтрами и блоками квартир*/
       .line{
         background: $gradientLine;
         height: 2px;
@@ -877,13 +809,11 @@ $sectionPaddingLeft_Right: 51px;
         margin: 70px auto 120px auto;
       }
 
-      /*Кнопка "Смотреть больше"*/
       .see_more{
         @include button_styles;
         margin-top: 60px;
       }
 
-      /*Блоки квартир*/
       .apartments_blocks{
         display: flex;
         flex-flow: row wrap;
@@ -891,7 +821,6 @@ $sectionPaddingLeft_Right: 51px;
         width: 80%;
         margin: 0 auto;
 
-        /*Блок с квартирой*/
         .room_block{
           box-sizing: border-box;
           width: 48.5%;
@@ -910,7 +839,6 @@ $sectionPaddingLeft_Right: 51px;
             max-width: 100%;
           }
 
-          /*Иконки с текстом*/
           .room_specifications{
             font-size: 16px;
             line-height: 24px;
@@ -924,7 +852,6 @@ $sectionPaddingLeft_Right: 51px;
             .room_price{
               &:not(:last-child){margin-right: 2%}
 
-              /*Задаем стили для всех иконок*/
               &:before{
                 content: "";
                 display: inline-block;
@@ -935,7 +862,6 @@ $sectionPaddingLeft_Right: 51px;
               }
             }
 
-            /*Через миксин задаём каждой иконке позицию*/
             .room_count:before{@include apartmentIco(25px, 25px, -14px, -20px)}
 
             .room_floor:before{
@@ -952,7 +878,6 @@ $sectionPaddingLeft_Right: 51px;
     }
   }
 
-  /*Секция "ВЫБЕРИТЕ КВАРТИРУ"*/
   .choose_apartment{
     background: #141416 url("../img/apartaments_big.jpeg") no-repeat center;
     background-size: 80% auto;
@@ -966,7 +891,6 @@ $sectionPaddingLeft_Right: 51px;
     .line_list {margin: 350px 0;}
   }
 
-  /*Секция "КОНТАКТЫ"*/
   .contacts{
     display: flex;
     justify-content: space-between;
@@ -980,11 +904,9 @@ $sectionPaddingLeft_Right: 51px;
       margin: 12em 0;
     }
 
-    /*Контент*/
     .contacts_content{
       width: 96%;
 
-      /*Текст с формой*/
       .contact_info{
         float: left;
         display: inline-block;
@@ -994,7 +916,6 @@ $sectionPaddingLeft_Right: 51px;
         height: 590px;
         width: 100%;
 
-        /*Список контактных данных*/
         .contacts_list{
           text-transform: uppercase;
           margin: 30px 0 120px 0;
@@ -1005,11 +926,9 @@ $sectionPaddingLeft_Right: 51px;
           }
         }
 
-        /*Форма*/
         .contacts_form {
           input:not(:last-of-type){margin-right: 2.4%}
 
-          /*Кнопка "Заказать просмотр"*/
           .form_send{
             @include button_styles;
             margin-top: 70px;
@@ -1017,7 +936,6 @@ $sectionPaddingLeft_Right: 51px;
         }
       }
 
-      /*Нижняя линия*/
       .line{
         background: $gradientLine;
         height: 2px;
@@ -1027,7 +945,6 @@ $sectionPaddingLeft_Right: 51px;
         top: 80%;
       }
 
-      /*Блок с залним фоном*/
       .bg_contacts_img{
         position: absolute;
         width: 64%;
@@ -1042,7 +959,5 @@ $sectionPaddingLeft_Right: 51px;
 
 }
 
-
-/*Подключение медиа запросов*/
 @import 'media.scss';
 

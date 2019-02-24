@@ -1,4 +1,4 @@
-$Four_K: 2548px;
+$Four_K: 2560px;
 $bagFixBigLaptop: 2048px;
 $laptopXXL: 1921px;
 $laptopXL: 1682px;
@@ -8,7 +8,7 @@ $laptopS: 1280px;
 $bagFixLaptop: 1233px;
 $laptopES: 1024px;
 $tabletEL: 900px;
-$tabletL: 805px;
+$tabletL: 800px;
 $tabletM: 720px;
 $tabletS: 640px;
 $mobileL: 530px;
@@ -17,14 +17,14 @@ $bagFixMobile:400px;
 $mobileS: 330px;
 
 
-/*2048 2548*/
+/*2048w - 2560w*/
 @media screen and (min-width: 2049px) and (max-width: $Four_K){
   $sectionPaddingLeft_Right: 71px;
 
   body{
     input{font-size: 24px}
 
-    h1{font: normal normal 90px/113px "Neuman", sans-serif}
+    h1{font: normal normal 98px/113px "Neuman", sans-serif}
 
     h2{font: normal normal 80px/normal "Neuman", sans-serif}
 
@@ -35,13 +35,6 @@ $mobileS: 330px;
 
   .number_list,
   .line_list {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-    margin: 0;
-    position: relative;
-    z-index: 10;
-
     .p_pos_line{
 
       height: 680px;
@@ -124,7 +117,7 @@ $mobileS: 330px;
         margin: 560px 0 0 164px;
 
         .header_text{
-          margin: 460px 0 60px 0;
+          margin: 360px 0 60px 0;
         }
 
         .order{width: 16%}
@@ -366,34 +359,94 @@ $mobileS: 330px;
   }
 }
 
-/*1921 2048*/
+/*2048w - 2560w  1600h*/
+@media screen and (min-width: 2049px) and (max-width: $Four_K) and (height: 1600px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 420px;
+      width: 2px;
+      margin: 60px 0 40px 0;
+
+      &:first-child {
+        height: 320px;
+        margin: 40px 0 40px 0;
+      }
+
+      &:last-child{
+        height: 600px;
+        margin: 152px 0 50px 0;
+      }
+    }
+  }
+
+  .header{
+    height: 1600px;
+
+    .header_info {
+      .header_content{
+        margin: 460px 0 0 164px;
+
+        .header_text{margin: 210px 0 40px 0}
+      }
+    }
+  }
+}
+
+/*2048w - 2560w  1440h*/
+@media screen and (min-width: 2049px) and (max-width: $Four_K) and (height: 1440px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+
+      height: 320px;
+      width: 2px;
+      margin: 60px 0 40px 0;
+
+      &:first-child {
+        height: 290px;
+        margin: 40px 0 20px 0;
+      }
+
+      &:last-child{
+        height: 500px;
+        margin: 152px 0 50px 0;
+      }
+    }
+  }
+
+  .header{
+    height: 1440px;
+
+    .header_info {
+      .header_content{
+        margin: 400px 0 0 164px;
+
+        .header_text{margin: 160px 0 60px 0}
+      }
+    }
+  }
+}
+
+/*1921w - 2048w*/
 @media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop){
   $sectionPaddingLeft_Right: 71px;
-
 
   body{
     input{font-size: 24px}
 
-    h1{font: normal normal 80px/normal "Neuman", sans-serif}
+    h1{font: normal normal 80px/90px "Neuman", sans-serif}
 
     h2{font: normal normal 60px/normal "Neuman", sans-serif}
 
     h3{font: normal normal 50px/normal "Neuman", sans-serif}
 
-    p{font: normal normal 26px/54px "Proxima Nova", sans-serif}
+    p{font: normal normal 25px/44px "Proxima Nova", sans-serif}
   }
 
   .number_list,
   .line_list {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-    margin: 0;
-    position: relative;
-    z-index: 10;
-
     .p_pos_line{
-
       height: 380px;
       width: 2px;
       margin: 60px 0 20px 0;
@@ -439,7 +492,6 @@ $mobileS: 330px;
     }
   }
 
-
   .form_send,
   .see_more,
   .filters_btn{
@@ -457,9 +509,7 @@ $mobileS: 330px;
     padding: 0 $sectionPaddingLeft_Right;
 
     .header_menu {
-      .logo{
-        width: 18%;
-      }
+      .logo{width: 18%}
 
       .line{
         height: 2px;
@@ -468,7 +518,6 @@ $mobileS: 330px;
 
       .navbar {
         .nav_list {
-
           .nav_elem {
             a {font-size: 20px}
           }
@@ -480,9 +529,7 @@ $mobileS: 330px;
       .header_content{
         margin: 380px 0 0 124px;
 
-        .header_text{
-          margin: 150px 0 40px 0;
-        }
+        .header_text{margin: 150px 0 40px 0}
 
         .order{width: 16%}
       }
@@ -498,7 +545,7 @@ $mobileS: 330px;
     .about{
       background: url("../img/about_big.jpeg") no-repeat center 12%, radial-gradient(600px 600px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
       background-size: 100% auto;
-      padding: 220px $sectionPaddingLeft_Right 150px $sectionPaddingLeft_Right;
+      padding: 200px $sectionPaddingLeft_Right 150px $sectionPaddingLeft_Right;
 
       .about_left_gradient,
       .about_right_gradient{
@@ -508,7 +555,6 @@ $mobileS: 330px;
         height: 800px;
         position: absolute;
       }
-
 
       .about_content{
         .about_info{
@@ -552,6 +598,7 @@ $mobileS: 330px;
 
     .location{
       padding: 9% $sectionPaddingLeft_Right;
+
       .location_content{
         .location_list{
           .location_elem{
@@ -682,7 +729,6 @@ $mobileS: 330px;
       padding: 0 $sectionPaddingLeft_Right;
       background-image: radial-gradient(800px 500px at 30% 60%, rgba(189, 116, 78, 0.15), transparent);
 
-
       .contacts_content{
         .contact_info{
           height: 990px;
@@ -714,22 +760,105 @@ $mobileS: 330px;
         }
 
         .bg_contacts_img{
-          position: absolute;
-          width: 60%;//
-          right: 0;
-          height: 1030px;//
-          background: url(../img/contacts_big.jpeg) no-repeat center;//
-          background-size: 100% 100%;//
-          border-radius: 5px;
-          box-shadow: 0 0 27px rgba(0, 0, 0, 0.45);
+          width: 60%;
+          height: 1030px;
+          background: url(../img/contacts_big.jpeg) no-repeat center;
+          background-size: 100% 100%;
         }
       }
     }
   }
 }
 
-/*1681w - 1920w  1080h*/
-@media screen and (min-width: $laptopXL) and (max-width: 1920px) {
+/*1921w - 2048w  1152h*/
+@media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop) and (height: 1152px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 200px;
+      width: 2px;
+      margin: 60px 0 20px 0;
+
+      &:first-child {
+        height: 190px;
+        margin: 40px 0 10px 0;
+      }
+
+      &:last-child{
+        height: 390px;
+        margin: 102px 0 50px 0;
+      }
+    }
+  }
+
+  .header {
+    height: 1152px;
+
+    .header_info {
+      .header_content{
+        margin: 290px 0 0 124px;
+
+        .header_text{margin: 140px 0 40px 0}
+
+        .order{width: 16%}
+      }
+    }
+
+    .bottom_line{
+      height: 2px;
+      opacity: 0.47;
+    }
+  }
+
+  .main_content{
+    .about{
+      .about_left_gradient,
+      .about_right_gradient{
+        top: 900px;
+      }
+    }
+  }
+}
+
+/*1921w - 2048w  1536h*/
+@media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop) and (height: 1536px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 440px;
+
+      &:first-child {height: 310px}
+
+      &:last-child{height: 640px}
+    }
+  }
+
+  .header {
+    height: 1536px;
+
+    .header_info {
+      .header_content{
+        margin: 440px 0 0 124px;
+
+        .header_text{margin: 250px 0 60px 0}
+
+        .order{width: 16%}
+      }
+    }
+  }
+
+  .main_content{
+    .about{
+      .about_left_gradient,
+      .about_right_gradient{
+        top: 900px;
+      }
+    }
+  }
+}
+
+/*1681w - 1920w*/
+@media screen and (min-width: $laptopXL) and (max-width: 1920px){
   $sectionPaddingLeft_Right: 71px;
 
   body {
@@ -764,7 +893,7 @@ $mobileS: 330px;
       width: 200px;
       left: 100px;
 
-      a {font-size: 14px}
+      a {font-size: 18px}
     }
   }
 
@@ -782,19 +911,14 @@ $mobileS: 330px;
 
   .header {
     padding: 0 $sectionPaddingLeft_Right;
-    height: 1080px;
 
     .header_menu {
-      .line {
-        width: 36%
-      }
+      .line {width: 36%}
 
       .navbar {
         .nav_list {
           .nav_elem {
-            a {
-              font-size: 16px
-            }
+            a {font-size: 16px}
           }
         }
       }
@@ -817,7 +941,7 @@ $mobileS: 330px;
     .about {
       background: url("../img/about_big.jpeg") no-repeat center 12%, radial-gradient(600px 600px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
       background-size: 100% auto;
-      padding: 145px $sectionPaddingLeft_Right 150px $sectionPaddingLeft_Right;
+      padding: 165px $sectionPaddingLeft_Right 150px $sectionPaddingLeft_Right;
 
       .about_content {
         .about_info {
@@ -1034,6 +1158,63 @@ $mobileS: 330px;
   }
 }
 
+/*1681w - 1920w  1200h*/
+@media screen and (min-width: $laptopXL) and (max-width: 1920px) and (height: 1200px) {
+
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 200px;
+
+      &:first-child {height: 190px}
+
+      &:last-child{
+        height: 490px;
+        margin: 82px 0 20px 0;
+      }
+    }
+  }
+
+  .header {
+    height: 1200px;
+
+    .header_info {
+      .header_content {
+        margin: 330px 0 0 114px;
+
+        .header_text {margin: 170px 0 34px 0}
+
+      }
+    }
+  }
+}
+
+/*1681w - 1920w  1080h*/
+@media screen and (min-width: $laptopXL) and (max-width: 1920px) and (height: 1080px) {
+
+  .line_list {
+    .scroll_down {
+      top: 5vw;
+      width: 200px;
+      left: 100px;
+
+      a {font-size: 14px}
+    }
+  }
+
+  .header {
+    height: 1080px;
+
+    .header_info {
+      .header_content {
+        margin: 276px 0 0 114px;
+
+        .header_text {margin: 136px 0 34px 0}
+      }
+    }
+  }
+}
+
 /*1440w - 1680w  1050h*/
 @media screen and (min-width: $laptopL) and (max-width: 1680px) and (max-height: 1050px){
   body{
@@ -1073,6 +1254,7 @@ $mobileS: 330px;
 
     .header_menu {
       padding-top: 16px;
+
       .navbar {
         .nav_list {
           display: flex;
@@ -1186,8 +1368,48 @@ $mobileS: 330px;
   }
 }
 
+/*1600w  900h*/
+@media screen and (width: 1600px) and (height: 900px) {
+
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 140px;
+      margin: 60px 0 10px 0;
+
+      &:first-child {
+        height: 116px;
+        margin: 30px 0 10px 0;
+      }
+
+      &:last-child{
+        height: 340px;
+        margin: 82px 0 50px 0;
+      }
+    }
+  }
+
+  .header{
+    height: 900px;
+
+
+    .header_info {
+      .header_content{
+        margin: 190px 0 0 100px;
+
+        .header_text{margin: 214px 0 36px 0}
+
+        .order{
+          width: 16%;
+        }
+      }
+    }
+
+  }
+}
+
 /*1366w  768h*/
-@media screen and (max-width: $laptopM) and (max-height: 768px){
+@media screen and (width: $laptopM) and (height: 768px){
 
   body{
     h1{font: normal normal 50px/63px "Neuman", sans-serif}
@@ -1496,7 +1718,7 @@ $mobileS: 330px;
 }
 
 /*1280w  1024h*/
-@media screen and (width: $laptopS) and (max-height: 1024px){
+@media screen and (width: $laptopS) and (height: 1024px){
 
   body{
     input{padding: 0.582em 0.55em;}
@@ -1622,7 +1844,7 @@ $mobileS: 330px;
 }
 
 /*1280w  800h*/
-@media screen and (width: $laptopS) and (max-height: 800px){
+@media screen and (width: $laptopS) and (height: 800px){
   .number_list,
   .line_list {
     .p_pos_line{
@@ -1685,7 +1907,7 @@ $mobileS: 330px;
 }
 
 /*1280w 720h*/
-@media screen and (width: $laptopS) and (max-height: 720px){
+@media screen and (width: $laptopS) and (height: 720px){
   .number_list,
   .line_list {
     .p_pos_line{
@@ -1745,7 +1967,6 @@ $mobileS: 330px;
 }
 
 /*1233*/
-/*Спецификации в блоке с квартирой сделаны в две колонки*/
 @media screen and (max-width: $bagFixLaptop){
   body{
     h1{font: normal normal 50px/63px "Neuman", sans-serif}
@@ -1863,7 +2084,7 @@ $mobileS: 330px;
   }
 }
 
-/*1024*/
+/*1024w*/
 @media screen and (max-width: $laptopES){
   body{
     h1{font: normal normal 38px/53px "Neuman", sans-serif}
@@ -2049,8 +2270,112 @@ $mobileS: 330px;
 
 }
 
-/*900*/
+/*1024w  786h*/
+@media screen and (width: $laptopES) and (height: 768px){
+  .line_list {
+    .scroll_down{top: 6.4vw}
+  }
+
+
+  .header {
+    height: 768px;
+    .number_list,
+    .line_list {
+      .p_pos_line{
+        height:110px;
+
+        &:first-child {
+          height: 120px;
+          margin: 5px 0 5px 0;
+        }
+
+        &:last-child{height: 250px}
+      }
+    }
+
+    .header_info {
+      .header_content{
+        margin: 176px 0 0 44px;
+
+        .header_text{
+          margin: 106px 0 20px 0;
+        }
+      }
+    }
+  }
+}
+
+/*1024w  600h*/
+@media screen and (width: $laptopES) and (height: 600px){
+  body{
+    h1{font: normal normal 32px/36px "Neuman", sans-serif}
+  }
+
+  .number_list {
+    .number_elem {
+      font: normal normal 10px/normal 'Neuman', sans-serif;
+      margin: 2px 4px 15px 0;
+    }
+
+    .active_num{font-size: 14px}
+  }
+
+  .line_list {
+    .line_elem {
+      margin: 15px 4px 15px 0;
+      top: 17px;
+    }
+
+    .scroll_down{top: 7vw}
+  }
+
+  .header {
+    height: 600px;
+
+    .number_list,
+    .line_list {
+      .p_pos_line{
+        height: 70px;
+        margin: 20px 0 10px 0;
+
+        &:first-child {
+          height: 80px;
+          margin: 5px 0 5px 0;
+        }
+
+        &:last-child{
+          height: 210px;
+          margin: 20px 0 0 0;
+        }
+      }
+    }
+
+    .header_info {
+      .header_content{
+        margin: 120px 0 0 44px;
+
+        .header_title{width: 50%}
+
+        .header_text{margin: 50px 0 20px 0}
+      }
+    }
+
+    .bottom_line{
+      bottom: 0;
+    }
+  }
+}
+
+/*900w*/
 @media screen and (max-width: $tabletEL) {
+  .line_list {
+    .scroll_down{
+      top: 7.5vw;
+
+      a{font-size: 9px}
+    }
+  }
+
   body {
     h1 {font: normal normal 4.3vw/53px "Neuman", sans-serif}
 
@@ -2058,7 +2383,6 @@ $mobileS: 330px;
   }
 
   .header {
-
     .number_list,
     .line_list{
       .p_pos_line{height: 150px}
@@ -2109,9 +2433,7 @@ $mobileS: 330px;
             opacity: 0.47;
           }
 
-          .logo{
-            width: 28%;
-          }
+          .logo{width: 28%}
 
           .exit_mob_menu{
             font: bold normal 60px/0 "Neuman", sans-serif;
@@ -2152,17 +2474,13 @@ $mobileS: 330px;
           }
         }
 
-        &.active{
-          display: flex;
-        }
+        &.active{display: flex}
       }
     }
 
     .header_info {
       .header_content {
         margin: 220px 0 0 30px;
-
-
 
         .header_text {
           margin: 134px 0 54px 0;
@@ -2476,7 +2794,7 @@ $mobileS: 330px;
   }
 }
 
-/*805*/
+/*800w*/
 @media screen and (max-width: $tabletL){
 
   $sectionPaddingLeft_Right: 31px;
@@ -2556,6 +2874,134 @@ $mobileS: 330px;
   }
 }
 
+/*800w  600h*/
+@media screen and (width: $tabletL) and (max-height: 600px){
+
+  .number_list {
+    .number_elem {
+      font: normal normal 10px/normal 'Neuman', sans-serif;
+      margin: 2px 4px 15px 0;
+    }
+
+    .active_num{font-size: 14px}
+  }
+
+  .line_list {
+    .line_elem {
+      margin: 15px 4px 15px 0;
+      top: 17px;
+    }
+
+    .scroll_down{top: 7vw}
+  }
+
+  .header {
+    height: 600px;
+
+    .number_list,
+    .line_list {
+      .p_pos_line{
+        height: 70px;
+        margin: 20px 0 30px 0;
+
+        &:first-child {
+          height: 90px;
+          margin: 5px 0 5px 0;
+        }
+
+        &:last-child{
+          height: 210px;
+          margin: 20px 0 10px 0;
+        }
+      }
+    }
+
+    .header_info {
+      .header_content{
+        margin: 120px 0 0 44px;
+
+        .header_text{margin: 60px 0 20px 0}
+      }
+    }
+
+    .bottom_line{bottom: 10px}
+  }
+}
+
+/*800w  480h*/
+@media screen and (width: $tabletL) and (max-height: 480px){
+ body{
+   h1{font: normal normal 32px/36px "Neuman", sans-serif}
+
+   p{font: normal normal 12px/20px "Proxima Nova", sans-serif}
+ }
+
+  .number_list {
+    .number_elem {
+      font: normal normal 10px/normal 'Neuman', sans-serif;
+      margin: 2px 4px 15px 0;
+    }
+
+    .active_num{font-size: 14px}
+  }
+
+  .line_list {
+    .line_elem {
+      margin: 15px 4px 15px 0;
+      top: 17px;
+    }
+
+    .scroll_down{
+      top: 6vw;
+
+      a{font-size: 7px}
+    }
+  }
+
+  .header {
+    height: 480px;
+
+    .number_list,
+    .line_list {
+      .p_pos_line{
+        height: 40px;
+        margin: 20px 0 30px 0;
+
+        &:first-child {
+          height: 46px;
+          margin: 5px 0 5px 0;
+        }
+
+        &:last-child{
+          height: 140px;
+          margin: 20px 0 10px 0;
+        }
+      }
+    }
+
+    .header_info {
+      .header_content{
+        margin: 90px 0 0 44px;
+
+        .header_text{margin: 60px 0 15px 0}
+
+        .order{width: 130px}
+      }
+    }
+
+    .bottom_line{bottom: 10px}
+  }
+
+  .main_content{
+    .about{
+      padding: 70px 31px 2% 31px;
+
+      .about_left_gradient,
+      .about_right_gradient{top: 200px}
+    }
+  }
+}
+
 /*720*/
 @media screen and (max-width: $tabletM){
 
@@ -2566,9 +3012,7 @@ $mobileS: 330px;
       font: normal normal 10px/normal 'Neuman', sans-serif;
       margin: 10px 4px 10px 0;
 
-      &:nth-child(2){
-        margin: 10px 4px 10px 0;
-      }
+      &:nth-child(2){margin: 10px 4px 10px 0}
 
       &:nth-child(6){  margin: 10px 4px 10px 0}
     }
@@ -2590,25 +3034,22 @@ $mobileS: 330px;
   }
 
   body {
-    h1 {
-      font: normal normal 4.3vw/33px "Neuman", sans-serif;
-    }
+    h1 {font: normal normal 4.3vw/33px "Neuman", sans-serif}
   }
 
   .header {
     .number_list,
     .line_list {
       .p_pos_line{
-        height: 12vw;
+        height: 140px;
         margin-bottom: 20px;
 
         &:first-child {
-          height: 18vw;
           margin-top: 12px;
         }
 
         &:last-child{
-          height: 19vw;
+          height: 200px;
           margin-top: 20px;
         }
       }
@@ -2637,16 +3078,16 @@ $mobileS: 330px;
 
     .header_info {
       .header_content {
-        margin: 70px 0 0 10px;
+        margin: 140px 0 0 10px;
         width: 80%;
 
-        .header_text {margin: 60px 0 54px 0;}
+        .header_text {margin: 115px 0 14px 0}
+
+        .order{width: 130px}
       }
     }
 
-    .bottom_line{
-      bottom: 20px;
-    }
+    .bottom_line{bottom: 20px}
   }
 
   .main_content {
@@ -2654,7 +3095,6 @@ $mobileS: 330px;
       padding: 50px $sectionPaddingLeft_Right 2% $sectionPaddingLeft_Right;
       background: url("../img/about_big.jpeg") no-repeat center 5%, radial-gradient(400px 400px at 50% 80%, rgba(189, 116, 78, 0.1), transparent);
       background-size: 100% auto;
-
 
       .about_left_gradient,
       .about_right_gradient {display: none}
@@ -2730,6 +3170,7 @@ $mobileS: 330px;
             .video-js {
               .vjs-big-play-button {
                 font-size: 1.3vw;
+
                 .vjs-icon-placeholder {
                   &:before {left: 30.5%}
                 }
@@ -2752,24 +3193,19 @@ $mobileS: 330px;
       .apartments_content {
         .apartments_blocks {
           .room_block {
-            .room_specifications {
-              font-size: 2.5vw;
-            }
+            .room_specifications {font-size: 2.5vw}
           }
         }
       }
     }
 
     .choose_apartment{
-
       background-size: 90% auto;
       height: 76vw;
       padding: 0 $sectionPaddingLeft_Right;
 
       .line_list,
-      .number_list{
-        margin: 80px 0;
-      }
+      .number_list{margin: 80px 0}
     }
 
     .contacts {
@@ -2783,9 +3219,7 @@ $mobileS: 330px;
           width: 100%;
           margin-left: 0;
 
-          .contacts_title{
-            margin-top: 30px;
-          }
+          .contacts_title{margin-top: 30px}
 
           .contacts_form {
             input{
