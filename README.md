@@ -1,4 +1,4 @@
 # Sytin
 Test template
 
-![Иллюстрация к проекту](https://github.com/alampiler/Agency/blob/master/app/img/template.png)
+![Иллюстрация к проекту](https://github.com/alampiler/Sytin/blob/master/app/img/template.png)
