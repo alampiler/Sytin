@@ -3,7 +3,7 @@ $bagFixBigLaptop: 2048px;
 $laptopXXL: 1921px;
 $laptopXL: 1682px;
 $laptopL: 1441px;
-$laptopM: 1366px;
+$laptopM: 1370px;
 $laptopS: 1280px;
 $bagFixLaptop: 1233px;
 $laptopES: 1024px;
@@ -770,8 +770,45 @@ $mobileS: 330px;
   }
 }
 
+/*1921w - 2048w  1536h*/
+@media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop) and (max-height: 1536px){
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 440px;
+
+      &:first-child {height: 310px}
+
+      &:last-child{height: 640px}
+    }
+  }
+
+  .header {
+    height: 1536px;
+
+    .header_info {
+      .header_content{
+        margin: 440px 0 0 124px;
+
+        .header_text{margin: 250px 0 60px 0}
+
+        .order{width: 16%}
+      }
+    }
+  }
+
+  .main_content{
+    .about{
+      .about_left_gradient,
+      .about_right_gradient{
+        top: 900px;
+      }
+    }
+  }
+}
+
 /*1921w - 2048w  1152h*/
-@media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop) and (height: 1152px){
+@media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop) and (max-height: 1152px){
   .number_list,
   .line_list {
     .p_pos_line{
@@ -820,42 +857,7 @@ $mobileS: 330px;
   }
 }
 
-/*1921w - 2048w  1536h*/
-@media screen and (min-width: $laptopXXL) and (max-width: $bagFixBigLaptop) and (height: 1536px){
-  .number_list,
-  .line_list {
-    .p_pos_line{
-      height: 440px;
 
-      &:first-child {height: 310px}
-
-      &:last-child{height: 640px}
-    }
-  }
-
-  .header {
-    height: 1536px;
-
-    .header_info {
-      .header_content{
-        margin: 440px 0 0 124px;
-
-        .header_text{margin: 250px 0 60px 0}
-
-        .order{width: 16%}
-      }
-    }
-  }
-
-  .main_content{
-    .about{
-      .about_left_gradient,
-      .about_right_gradient{
-        top: 900px;
-      }
-    }
-  }
-}
 
 /*1681w - 1920w*/
 @media screen and (min-width: $laptopXL) and (max-width: 1920px){
@@ -893,7 +895,7 @@ $mobileS: 330px;
       width: 200px;
       left: 100px;
 
-      a {font-size: 18px}
+      a {font-size: 16px}
     }
   }
 
@@ -1241,7 +1243,7 @@ $mobileS: 330px;
       }
 
       &:last-child{
-        height: 430px;
+        height: 410px;
         margin: 82px 0 50px 0;
       }
     }
@@ -1408,8 +1410,95 @@ $mobileS: 330px;
   }
 }
 
+
+@media screen and (max-width: $laptopM) and (min-width: 1350px){
+
+  body{
+    h1{font: normal normal 50px/63px "Neuman", sans-serif}
+  }
+
+  .number_list,
+  .line_list {
+    .p_pos_line{
+      height: 50px;
+      margin: 40px 0 10px 0;
+
+      &:first-child {
+        height: 70px;
+        margin: 20px 0 0 0;
+      }
+
+      &:last-child{
+        height: 200px;
+        margin: 42px 0 50px 0;
+      }
+    }
+  }
+
+  .line_list {
+    .scroll_down{
+      left: 80px;
+      top: 5.5vw;
+      width: 160px;
+
+      a{font-size: 9px}
+    }
+  }
+
+  .header {
+    height: 668px;
+
+    .header_info {
+      .header_content{
+        margin: 135px 0 0 80px;
+
+        .header_text{margin: 54px 0 20px 0}
+
+        .order{width: 137px}
+      }
+    }
+  }
+
+
+  .main_content{
+    .about{
+      .about_left_gradient,
+      .about_right_gradient{top: 520px}
+
+      .about_content{
+        .about_info{margin-top: 462px}
+      }
+    }
+
+    .spec_features{
+      height: 1560px;
+
+      .spec_feat_container{
+        .order_viewing{
+          .order_view_content{
+            margin-top: 0;
+          }
+        }
+      }
+
+    }
+
+    .apartments{
+      .apartments_content{
+        .apartments_blocks{
+          .room_block{
+            .room_specifications{
+              font-size: 1.1vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /*1366w  768h*/
-@media screen and (width: $laptopM) and (height: 768px){
+@media screen and (max-width: $laptopM) and (min-height: 768px){
 
   body{
     h1{font: normal normal 50px/63px "Neuman", sans-serif}
@@ -3262,15 +3351,14 @@ $mobileS: 330px;
       .p_pos_line{
         height: 132px;
 
-
         &:first-child {
           height: 10vw;
           margin-top: 12px;
         }
 
         &:last-child{
-          height: 183px;
-
+          height: 193px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -3665,6 +3753,7 @@ $mobileS: 330px;
 
   .line_list {
     width: 15px;
+
     .line_elem {
       width: 5px;
       margin: 11.5px 4px 11.5px 0;
@@ -3680,7 +3769,7 @@ $mobileS: 330px;
     .number_list,
     .line_list {
       .p_pos_line{
-        height: 76px;
+        height: 80px;
         margin: 54px 0 9px 0;
 
         &:first-child {
@@ -3689,8 +3778,9 @@ $mobileS: 330px;
         }
 
         &:last-child{
-          height: 74px;
+          height: 84px;
           margin-top: 54px;
+          margin-bottom: 10px;
         }
       }
     }
