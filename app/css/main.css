@@ -2857,8 +2857,8 @@ body {
     right: 0;
     bottom: 0;
     width: 100%;
-    font-size: 60px;
-    height: 80px; }
+    font-size: 46px;
+    height: 50px; }
   @-webkit-keyframes scrollJump {
     0% {
       top: initial;
